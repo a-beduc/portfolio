@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(98, 169, 40);
+    color: white;
+    padding: 1rem 2rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+#banner {
+    border-style: solid;
+}
+
+.projectCardContainerInner {
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    margin: 2rem auto;
+    position: relative;
+    overflow: visible;
+    border: 2px solid #ccc; /* Delete later */
+}
+
+.projectCardImage {
+    flex: 0 0 75%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.projectCardImage img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    opacity: 0.8;
+}
+
+.projectCardImage img:hover {
+    opacity: 1;
+}
+
+.projectCardText {
+    flex: 0 0 inherit;
+    margin-left: -25%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    color: white;
+    z-index: 1;
+}
