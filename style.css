@@ -4,12 +4,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #F1F1F2;
 }
 
 body {
-  font-family: "Azeret Mono", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    background: #474787;
+    font-family: "Azeret Mono", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 a {
@@ -112,7 +114,7 @@ nav ul li:hover {
     border-top: 5px solid #474787;
     border-bottom: 5px solid #474787;
     gap: 0.5rem;
-    padding: 4rem;
+    padding: 8rem;
 }
 
 #banner h1 {
@@ -120,19 +122,46 @@ nav ul li:hover {
     margin: 1.2rem 0 2rem 0;
 }
 
-#banner p {
+p {
     font-size: 1.2rem;
 }
 
 section {
+    padding: 3rem 0;
     background: #474787;
     background-size: cover;
     width: 100%;
-    min-height: 100vh;
+    min-height: 110vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+section p {
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.2rem;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: auto;
+    max-width: 800px;
+}
+
+.about{
+    align-items: start;
+    gap: 2rem;
+    text-align: justify;
+}
+
+.about h3 {
+    padding: 0.5rem 0;
 }
 
 .projectCardContainerInner {
@@ -194,7 +223,6 @@ section {
     background-color: rgba(44, 44, 84, 0.8);
     padding: 1.5rem;
     box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
-    color: white;
     border-radius: 10px;
     z-index: 1;
 }
@@ -231,4 +259,21 @@ section {
     background: #474787;
     border-radius: 5px;
     padding: 4px 16px;
+}
+
+.div {
+    background: #474787;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    background: #474787;
+    display: block;
+    border: 0;
+    border-top: 4px solid rgb(44, 44, 84);
+    border-radius: 5px;
+    width: 30%;
+    margin: 0 auto;
+    padding: 0;
 }
