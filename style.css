@@ -57,7 +57,7 @@ nav {
     font-style: normal;
     font-size: 1.3rem;
     height: 48px;
-    justify-content: center;
+    justify-content: start;
     line-height: 24px;
     max-width: 100%;
     padding: 0 25px;
@@ -97,10 +97,11 @@ nav ul li:hover {
 }
 
 #banner {
+    position: relative;
     width: 100%;
     height: 110vh;
-    background: #2C2C54 url('images/triangles5.png') center fixed no-repeat;
-    background-size: cover;
+    background: #2C2C54;
+    background-size: 25px 25px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -110,11 +111,59 @@ nav ul li:hover {
     font-style: normal;
     font-size: 2rem;
     color: #ECECEC;
-    text-align: center;
+    text-align: left;
     border-top: 5px solid #474787;
     border-bottom: 5px solid #474787;
     gap: 0.5rem;
     padding: 8rem;
+    z-index: -5
+}
+
+@keyframes scrollPattern {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(50%);
+    }
+}
+
+#banner .bannerBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/test.svg') repeat;
+    background-size: 25px 25px;
+    z-index: 1;
+    animation: scrollPattern 5s linear infinite;
+    filter: invert(29%) sepia(21%) saturate(1356%) hue-rotate(201deg) brightness(95%) contrast(94%);
+}
+
+#banner .bannerSolidBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: rgba(44, 44, 84, 1);
+    z-index: 3;
+}
+
+#banner .bannerOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to bottom, rgba(44, 44, 84, 1), rgba(44, 44, 84, 0));
+    z-index: 2;
+}
+
+.bannerContent {
+    position: relative;
+    z-index: 4;
 }
 
 #banner h1 {
@@ -276,4 +325,30 @@ hr {
     width: 30%;
     margin: 0 auto;
     padding: 0;
+}
+
+.githubLogo {
+    margin: auto;
+    width: 3rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.githubLogo:hover {
+    fill: #ECECEC;
+
+}
+
+.filter {
+    filter: none;
+    transform: scale(1);
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.filter:hover {
+    filter: invert(64%) sepia(53%) saturate(6185%) hue-rotate(161deg) brightness(94%) contrast(101%);
+    transform: scale(1.1);
+    transition: transform 0.3s ease, fill 0.3s ease;
 }
