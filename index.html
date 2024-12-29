@@ -8,8 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Electrolize&display=swap" rel="stylesheet">
 </head>
-<body>
-<nav>
+<body class="backgroundColorOne">
+<nav class="backgroundColorOne">
     <div>Alexandre Beduc.</div>
     <ul>
         <li><a href="about.html">About me</a></li>
@@ -17,29 +17,26 @@
         <li><a href="#contacts">Contacts</a></li>
     </ul>
 </nav>
-<div id="banner">
-    <div class="bannerBackground"></div>
-    <div class="bannerSolidBlock"></div>
-    <div class="bannerOverlay"></div>
+<div id="banner" class="backgroundColorOne">
     <div class="bannerContent">
         <h4>Hello, I'm</h4>
-        <h1>Alexandre Beduc.</h1>
-        <p>a Python Backend Developer, passionate about</p>
-        <p>crafting efficient and scalable applications.</p>
+        <h1 class="textColorTwo">Alexandre Beduc.</h1>
+        <p>A Python Backend Developer,</p>
+        <p>passionate about coding and improving.</p>
         <div id="bannerButton">
-            <button role="button" onclick="location.href='#about'">Who am I?</button>
-            <button role="button" onclick="location.href='#projects'">My Projects</button>
+            <button role="button" onclick="location.href='#about'" class="backgroundColorTwo">Who am I?</button>
+            <button role="button" onclick="location.href='#projects'" class="backgroundColorTwo">My Projects</button>
         </div>
     </div>
+    <img src="images/down-arrow-5-svgrepo-com.svg" class="bannerArrow" alt="icon down arrow">
 </div>
-<section id="projects">
-    <h2>Projects</h2>
+<section id="projects" class="backgroundColorOne">
         <a class="projectCardContainerInner" href="https://github.com/a-beduc/formation_project_4" target="_blank">
             <div class="projectCardImage">
                 <img alt="Placeholder" src="images/project_4-1.png">
                 <div class="projectCardImageOverlay"></div>
             </div>
-            <div class="projectCardText">
+            <div class="projectCardText backgroundColorTwo">
                 <h2>Chess App Tournament</h2>
                 <ul class="abilities">
                     <li>Python</li>
@@ -49,7 +46,7 @@
             </div>
         </a>
         <a class="projectCardContainerInner" href="https://github.com/a-beduc/formation_project_6">
-            <div class="projectCardText">
+            <div class="projectCardText backgroundColorTwo">
                 <h2>Movie Index Website</h2>
                 <ul class="abilities">
                     <li>HTML</li>
@@ -72,9 +69,7 @@
     <h1>Contacts</h1>
     <p>XXXXXXXXX</p>
 </section>
-<object data="/images/github-svgrepo-com.svg" type="image/svg+xml" class="githubLogo">
-    <img src="/images/github-svgrepo-com.svg" alt="Logo github">
-</object>
+
 <img src="/images/github-svgrepo-com.svg" class="filter" alt="testlogo"/>
 </body>
 </html>
