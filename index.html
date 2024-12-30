@@ -5,54 +5,55 @@
     <title>Site Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Electrolize&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Electrolize&display=swap" rel="stylesheet">
+    <script src="scriptNav.js" defer></script>
 </head>
-<body class="backgroundColorOne">
-<nav class="backgroundColorOne">
+<body>
+<nav>
     <div>Alexandre Beduc.</div>
     <ul>
         <li><a href="about.html">About me</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#contact">Contacts</a></li>
     </ul>
 </nav>
-<div id="banner" class="backgroundColorOne">
+<div id="banner">
     <div class="bannerContent">
         <h4>Hello, I'm</h4>
-        <h1 class="textColorTwo">Alexandre Beduc.</h1>
+        <h1>Alexandre Beduc.</h1>
         <p>A Python Backend Developer,</p>
         <p>passionate about coding and improving.</p>
         <div id="bannerButton">
-            <button role="button" onclick="location.href='#about'" class="backgroundColorTwo">Who am I?</button>
-            <button role="button" onclick="location.href='#projects'" class="backgroundColorTwo">My Projects</button>
+            <button role="button" onclick="location.href='#about'">Who am I?</button>
+            <button role="button" onclick="location.href='#projects'">My Projects</button>
         </div>
     </div>
     <img src="images/down-arrow-5-svgrepo-com.svg" class="bannerArrow" alt="icon down arrow">
 </div>
-<section id="projects" class="backgroundColorOne">
+<section id="projects">
         <a class="projectCardContainerInner" href="https://github.com/a-beduc/formation_project_4" target="_blank">
             <div class="projectCardImage">
                 <img alt="Placeholder" src="images/project_4-1.png">
                 <div class="projectCardImageOverlay"></div>
             </div>
-            <div class="projectCardText backgroundColorTwo">
+            <div class="projectCardText">
                 <h2>Chess App Tournament</h2>
                 <ul class="abilities">
-                    <li>Python</li>
-                    <li>MVC</li>
+                    <li><span>Python</span></li>
+                    <li><span>MVC</span></li>
                 </ul>
                 <p>This project </p>
             </div>
         </a>
         <a class="projectCardContainerInner" href="https://github.com/a-beduc/formation_project_6">
-            <div class="projectCardText backgroundColorTwo">
+            <div class="projectCardText">
                 <h2>Movie Index Website</h2>
-                <ul class="abilities">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>API</li>
+                <ul>
+                    <li><span>HTML</span></li>
+                    <li><span>CSS</span></li>
+                    <li><span>JavaScript</span></li>
+                    <li><span>API</span></li>
                 </ul>
                 <p>This project has been completed as part of the formation for Python Application Developer on OpenClassrooms. It encompasses the implementation of a specific website design using only HTML and CSS. The API request to create the content of the website has been written in Javascript.</p>
             </div>
@@ -65,11 +66,47 @@
 <div>
     <hr class="sectionSeparator">
 </div>
-<section id="contacts">
-    <h1>Contacts</h1>
-    <p>XXXXXXXXX</p>
+<section id="contact">
+    <h1>Get in touch</h1>
+    <p>If you have any question, don't hesitate to reach out.</p>
+    <form>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="formFirstName">First name*</label>
+                <input type="text" id="formFirstName" name="formFirstName">
+            </div>
+            <div class="form-group">
+                <label for="formLastName">Last name*</label>
+                <input type="text" id="formLastName" name="formLastName">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="formEMail">Email*</label>
+                <input type="text" id="formEMail" name="formEMail">
+            </div>
+            <div class="form-group">
+                <label for="formCompany">Company</label>
+                <input type="text" id="formCompany" name="formCompany">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group full-width">
+                <label for="formMessage">Your message*</label>
+                <textarea id="formMessage" name="formMessage" placeholder="Type your message here." rows="4"></textarea>
+            </div>
+        </div>
+        <div class="form-row">
+            <button>Submit</button>
+        </div>
+    </form>
 </section>
-
-<img src="/images/github-svgrepo-com.svg" class="filter" alt="testlogo"/>
+<div>
+    <hr class="sectionSeparator">
+</div>
+<footer>
+<img src="/images/github-svgrepo-com.svg" class="footerLogo filter" alt="Logo of github"/>
+<img src="/images/email-svgrepo-com.svg" class="footerLogo filter" alt="Logo of an Email"/>
+</footer>
 </body>
 </html>
