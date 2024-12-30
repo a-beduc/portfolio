@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Site Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="toggle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Electrolize&display=swap" rel="stylesheet">
@@ -12,11 +13,17 @@
 <body>
 <nav>
     <div>Alexandre Beduc.</div>
-    <ul>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contacts</a></li>
-    </ul>
+        <div class="navNavigation">
+        <ul>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contacts</a></li>
+        </ul>
+        <div>
+            <label class="toggle-control">
+            <input id="theme-toggle" type="checkbox" checked><span class="control"></span></label>
+        </div>
+    </div>
 </nav>
 <div id="banner">
     <div class="bannerContent">
@@ -25,8 +32,8 @@
         <p>A Python Backend Developer,</p>
         <p>passionate about coding and improving.</p>
         <div id="bannerButton">
-            <button role="button" onclick="location.href='#about'">Who am I?</button>
-            <button role="button" onclick="location.href='#projects'">My Projects</button>
+            <button role="button" onclick="location.href='#about'" class="basicButton">Who am I?</button>
+            <button role="button" onclick="location.href='#projects'" class="basicButton">My Projects</button>
         </div>
     </div>
     <img src="images/down-arrow-5-svgrepo-com.svg" class="bannerArrow" alt="icon down arrow">
@@ -97,7 +104,7 @@
             </div>
         </div>
         <div class="form-row">
-            <button>Submit</button>
+            <button class="basicButton">Submit</button>
         </div>
     </form>
 </section>

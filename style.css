@@ -46,6 +46,7 @@ hr {
 }
 
 nav {
+    height: 5rem;
     background-color: rgb(var(--primary-color));
     position: fixed;
     top: 0;
@@ -62,6 +63,13 @@ nav {
     border-bottom: 3px solid rgb(var(--secondary-color));
 }
 
+.navNavigation {
+    display: flex;
+    align-items: start;
+    gap: 3rem;
+    margin-right: 3rem;
+}
+
 .hidden {
     top: -100px;
 }
@@ -72,13 +80,13 @@ nav ul {
     justify-content: center;
     margin: 0;
     padding: 0;
-    font-weight: 200;
     gap: 3rem;
+    font-weight: 200;
     transition-property: text-decoration;
     transition-duration: 0.3s;
 }
 
-nav ul li:hover {
+nav ul li:not(:has(label)):hover {
     text-decoration: underline;
     transform: translateY(-2px);
 }
@@ -119,7 +127,7 @@ nav ul li:hover {
     gap: 1.3rem;
 }
 
-button {
+.basicButton {
     align-items: center;
     background: rgba(var(--secondary-color), 1);
     border: none;
@@ -146,7 +154,7 @@ button {
     transition-property: box-shadow, transform, background;
 }
 
-button:hover {
+.basicButton:hover {
     background: rgba(var(--secondary-color), 0.8);
     box-shadow: 5px 10px rgba(0, 0, 0, 0);
     transform: translateY(-2px) scale(1.05);
@@ -229,7 +237,7 @@ section p {
     object-fit: cover;
     border-radius: 5px;
     display: block;
-    opacity: 0.7;
+    opacity: 0.8;
     transition-duration: 0.3s;
     transition-property: opacity;
 }
@@ -304,7 +312,7 @@ footer {
 
 .filter:hover {
     cursor: pointer;
-    filter: invert(56%) sepia(96%) saturate(2554%) hue-rotate(186deg) brightness(89%) contrast(95%);
+    filter: var(--filter-secondary-color);
     transform: scale(1.1);
     transition: transform 0.3s ease, fill 0.3s ease;
 }
@@ -358,7 +366,7 @@ input:focus, textarea:focus {
     border: solid 1px #fff;
 }
 
-label {
+.form label {
     margin-bottom: 0.5rem;
     font-size: 1rem;
     font-weight: 200;
@@ -370,4 +378,49 @@ form button {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.toggle-control {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+        -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+}
+
+.toggle-control input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.toggle-control input:checked ~ .control:after {
+    left: 2.3rem;
+}
+
+.toggle-control .control {
+    background-color: rgb(var(--secondary-color));
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.8rem;
+    width: 4rem;
+    border-radius: 25px;
+    transition: background-color 0.15s ease-in;
+}
+
+.toggle-control .control:after {
+    content: "";
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 25px;
+    background: white;
+    transition: left 0.15s ease-in;
 }
