@@ -174,7 +174,7 @@ nav ul li:not(:has(label)):hover {
     filter: var(--filter-secondary-color);
     width: 6rem;
     height: auto;
-    bottom: 5%;
+    bottom: 0;
     animation: upDownPattern 1s alternate infinite;
 }
 
