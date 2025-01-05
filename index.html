@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Site Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Electrolize&display=swap" rel="stylesheet">
-    <script src="scriptNav.js" defer></script>
+    <script src="static/script/scriptNav.js" defer></script>
+    <script src="static/script/scriptThemeSwitch.js" defer></script>
+    <script src="static/script/scriptLanguageSwitch.js" defer></script>
 </head>
 <body>
 <nav>
-    <div>Alexandre Beduc.</div>
+    <div data-translate="name"></div>
         <div class="navNavigation">
         <ul>
-            <li><a href="about.html">About me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contacts</a></li>
+            <li><a href="about.html" data-translate="nav.aboutMe"></a></li>
+            <li><a href="#projects" data-translate="nav.project"></a></li>
+            <li><a href="#contact" data-translate="nav.contact"></a></li>
         </ul>
         <div>
             <label class="toggle-control">
@@ -26,13 +28,12 @@
 </nav>
 <div id="banner">
     <div class="bannerContent">
-        <h4>Hello, I'm</h4>
-        <h1>Alexandre Beduc.</h1>
-        <p>A Python Backend Developer,</p>
-        <p>passionate about coding and improving.</p>
+        <h4 data-translate="banner.h4"></h4>
+        <h1 data-translate="banner.h1"></h1>
+        <p data-translate="banner.p"></p>
         <div id="bannerButton">
-            <button role="button" onclick="location.href='#about'" class="basicButton">Who am I?</button>
-            <button role="button" onclick="location.href='#projects'" class="basicButton">My Projects</button>
+            <button role="button" onclick="location.href='about.html'" class="basicButton" data-translate="banner.button.aboutMe"></button>
+            <button role="button" onclick="location.href='#projects'" class="basicButton" data-translate="banner.button.project"></button>
         </div>
     </div>
     <img src="images/down-arrow-5-svgrepo-com.svg" class="bannerArrow" alt="icon down arrow">
@@ -44,12 +45,12 @@
                 <div class="projectCardImageOverlay"></div>
             </div>
             <div class="projectCardText">
-                <h2>Chess App Tournament</h2>
+                <h2 data-translate="projectCard.chessApp.h2"></h2>
                 <ul class="abilities">
                     <li><span>Python</span></li>
                     <li><span>MVC</span></li>
                 </ul>
-                <p>This project </p>
+                <p data-translate="projectCard.chessApp.p"></p>
                 <div class="projectCardTextIcon">
                     <img src="images/github-svgrepo-com.svg" class="projectCardTextIconLogo filterReversed" alt="Logo of github"/>
                 </div>
@@ -57,14 +58,14 @@
         </a>
         <a class="projectCardContainerInner" href="https://github.com/a-beduc/formation_project_6">
             <div class="projectCardText">
-                <h2>Movie Index Website</h2>
+                <h2 data-translate="projectCard.movieIndexWebsite.h2"></h2>
                 <ul>
                     <li><span>HTML</span></li>
                     <li><span>CSS</span></li>
                     <li><span>JavaScript</span></li>
                     <li><span>API</span></li>
                 </ul>
-                <p>This project has been completed as part of the formation for Python Application Developer on OpenClassrooms. It encompasses the implementation of a specific website design using only HTML and CSS. The API request to create the content of the website has been written in Javascript.</p>
+                <p data-translate="projectCard.movieIndexWebsite.p"></p>
                 <div class="projectCardTextIcon">
                     <img src="images/github-svgrepo-com.svg" class="projectCardTextIconLogo filterReversed" alt="Logo of github"/>
                 </div>
@@ -79,37 +80,37 @@
     <hr class="sectionSeparator">
 </div>
 <section id="contact" class="indexSection">
-    <h1>Get in touch</h1>
-    <p>If you have any question, don't hesitate to reach out.</p>
+    <h1 data-translate="form.h1"></h1>
+    <p data-translate="form.p"></p>
     <form>
         <div class="form-row">
             <div class="form-group">
-                <label for="formFirstName">First name*</label>
+                <label for="formFirstName" data-translate="form.labelFirstName"></label>
                 <input type="text" id="formFirstName" name="formFirstName">
             </div>
             <div class="form-group">
-                <label for="formLastName">Last name*</label>
+                <label for="formLastName" data-translate="form.labelLastName"></label>
                 <input type="text" id="formLastName" name="formLastName">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group">
-                <label for="formEMail">Email*</label>
+                <label for="formEMail" data-translate="form.labelLastEmail"></label>
                 <input type="text" id="formEMail" name="formEMail">
             </div>
             <div class="form-group">
-                <label for="formCompany">Company</label>
+                <label for="formCompany" data-translate="form.labelCompany"></label>
                 <input type="text" id="formCompany" name="formCompany">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group full-width">
-                <label for="formMessage">Your message*</label>
+                <label for="formMessage" data-translate="form.labelMessage"></label>
                 <textarea id="formMessage" name="formMessage" placeholder="Type your message here." rows="4"></textarea>
             </div>
         </div>
         <div class="form-row">
-            <button class="basicButton">Submit</button>
+            <button class="basicButton" data-translate="form.button">Submit</button>
         </div>
     </form>
 </section>
