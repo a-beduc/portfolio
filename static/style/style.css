@@ -435,7 +435,7 @@ form button {
 }
 
 .toggle-control input:checked ~ .control:after {
-    left: 2.3rem;
+    left: 2.2rem;
 }
 
 .toggle-control .control {
@@ -443,7 +443,7 @@ form button {
     position: absolute;
     top: 0;
     left: 0;
-    height: 1.8rem;
+    height: 2rem;
     width: 4rem;
     border-radius: 25px;
     transition: background-color 0.15s ease-in;
@@ -452,10 +452,10 @@ form button {
 .toggle-control .control:after {
     content: "";
     position: absolute;
-    top: 0.2rem;
-    left: 0.2rem;
-    width: 1.4rem;
-    height: 1.4rem;
+    top: 0.28rem;
+    left: 0.28rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 25px;
     background: white;
     transition: left 0.15s ease-in;
