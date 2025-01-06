@@ -506,3 +506,54 @@ form button {
     color: rgba(255, 255, 255, 0.3);
 }
 
+
+/*language picker*/
+.language-picker {
+    position: relative;
+    display: flex;
+}
+
+.language-picker summary {
+    list-style: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.language-picker summary::-webkit-details-marker {
+    display: none;
+}
+
+.language-picker summary::marker {
+    display: none;
+}
+
+.flag-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.flag-options {
+    display: flex;
+    position: absolute;
+    background: rgb(var(--secondary-color));
+    border-radius: 5px;
+    padding: 8px;
+    top: 40px;
+    left: -8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-picker[open] .flag-options {
+  display: block;
+}
+
+.flag-options li {
+    cursor: pointer;
+    list-style: none;
+}

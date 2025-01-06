@@ -12,20 +12,41 @@
     <script src="static/script/scriptLanguageSwitch.js" defer></script>
 </head>
 <body>
-<nav>
-    <div data-translate="name"></div>
+<header>
+    <nav>
+        <div data-translate="name"></div>
         <div class="navNavigation">
-        <ul>
-            <li><a href="about.html" data-translate="nav.aboutMe"></a></li>
-            <li><a href="#projects" data-translate="nav.project"></a></li>
-            <li><a href="#contact" data-translate="nav.contact"></a></li>
-        </ul>
-        <div>
-            <label class="toggle-control">
-            <input id="theme-toggle" type="checkbox" checked><span class="control"></span></label>
+            <ul>
+                <li><a href="about.html" data-translate="nav.aboutMe"></a></li>
+                <li><a href="#projects" data-translate="nav.project"></a></li>
+                <li><a href="#contact" data-translate="nav.contact"></a></li>
+            </ul>
+            <div>
+                <details class="language-picker">
+                    <summary>
+                        <img src="images/gb.svg" alt="English flag" class="flag-icon" />
+                    </summary>
+                    <ul class="flag-options">
+                        <li data-lang="en">
+                            <img src="images/gb.svg" alt="English flag" class="flag-icon" />
+                        </li>
+                        <li data-lang="es">
+                            <img src="images/es.svg" alt="Spanish flag" class="flag-icon" />
+                        </li>
+                        <li data-lang="fr">
+                            <img src="images/fr.svg" alt="French flag" class="flag-icon" />
+                        </li>
+                    </ul>
+                </details>
+            </div>
+            <div>
+                <label class="toggle-control">
+                <input id="theme-toggle" type="checkbox" checked><span class="control"></span></label>
+            </div>
+
         </div>
-    </div>
-</nav>
+    </nav>
+</header>
 <div id="banner">
     <div class="bannerContent">
         <h4 data-translate="banner.h4"></h4>
@@ -95,7 +116,7 @@
         </div>
         <div class="form-row">
             <div class="form-group">
-                <label for="formEMail" data-translate="form.labelLastEmail"></label>
+                <label for="formEMail" data-translate="form.labelEmail"></label>
                 <input type="text" id="formEMail" name="formEMail">
             </div>
             <div class="form-group">
