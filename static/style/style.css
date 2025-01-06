@@ -10,6 +10,7 @@
 :root {
     --primary-color: 29, 36, 51;
     --secondary-color: 53, 141, 222;
+    --tertiary-color: 55, 85, 125;
     --filter-primary-color: invert(10%) sepia(60%) saturate(407%) hue-rotate(181deg) brightness(92%) contrast(91%);
     --filter-secondary-color: invert(53%) sepia(96%) saturate(2247%) hue-rotate(187deg) brightness(90%) contrast(92%);
 }
@@ -40,6 +41,10 @@ hr {
     border: 0;
     border-top: 2px solid rgb(var(--secondary-color));
     border-radius: 5px;
+    width: 100%;
+}
+
+.sectionSeparator {
     width: 15%;
     margin: 0 auto;
     padding: 0;
@@ -174,15 +179,18 @@ nav ul li:not(:has(label)):hover {
     filter: var(--filter-secondary-color);
     width: 6rem;
     height: auto;
-    bottom: 5%;
+    bottom: 0;
     animation: upDownPattern 1s alternate infinite;
+}
+
+.indexSection {
+    min-height: 110vh;
 }
 
 section {
     padding: 3rem 0;
     background-size: cover;
     width: 100%;
-    min-height: 110vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -252,16 +260,19 @@ section p {
     transform: translateY(-50%);
     background-color: rgba(var(--secondary-color), 0.8);
     width: 50%;
-    padding: 1.5rem;
+    padding: 1.5rem 3rem;
     box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .projectCardText ul {
-    margin-top: 1.5rem;
     display: flex;
     gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .projectCardText ul li {
@@ -275,20 +286,45 @@ section p {
 }
 
 .projectCardText h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 800;
 }
 
 .projectCardText p {
-    margin-top: 1rem;
     font-size: 1rem;
     font-weight: 200;
     line-height: 1.5rem;
     text-align: justify;
+    margin-bottom: 1.5rem;
 }
 
 .projectCardText:nth-child(even) {
     right: 0;
+}
+
+.projectCardTextIcon {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.projectCardTextIconLogo {
+    width: 1.5rem;
+    height: auto;
+}
+
+.filterReversed {
+    transform: scale(1);
+    transition: transform 0.3s ease, fill 0.3s ease;
+    filter: invert(99%) sepia(1%) saturate(3140%) hue-rotate(32deg) brightness(121%) contrast(100%);
+}
+
+.filterReversed:hover {
+    cursor: pointer;
+    filter: var(--filter-primary-color);
+    transform: scale(1.1);
+    transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 footer {
@@ -399,7 +435,7 @@ form button {
 }
 
 .toggle-control input:checked ~ .control:after {
-    left: 2.3rem;
+    left: 2.2rem;
 }
 
 .toggle-control .control {
@@ -407,7 +443,7 @@ form button {
     position: absolute;
     top: 0;
     left: 0;
-    height: 1.8rem;
+    height: 2rem;
     width: 4rem;
     border-radius: 25px;
     transition: background-color 0.15s ease-in;
@@ -416,11 +452,108 @@ form button {
 .toggle-control .control:after {
     content: "";
     position: absolute;
-    top: 0.2rem;
-    left: 0.2rem;
-    width: 1.4rem;
-    height: 1.4rem;
+    top: 0.28rem;
+    left: 0.28rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 25px;
     background: white;
     transition: left 0.15s ease-in;
+}
+
+.contentBlock {
+    width:80%;
+    background-color: rgba(52, 74, 106, 0.8);
+    padding: 2rem 3rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 2rem;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.contentBlock h1 {
+    width:100%;
+    font-size: 2rem;
+    padding: 1rem 0;
+    border-bottom: 2px solid rgb(var(--secondary-color));
+}
+
+.contentPhotoBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contentPhotoBlock img{
+    max-width: 75%;
+    max-height: 75%;
+    width: inherit;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.contentPhotoBlockText {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+/*language picker*/
+.language-picker {
+    position: relative;
+    display: flex;
+}
+
+.language-picker summary {
+    list-style: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.language-picker summary::-webkit-details-marker {
+    display: none;
+}
+
+.language-picker summary::marker {
+    display: none;
+}
+
+.flag-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.flag-options {
+    display: flex;
+    position: absolute;
+    background: rgb(var(--secondary-color));
+    border-radius: 5px;
+    padding: 8px;
+    top: 40px;
+    left: -8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-picker[open] .flag-options {
+  display: block;
+}
+
+.flag-options li {
+    cursor: pointer;
+    list-style: none;
 }
