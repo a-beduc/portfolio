@@ -1,7 +1,10 @@
-let currentLanguage = 'fr';
+let storedLang = localStorage.getItem('preferredLang');
+let currentLanguage = storedLang || 'en';
 
 async function setLanguage(lang) {
     currentLanguage = lang;
+    localStorage.setItem('preferredLang', lang);
+
     const response = await fetch(`lang/${lang}.json`);
     const translations = await response.json();
     updateText(translations);
@@ -23,4 +26,38 @@ function getNestedValue(obj, keyPath) {
     return keyPath.split('.').reduce((acc, key) => acc && acc[key], obj);
 }
 
-setLanguage(currentLanguage);
+setLanguage(currentLanguage).then(() => {
+    updateFlagIcon(currentLanguage);
+});
+
+const flagMap = {
+    fr: { src: "images/fr.svg", alt: "French flag", formPlaceholder: "Écrivez votre message ici." },
+    es: { src: "images/es.svg", alt: "Spanish flag", formPlaceholder: "xxx" },
+    en: { src: "images/gb.svg", alt: "English flag", formPlaceholder: "Type your message here." }
+}
+
+function updateFlagIcon(lang) {
+    const details = document.querySelector('.language-picker');
+    const summaryImg = details.querySelector('summary img');
+    const formPlaceholder = document.getElementById('formMessage');
+    if (flagMap[lang]) {
+        summaryImg.src = flagMap[lang].src;
+        summaryImg.alt = flagMap[lang].alt;
+        formPlaceholder.placeholder = flagMap[lang].formPlaceholder;
+    } else {
+        summaryImg.src = flagMap["en"].src;
+        summaryImg.alt = flagMap["en"].alt;
+        formPlaceholder.placeholder = flagMap["en"].formPlaceholder;
+    }
+}
+
+document.querySelectorAll('.language-picker .flag-options li').forEach(li => {
+    li.addEventListener('click', function() {
+        const selectedLang = this.dataset.lang;
+        const details = this.closest('details');
+        details.open = false;
+
+        setLanguage(selectedLang);
+        updateFlagIcon(selectedLang)
+    });
+});
