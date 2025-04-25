@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Electrolize&display=swap" rel="stylesheet">
     <script src="static/script/scriptNav.js" defer></script>
+    <script src="static/script/scriptMenuButton.js" defer></script>
 <!--    <script src="static/script/scriptThemeSwitch.js" defer></script>-->
 <!--    <script src="static/script/scriptLanguageSwitch.js" defer></script>-->
     <script src="static/script/tempo_load_lang.js" defer></script>
@@ -17,8 +18,10 @@
 <header>
     <nav class="nav-bar">
         <div data-translate="name" class="nav-bar__name"></div>
-
-        <div class="nav-bar__menu">
+        <button id="menu-button" class="nav-bar__button">
+            <img src="images/menu-svgrepo-com.svg" class="nav-bar__button__logo filter" alt="Menu Logo"/>
+        </button>
+        <div id="menu" class="nav-bar__menu">
             <ul class="nav-bar__list">
                 <li class="nav-bar__item">
                     <a href="about.html" data-translate="nav.aboutMe" class="nav-bar__link"></a>
@@ -60,7 +63,7 @@
 
 <div class="banner">
     <div class="banner__content">
-        <h4 data-transalte="banner.h4" class="banner__h4"></h4>
+        <h2 data-translate="banner.h2" class="banner__h2"></h2>
         <h1 data-translate="banner.h1" class="banner__h1"></h1>
         <p data-translate="banner.p" class="banner__p"></p>
     </div>
@@ -159,3 +162,12 @@
         </form>
     </div>
 </section>
+<div>
+    <hr class="line-separator">
+</div>
+<footer class="footer">
+    <img src="images/github-svgrepo-com.svg" class="footer__logo filter" alt="Logo of github"/>
+    <img src="images/email-svgrepo-com.svg" class="footer__logo filter" alt="Logo of an Email"/>
+</footer>
+</body>
+</html>

@@ -1,3 +1,12 @@
+:root {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,7 +17,7 @@ body {
   background-color: rgb(26, 36, 51);
   font-family: "Azeret Mono", serif;
   color: rgb(255, 255, 255);
-  font-size: 16px;
+  padding-bottom: 1rem;
 }
 
 a {
@@ -33,33 +42,98 @@ ul {
   justify-content: space-between;
   background-size: cover;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.25rem;
   border-bottom: 3px solid rgb(53, 141, 222);
   padding: 0 1rem;
 }
+.nav-bar__button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  outline: inherit;
+  cursor: pointer;
+}
+.nav-bar__button__logo {
+  display: inline-block;
+  width: 2.5rem;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .nav-bar__button {
+    display: none;
+  }
+}
 .nav-bar__menu {
-  display: flex;
-  align-items: center;
-  justify-content: end;
+  display: initial;
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 4rem;
+  right: 1rem;
+  background-color: rgb(53, 141, 222);
+  border-radius: 5px;
+  border: white solid 1px;
+  gap: 0.5rem;
+  transform: translateY(-150%);
+  transition: transform 0.3s ease;
+}
+.nav-bar__menu.is-open {
+  transform: translateY(0);
+}
+@media (min-width: 768px) {
+  .nav-bar__menu {
+    position: initial;
+    top: revert;
+    right: revert;
+    background-color: initial;
+    border: none;
+    border-radius: 0;
+    transform: initial;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
 }
 .nav-bar__list {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  gap: 1rem;
+  flex-direction: column;
+  font-size: 1.125rem;
   font-weight: 200;
-  font-size: 0.8rem;
   transition-property: text-decoration;
   transition-duration: 0.3s;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .nav-bar__list {
+    gap: 1rem;
+    flex-direction: row;
+  }
+}
+.nav-bar__item {
+  padding: 0.75rem 0.25rem;
+}
+@media (min-width: 768px) {
+  .nav-bar__item {
+    padding: 0;
+  }
+}
+.nav-bar__link {
+  padding: 0.875rem 1rem;
+}
+@media (min-width: 768px) {
+  .nav-bar__link {
+    padding: 0;
+  }
 }
 .nav-bar__item:hover {
   text-decoration: underline;
   transform: translateY(-2px);
 }
 .nav-bar__hidden {
-  top: -8rem;
+  top: -16rem;
 }
 
 .banner {
@@ -74,7 +148,6 @@ ul {
   font-family: "Electrolize", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1rem;
   text-align: left;
 }
 .banner__content {
@@ -86,13 +159,23 @@ ul {
   }
 }
 .banner__h1 {
+  font-size: 3rem;
   font-weight: 1000;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: rgb(53, 141, 222);
+}
+.banner__h2 {
+  font-weight: 200;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.banner__p {
+  font-weight: 200;
+  font-size: 1.125rem;
 }
 @keyframes upDownPattern {
   from {
-    transform: translateY(-20%);
+    transform: translateY(-15%);
   }
   to {
     transform: translateY(0);
@@ -103,8 +186,8 @@ ul {
   filter: invert(53%) sepia(96%) saturate(2247%) hue-rotate(187deg) brightness(90%) contrast(92%);
   width: 6rem;
   height: auto;
-  bottom: 1rem;
-  animation: upDownPattern 1s alternate infinite;
+  bottom: 0;
+  animation: upDownPattern 1.5s alternate infinite;
 }
 
 .section {
@@ -112,7 +195,14 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 5rem;
+  margin: 2rem auto;
+}
+@media (min-width: 768px) {
+  .section {
+    gap: 10rem;
+    margin: 5rem auto;
+  }
 }
 
 .project {
@@ -299,7 +389,7 @@ ul {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: stretch;
   gap: 1rem;
   padding: 0 2rem;
@@ -314,9 +404,8 @@ ul {
     max-width: 900px;
   }
 }
-.contact__title .contact__content {
+.contact__title, .contact__content {
   width: 100%;
-  align-self: start;
   text-align: left;
 }
 .contact__form {
@@ -324,6 +413,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  font-size: 1.125rem;
 }
 .contact__form__row {
   width: 100%;
@@ -334,6 +424,7 @@ ul {
 @media (min-width: 768px) {
   .contact__form__row {
     flex-direction: row;
+    justify-content: end;
   }
 }
 .contact__form__group {
@@ -350,9 +441,70 @@ ul {
   resize: vertical;
   padding: 0.5rem;
   color: rgb(255, 255, 255);
+  font-size: 1rem;
 }
 .contact__form__group input:focus, .contact__form__group textarea:focus {
   border: 1px solid rgb(255, 255, 255);
+}
+.contact__form__button {
+  color: rgb(255, 255, 255);
+  align-content: center;
+  align-items: center;
+  background: rgb(53, 141, 222);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  font-family: "Electrolize", serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 1.3rem;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: 3px 7px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.4s;
+  transition-property: box-shadow, transform, background;
+}
+.contact__form__button:hover {
+  background: rgba(53, 141, 222, 0.8);
+  box-shadow: 5px 10px rgba(0, 0, 0, 0);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  height: auto;
+}
+.footer__logo {
+  display: inline-block;
+  width: 2.5rem;
+  height: auto;
+}
+
+.filter {
+  transform: scale(1);
+  transition: transform 0.3s ease, fill 0.3s ease;
+  filter: invert(99%) sepia(1%) saturate(3140%) hue-rotate(32deg) brightness(121%) contrast(100%);
+}
+.filter:hover {
+  cursor: pointer;
+  filter: invert(53%) sepia(96%) saturate(2247%) hue-rotate(187deg) brightness(90%) contrast(92%);
+  transform: scale(1.1);
+  transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 /*# sourceMappingURL=style_v2.css.map */
