@@ -83,7 +83,10 @@ ul {
   }
 
   &__menu {
-    display: initial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     width: auto;
     height: auto;
@@ -93,12 +96,13 @@ ul {
     border-radius: 5px;
     border: white solid 1px;
     gap: 0.5rem;
+    padding-bottom: 0.5rem;
 
-    transform: translateY(-150%);
+    transform: translateX(150%);
     transition: transform 0.3s ease;
 
     &.is-open {
-      transform: translateY(0);
+      transform: translateX(0);
     }
 
     @media (min-width: $breakpoint-tablet-min) {
@@ -109,8 +113,10 @@ ul {
       border: none;
       border-radius: 0;
       transform: initial;
+      padding-bottom: 0;
 
       display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: end;
     }
@@ -158,6 +164,74 @@ ul {
     top: -16rem;
   }
 }
+
+.theme {
+  min-width: 4rem;
+  min-height: 2rem;
+
+  &__toggle {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+      -moz-user-select: none;
+        -ms-user-select: none;
+          user-select: none;
+
+    &__input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked ~ .theme__toggle__control:after {
+        left: 2.2rem;
+      }
+    }
+
+    &__control {
+      background-color: $color-primary;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2rem;
+      width: 4rem;
+      border-radius: 25px;
+      transition: background-color 0.15s ease-in;
+
+      @media (min-width: $breakpoint-tablet-min) {
+        background-color: $color-secondary;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0.28rem;
+        left: 0.28rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 25px;
+        background: white;
+        transition: left 0.15s ease-in;
+      }
+    }
+  }
+}
+
+//.language-picker {
+//  position: relative;
+//  display: flex;
+//
+//  &__summary {
+//    list-style: none;
+//    cursor: pointer;
+//    outline: none;
+//    border: none;
+//    display: inline-flex;
+//    align-items: center;
+//  }
+//}
 
 .banner {
       position: relative;

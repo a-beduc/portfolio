@@ -65,7 +65,10 @@ ul {
   }
 }
 .nav-bar__menu {
-  display: initial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   width: auto;
   height: auto;
@@ -75,11 +78,12 @@ ul {
   border-radius: 5px;
   border: white solid 1px;
   gap: 0.5rem;
-  transform: translateY(-150%);
+  padding-bottom: 0.5rem;
+  transform: translateX(150%);
   transition: transform 0.3s ease;
 }
 .nav-bar__menu.is-open {
-  transform: translateY(0);
+  transform: translateX(0);
 }
 @media (min-width: 768px) {
   .nav-bar__menu {
@@ -90,7 +94,9 @@ ul {
     border: none;
     border-radius: 0;
     transform: initial;
+    padding-bottom: 0;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: end;
   }
@@ -134,6 +140,56 @@ ul {
 }
 .nav-bar__hidden {
   top: -16rem;
+}
+
+.theme {
+  min-width: 4rem;
+  min-height: 2rem;
+}
+.theme__toggle {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.theme__toggle__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.theme__toggle__input:checked ~ .theme__toggle__control:after {
+  left: 2.2rem;
+}
+.theme__toggle__control {
+  background-color: rgb(26, 36, 51);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 4rem;
+  border-radius: 25px;
+  transition: background-color 0.15s ease-in;
+}
+@media (min-width: 768px) {
+  .theme__toggle__control {
+    background-color: rgb(53, 141, 222);
+  }
+}
+.theme__toggle__control:after {
+  content: "";
+  position: absolute;
+  top: 0.28rem;
+  left: 0.28rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 25px;
+  background: white;
+  transition: left 0.15s ease-in;
 }
 
 .banner {
