@@ -6,7 +6,7 @@
     "contact": "Contact"
   },
   "banner": {
-    "h4": "Hello, I'm",
+    "h2": "Hello, I'm",
     "h1": "Alexandre Beduc.",
     "p": "A Python Backend Developer, passionate about coding.",
     "button": {
