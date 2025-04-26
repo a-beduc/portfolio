@@ -31,14 +31,13 @@ setLanguage(currentLanguage).then(() => {
 });
 
 const flagMap = {
-    fr: { src: "images/fr.svg", alt: "French flag", formPlaceholder: "Écrivez votre message ici." },
-    es: { src: "images/es.svg", alt: "Spanish flag", formPlaceholder: "xxx" },
-    en: { src: "images/gb.svg", alt: "English flag", formPlaceholder: "Type your message here." }
+    fr: { src: "static/images/fr.svg", alt: "French flag", formPlaceholder: "Écrivez votre message ici." },
+    en: { src: "static/images/gb.svg", alt: "English flag", formPlaceholder: "Type your message here." }
 }
 
+const details = document.querySelector('.language-picker');
 function updateFlagIcon(lang) {
-    const details = document.querySelector('.language-picker');
-    const summaryImg = details.querySelector('summary img');
+    const summaryImg = document.getElementById('selected-flag');
     const formPlaceholder = document.getElementById('formMessage');
     if (flagMap[lang]) {
         summaryImg.src = flagMap[lang].src;
@@ -51,7 +50,7 @@ function updateFlagIcon(lang) {
     }
 }
 
-document.querySelectorAll('.language-picker .flag-options li').forEach(li => {
+document.querySelectorAll('.language-picker__item').forEach(li => {
     li.addEventListener('click', function() {
         const selectedLang = this.dataset.lang;
         const details = this.closest('details');
