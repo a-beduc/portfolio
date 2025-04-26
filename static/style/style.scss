@@ -19,6 +19,12 @@ $breakpoint-desktop-min: 1200px;
 :root {
   font-size: 16px;
 
+  --primary-color: 26, 36, 51;
+  --secondary-color: 53, 141, 222;
+  --tertiary-color: 55, 85, 125;
+  --filter-primary-color: invert(10%) sepia(60%) saturate(407%) hue-rotate(181deg) brightness(92%) contrast(91%);
+  --filter-secondary-color: invert(53%) sepia(96%) saturate(2247%) hue-rotate(187deg) brightness(90%) contrast(92%);
+
   @media (min-width: $breakpoint-tablet-min) {
     font-size: 18px;
   }
@@ -31,7 +37,7 @@ $breakpoint-desktop-min: 1200px;
 }
 
 body {
-  background-color: $color-primary;
+  background-color: rgb(var(--primary-color));
   font-family: $font-family-primary;
   color: $font-color;
   padding-bottom: 1rem;
@@ -48,7 +54,7 @@ ul {
 
 .nav-bar {
   height: 5rem;
-  background-color: $color-primary;
+  background-color: rgb(var(--primary-color));
   position: fixed;
   top: 0;
   width: 100%;
@@ -60,7 +66,7 @@ ul {
   background-size: cover;
   font-weight: 600;
   font-size: 1.25rem;
-  border-bottom: 3px solid $color-secondary;
+  border-bottom: 3px solid rgb(var(--secondary-color));
   padding: 0 1rem;
 
   &__button {
@@ -92,7 +98,7 @@ ul {
     height: auto;
     top: 4rem;
     right: 1rem;
-    background-color: $color-secondary;
+    background-color: rgb(var(--secondary-color));
     border-radius: 5px;
     border: white solid 1px;
     gap: 0.5rem;
@@ -127,7 +133,7 @@ ul {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
+      gap: 0.875rem;
 
       @media (min-width: $breakpoint-tablet-min) {
         flex-direction: row;
@@ -205,7 +211,7 @@ ul {
     }
 
     &__control {
-      background-color: $color-primary;
+      background-color: rgb(var(--primary-color));
       position: absolute;
       top: 0;
       left: 0;
@@ -215,7 +221,7 @@ ul {
       transition: background-color 0.15s ease-in;
 
       @media (min-width: $breakpoint-tablet-min) {
-        background-color: $color-secondary;
+        background-color: rgb(var(--secondary-color));
       }
 
       &:after {
@@ -257,7 +263,7 @@ ul {
   &__flag-options {
     display: flex;
     position: absolute;
-    background: $color-secondary;
+    background: rgb(var(--secondary-color));
     border: 1px solid white;
     border-radius: 5px;
     padding: 8px;
@@ -310,7 +316,7 @@ ul {
     font-size: 3rem;
     font-weight: 1000;
     margin-bottom: 1rem;
-    color: $color-secondary;
+    color: rgb(var(--secondary-color));
   }
 
   &__h2 {
@@ -336,7 +342,7 @@ ul {
 
   &__arrow {
     position: absolute;
-    filter: $color-filter-secondary;
+    filter: var(--filter-secondary-color);
     width: 6rem;
     height: auto;
     bottom: 0;
@@ -437,7 +443,7 @@ ul {
   inset: 0;
   z-index: 1;
 
-  background-color: rgba($color-secondary, 0.6);
+  background-color: rgba(var(--secondary-color), 0.6);
   padding: 1.5rem 3rem;
   box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -490,7 +496,7 @@ ul {
     &__item {
       padding: 0.3rem 0.8rem;
       border-radius: 5px;
-      background-color: rgba($color-primary, 0.8);
+      background-color: rgba(var(--primary-color), 0.8);
 
       & span {
         opacity: 1;
@@ -526,7 +532,7 @@ ul {
 
   &:hover {
     cursor: pointer;
-    filter: $color-filter-primary;
+    filter: var(--filter-primary-color);
     transform: scale(1.1);
     transition: transform 0.3s ease, fill 0.3s ease;
   }
@@ -535,7 +541,7 @@ ul {
 .line-separator {
   display: block;
   border: 0;
-  border-top: 2px solid $color-secondary;
+  border-top: 2px solid rgb(var(--secondary-color));
   border-radius: 5px;
   width: 15%;
   margin: 1.5rem auto;
@@ -592,8 +598,8 @@ ul {
       gap: 0.5rem;
 
       & input, textarea {
-        background-color: $color-primary;
-        border: solid 1px $color-secondary;
+        background-color: rgb(var(--primary-color));
+        border: solid 1px rgb(var(--secondary-color));
         border-radius: 3px;
         outline: none;
         resize: vertical;
@@ -604,6 +610,10 @@ ul {
         &:focus {
           border: 1px solid rgb(256, 256, 256);
         }
+
+        &::placeholder {
+          color: rgba(white, 0.5);
+        }
       }
     }
 
@@ -611,7 +621,7 @@ ul {
       color: $font-color;
       align-content: center;
       align-items: center;
-      background: $color-secondary;
+      background: rgb(var(--secondary-color));
       border: none;
       border-radius: 10px;
       cursor: pointer;
@@ -636,7 +646,7 @@ ul {
       transition-property: box-shadow, transform, background;
 
       &:hover {
-        background: rgba($color-secondary, 0.8);
+        background: rgba(var(--secondary-color), 0.8);
         box-shadow: 5px 10px rgba(0, 0, 0, 0);
         transform: translateY(-2px) scale(1.05);
       }
@@ -667,7 +677,7 @@ ul {
 
   &:hover {
     cursor: pointer;
-    filter: $color-filter-secondary;
+    filter: var(--filter-secondary-color);
     transform: scale(1.1);
     transition: transform 0.3s ease, fill 0.3s ease;
   }
