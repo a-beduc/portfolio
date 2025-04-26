@@ -6,7 +6,7 @@
     "contact": "Contact"
   },
   "banner": {
-    "h4": "Hello, I'm",
+    "h2": "Hello, I'm",
     "h1": "Alexandre Beduc.",
     "p": "A Python Backend Developer, passionate about coding.",
     "button": {
@@ -26,8 +26,8 @@
   },
   "projectCard": {
     "chessApp": {
-      "h2": "Chess App Tournament",
-      "p": "This project"
+      "h2": "Chess Log Tournament",
+      "p": "Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
     },
     "movieIndexWebsite": {
       "h2": "Movie Index Website",
