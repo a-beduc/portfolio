@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alexandre Beduc</title>
-    <link rel="stylesheet" href="static/style/style.css">
+    <link rel="stylesheet" href="/static/style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.g/static.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Electrolize&display=swap" rel="stylesheet">
-    <script src="static/script/scriptHideNav.js" defer></script>
-    <script src="static/script/scriptMenuButton.js" defer></script>
-    <script src="static/script/scriptThemeSwitch.js" defer></script>
-    <script src="static/script/scriptLanguageSwitch.js" defer></script>
+    <script src="/static/script/scriptHideNav.js" defer></script>
+    <script src="/static/script/scriptMenuButton.js" defer></script>
+    <script src="/static/script/scriptThemeSwitch.js" defer></script>
+    <script src="/static/script/scriptLanguageSwitch.js" defer></script>
 </head>
 <body>
 <header>
     <nav class="nav-bar">
-        <div data-translate="name" class="nav-bar__name"></div>
+        <div data-translate="header.name" class="nav-bar__name"></div>
         <button id="menu-button" class="nav-bar__button">
-            <img src="static/images/menu-svgrepo-com.svg" class="nav-bar__button__logo filter" alt="Menu Logo"/>
+            <img src="/static/images/menu-svgrepo-com.svg" class="nav-bar__button__logo filter" alt="Menu icon"/>
         </button>
         <div id="menu" class="nav-bar__menu">
             <ul class="nav-bar__list">
 <!--                <li class="nav-bar__item">-->
-<!--                    <a href="about.html" data-translate="nav.aboutMe" class="nav-bar__link"></a>-->
+<!--                    <a href="about.html" data-translate="header.nav.aboutMe" class="nav-bar__link"></a>-->
 <!--                </li>-->
                 <li class="nav-bar__item">
-                    <a href="#projects" data-translate="nav.project" class="nav-bar__link"></a>
+                    <a href="#projects" data-translate="header.nav.project" class="nav-bar__link"></a>
                 </li>
                 <li class="nav-bar__item">
-                    <a href="#contact" data-translate="nav.contact" class="nav-bar__link"></a>
+                    <a href="#contact" data-translate="header.nav.contact" class="nav-bar__link"></a>
                 </li>
             </ul>
             <div class="nav-bar__menu__widget">
@@ -41,14 +41,14 @@
                 </div>
                 <details class="language-picker">
                     <summary class="language-picker__summary">
-                        <img id="selected-flag" src="static/images/gb.svg" alt="English flag" class="flag-icon" />
+                        <img id="selected-flag" src="/static/images/gb.svg" alt="English flag" class="flag-icon" />
                     </summary>
                     <ul class="language-picker__flag-options">
                         <li data-lang="en" class="language-picker__item">
-                            <img src="static/images/gb.svg" alt="English flag" class="flag-icon" />
+                            <img src="/static/images/gb.svg" alt="English flag" class="flag-icon" />
                         </li>
                         <li data-lang="fr" class="language-picker__item">
-                            <img src="static/images/fr.svg" alt="French flag" class="flag-icon" />
+                            <img src="/static/images/fr.svg" alt="French flag" class="flag-icon" />
                         </li>
                     </ul>
                 </details>
@@ -59,29 +59,37 @@
 
 <div class="banner">
     <div class="banner__content">
-        <h2 data-translate="banner.h2" class="banner__h2"></h2>
-        <h1 data-translate="banner.h1" class="banner__h1"></h1>
-        <p data-translate="banner.p" class="banner__p"></p>
+        <h2 data-translate="index.banner.greeting" class="banner__h2"></h2>
+        <h1 data-translate="index.banner.name" class="banner__h1"></h1>
+        <p data-translate="index.banner.information" class="banner__p"></p>
     </div>
-    <img src="static/images/down-arrow-5-svgrepo-com.svg" class="banner__arrow" alt="icon down arrow">
+    <img src="/static/images/down-arrow-5-svgrepo-com.svg" class="banner__arrow" alt="arrow icon pointing down">
 </div>
 <section id="projects" class="section">
     <div class="project-card">
         <div class="image-container">
-            <img class="image-container__image" alt="Placeholder" src="static/images/project_4-1.png">
+            <a href="/projects/chess-log-app/chess-log-app.html">
+                <img class="image-container__image" alt="image of the chess log app" src="/projects/chess-log-app/assets/project_4-1.png">
+            </a>
         </div>
         <div class="text-container">
             <div class="text-container__head">
-                <h2 class="text-container__title" data-translate="projectCard.chessApp.h2"></h2>
+                <h2 class="text-container__title" data-translate="project.chessLogApp.card.title"></h2>
                 <ul class="text-container__abilities">
-                    <li class="text-container__abilities__item"><span>Python</span></li>
-                    <li class="text-container__abilities__item"><span>MVC</span></li>
+                    <li class="text-container__abilities__item" data-translate="project.chessLogApp.card.skill.01"><span></span></li>
+                    <li class="text-container__abilities__item" data-translate="project.chessLogApp.card.skill.02"><span></span></li>
+                    <li class="text-container__abilities__item" data-translate="project.chessLogApp.card.skill.03"><span></span></li>
                 </ul>
             </div>
             <div class="text-container__body">
-                <p class="text-container__content" data-translate="projectCard.chessApp.p"></p>
+                <p class="text-container__content" data-translate="project.chessLogApp.card.content"></p>
                 <div class="text-container__icon">
-                    <img src="static/images/github-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="Logo of github"/>
+                    <a href="https://github.com/a-beduc/formation_project_4" target="_blank">
+                        <img src="/static/images/github-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="Logo of github"/>
+                    </a>
+                    <a href="/projects/chess-log-app/chess-log-app.html">
+                        <img src="/static/images/arrow-down-right-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="External link to project"/>
+                    </a>
                 </div>
             </div>
         </div>
@@ -92,37 +100,37 @@
 </div>
 <section id="contact" class="section">
     <div class="contact">
-        <h1 data-translate="form.h1" class="contact__title"></h1>
-        <p data-translate="form.p" class="contact__content"></p>
+        <h1 data-translate="index.form.title" class="contact__title"></h1>
+        <p data-translate="index.form.description" class="contact__content"></p>
         <form class="contact__form">
             <div class="contact__form__row">
                 <div class="contact__form__group">
-                    <label for="formFirstName" data-translate="form.labelFirstName"></label>
+                    <label for="formFirstName" data-translate="index.form.labelFirstName"></label>
                     <input type="text" id="formFirstName" name="formFirstName">
                 </div>
                 <div class="contact__form__group">
-                    <label for="formLastName" data-translate="form.labelLastName"></label>
+                    <label for="formLastName" data-translate="index.form.labelLastName"></label>
                     <input type="text" id="formLastName" name="formLastName">
                 </div>
             </div>
             <div class="contact__form__row">
                 <div class="contact__form__group">
-                    <label for="formEMail" data-translate="form.labelEmail"></label>
+                    <label for="formEMail" data-translate="index.form.labelEmail"></label>
                     <input type="text" id="formEMail" name="formEMail">
                 </div>
                 <div class="contact__form__group">
-                    <label for="formCompany" data-translate="form.labelCompany"></label>
+                    <label for="formCompany" data-translate="index.form.labelCompany"></label>
                     <input type="text" id="formCompany" name="formCompany">
                 </div>
             </div>
             <div class="contact__form__row">
                 <div class="contact__form__group full-width">
-                    <label for="formMessage" data-translate="form.labelMessage"></label>
+                    <label for="formMessage" data-translate="index.form.labelMessage"></label>
                     <textarea id="formMessage" name="formMessage" placeholder="Type your message here." rows="4"></textarea>
                 </div>
             </div>
             <div class="contact__form__row">
-                <button class="contact__form__button" data-translate="form.button">Submit</button>
+                <button class="contact__form__button" data-translate="index.form.button">Submit</button>
             </div>
         </form>
     </div>
@@ -131,8 +139,12 @@
     <hr class="line-separator">
 </div>
 <footer class="footer">
-    <img src="static/images/github-svgrepo-com.svg" class="footer__logo filter" alt="Logo of github"/>
-    <img src="static/images/email-svgrepo-com.svg" class="footer__logo filter" alt="Logo of an Email"/>
+    <a href="https://github.com/a-beduc" target="_blank">
+        <img src="/static/images/github-svgrepo-com.svg" class="footer__logo filter" alt="Logo of github"/>
+    </a>
+    <a href="mailto:alexandre.beduc@gmail.com" target="_blank">
+        <img src="/static/images/email-svgrepo-com.svg" class="footer__logo filter" alt="Logo of an Email"/>
+    </a>
 </footer>
 </body>
 </html>
