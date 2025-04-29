@@ -42,11 +42,15 @@ function updateFlagIcon(lang) {
     if (flagMap[lang]) {
         summaryImg.src = flagMap[lang].src;
         summaryImg.alt = flagMap[lang].alt;
-        formPlaceholder.placeholder = flagMap[lang].formPlaceholder;
+        if (formPlaceholder) {
+            formPlaceholder.placeholder = flagMap[lang].formPlaceholder;
+        }
     } else {
         summaryImg.src = flagMap["en"].src;
         summaryImg.alt = flagMap["en"].alt;
-        formPlaceholder.placeholder = flagMap["en"].formPlaceholder;
+        if (formPlaceholder) {
+            formPlaceholder.placeholder = flagMap["en"].formPlaceholder;
+        }
     }
 }
 
