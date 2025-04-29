@@ -1,8 +1,16 @@
 const menuButton = document.getElementById("menu-button");
 const menuBlock = document.getElementById("menu");
+
+function getBasicLocation() {
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    return pathParts.length <= 2 ? "" : "../../";
+}
+
+const basicPath = getBasicLocation();
+
 const menuIcons = {
-    close: '/static/images/menu-svgrepo-com.svg',
-    open: '/static/images/cross-svgrepo-com.svg',
+    close: `${basicPath}static/images/menu-svgrepo-com.svg`,
+    open: `${basicPath}static/images/cross-svgrepo-com.svg`,
 };
 
 menuButton.addEventListener("click", () => {
