@@ -325,41 +325,99 @@ ul {
   }
 }
 
-.project {
+.project-card {
   position: relative;
   width: 100%;
   max-width: 450px;
   height: 300px;
 }
 @media (min-width: 575px) and (max-width: 768px) {
-  .project {
+  .project-card {
     max-width: 600px;
     height: 400px;
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
-  .project {
+  .project-card {
     max-width: 900px;
     height: 600px;
   }
 }
 @media (min-width: 1200px) {
-  .project {
+  .project-card {
     height: 600px;
     max-width: 2000px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .project:nth-child(even) .text-container {
+  .project-card:nth-child(even) .text-container {
     left: 10%;
     right: auto;
     transform: translate(0, -50%);
   }
-  .project:nth-child(odd) .text-container {
+  .project-card:nth-child(odd) .text-container {
     right: 10%;
     left: auto;
     transform: translate(0, -50%);
+  }
+}
+.project-card--detail {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+@media (min-width: 575px) {
+  .project-card--detail {
+    gap: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .project-card--detail {
+    height: 500px;
+  }
+}
+.project-card--detail .image-container {
+  display: flex;
+  position: static;
+  width: 70%;
+  height: auto;
+}
+@media (min-width: 1200px) {
+  .project-card--detail .image-container {
+    position: absolute;
+    height: 500px;
+    width: 750px;
+    left: 8%;
+    right: auto;
+  }
+}
+.project-card--detail .image-container__image {
+  opacity: initial;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.project-card--detail .image-container__image:hover {
+  cursor: initial;
+}
+.project-card--detail .text-container {
+  display: flex;
+  position: static;
+}
+@media (min-width: 575px) {
+  .project-card--detail .text-container {
+    transform: none;
+  }
+}
+@media (min-width: 1200px) {
+  .project-card--detail .text-container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
   }
 }
 
@@ -664,6 +722,13 @@ ul {
   filter: var(--filter-secondary-color);
   transform: scale(1.1);
   transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
