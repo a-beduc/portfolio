@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alexandre Beduc</title>
-    <link rel="stylesheet" href="/static/style/style.css">
+    <link rel="stylesheet" href="static/style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.g/static.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Electrolize&display=swap" rel="stylesheet">
-    <script src="/static/script/scriptHideNav.js" defer></script>
-    <script src="/static/script/scriptMenuButton.js" defer></script>
-    <script src="/static/script/scriptThemeSwitch.js" defer></script>
-    <script src="/static/script/scriptLanguageSwitch.js" defer></script>
+    <script src="static/script/scriptHideNav.js" defer></script>
+    <script src="static/script/scriptMenuButton.js" defer></script>
+    <script src="static/script/scriptThemeSwitch.js" defer></script>
+    <script src="static/script/scriptLanguageSwitch.js" defer></script>
 </head>
 <body>
 <header>
     <nav class="nav-bar">
-        <div data-translate="header.name" class="nav-bar__name"></div>
+        <a href="index.html">
+            <div data-translate="header.name" class="nav-bar__name"></div>
+        </a>
         <button id="menu-button" class="nav-bar__button">
-            <img src="/static/images/menu-svgrepo-com.svg" class="nav-bar__button__logo filter" alt="Menu icon"/>
+            <img src="static/images/menu-svgrepo-com.svg" class="nav-bar__button__logo filter" alt="Menu icon"/>
         </button>
         <div id="menu" class="nav-bar__menu">
             <ul class="nav-bar__list">
@@ -41,14 +43,14 @@
                 </div>
                 <details class="language-picker">
                     <summary class="language-picker__summary">
-                        <img id="selected-flag" src="/static/images/gb.svg" alt="English flag" class="flag-icon" />
+                        <img id="selected-flag" src="static/images/gb.svg" alt="English flag" class="flag-icon" />
                     </summary>
                     <ul class="language-picker__flag-options">
                         <li data-lang="en" class="language-picker__item">
-                            <img src="/static/images/gb.svg" alt="English flag" class="flag-icon" />
+                            <img src="static/images/gb.svg" alt="English flag" class="flag-icon" />
                         </li>
                         <li data-lang="fr" class="language-picker__item">
-                            <img src="/static/images/fr.svg" alt="French flag" class="flag-icon" />
+                            <img src="static/images/fr.svg" alt="French flag" class="flag-icon" />
                         </li>
                     </ul>
                 </details>
@@ -63,13 +65,13 @@
         <h1 data-translate="index.banner.name" class="banner__h1"></h1>
         <p data-translate="index.banner.information" class="banner__p"></p>
     </div>
-    <img src="/static/images/down-arrow-5-svgrepo-com.svg" class="banner__arrow" alt="arrow icon pointing down">
+    <img src="static/images/down-arrow-5-svgrepo-com.svg" class="banner__arrow" alt="arrow icon pointing down">
 </div>
 <section id="projects" class="section">
     <div class="project-card">
         <div class="image-container">
-            <a href="/projects/chess-log-app/chess-log-app.html">
-                <img class="image-container__image" alt="image of the chess log app" src="/projects/chess-log-app/assets/project_4-1.png">
+            <a href="projects/chess-log-app/chess-log-app.html">
+                <img class="image-container__image" alt="image of the chess log app" src="projects/chess-log-app/assets/project_4-1.png">
             </a>
         </div>
         <div class="text-container">
@@ -85,10 +87,10 @@
                 <p class="text-container__content" data-translate="project.chessLogApp.card.content"></p>
                 <div class="text-container__icon">
                     <a href="https://github.com/a-beduc/formation_project_4" target="_blank">
-                        <img src="/static/images/github-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="Logo of github"/>
+                        <img src="static/images/github-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="Logo of github"/>
                     </a>
-                    <a href="/projects/chess-log-app/chess-log-app.html">
-                        <img src="/static/images/arrow-down-right-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="External link to project"/>
+                    <a href="projects/chess-log-app/chess-log-app.html">
+                        <img src="static/images/arrow-down-right-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="External link to project"/>
                     </a>
                 </div>
             </div>
@@ -140,10 +142,10 @@
 </div>
 <footer class="footer">
     <a href="https://github.com/a-beduc" target="_blank">
-        <img src="/static/images/github-svgrepo-com.svg" class="footer__logo filter" alt="Logo of github"/>
+        <img src="static/images/github-svgrepo-com.svg" class="footer__logo filter" alt="Logo of github"/>
     </a>
     <a href="mailto:alexandre.beduc@gmail.com" target="_blank">
-        <img src="/static/images/email-svgrepo-com.svg" class="footer__logo filter" alt="Logo of an Email"/>
+        <img src="static/images/email-svgrepo-com.svg" class="footer__logo filter" alt="Logo of an Email"/>
     </a>
 </footer>
 </body>
