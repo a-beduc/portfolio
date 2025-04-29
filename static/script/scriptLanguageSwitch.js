@@ -5,7 +5,7 @@ async function setLanguage(lang) {
     currentLanguage = lang;
     localStorage.setItem('preferredLang', lang);
 
-    const response = await fetch(`lang/${lang}.json`);
+    const response = await fetch(`/lang/${lang}.json`);
     const translations = await response.json();
     updateText(translations);
 }
@@ -31,8 +31,8 @@ setLanguage(currentLanguage).then(() => {
 });
 
 const flagMap = {
-    fr: { src: "static/images/fr.svg", alt: "French flag", formPlaceholder: "Écrivez votre message ici." },
-    en: { src: "static/images/gb.svg", alt: "English flag", formPlaceholder: "Type your message here." }
+    fr: { src: "/static/images/fr.svg", alt: "French flag", formPlaceholder: "Écrivez votre message ici." },
+    en: { src: "/static/images/gb.svg", alt: "English flag", formPlaceholder: "Type your message here." }
 }
 
 const details = document.querySelector('.language-picker');
@@ -42,11 +42,15 @@ function updateFlagIcon(lang) {
     if (flagMap[lang]) {
         summaryImg.src = flagMap[lang].src;
         summaryImg.alt = flagMap[lang].alt;
-        formPlaceholder.placeholder = flagMap[lang].formPlaceholder;
+        if (formPlaceholder) {
+            formPlaceholder.placeholder = flagMap[lang].formPlaceholder;
+        }
     } else {
         summaryImg.src = flagMap["en"].src;
         summaryImg.alt = flagMap["en"].alt;
-        formPlaceholder.placeholder = flagMap["en"].formPlaceholder;
+        if (formPlaceholder) {
+            formPlaceholder.placeholder = flagMap["en"].formPlaceholder;
+        }
     }
 }
 

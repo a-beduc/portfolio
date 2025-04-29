@@ -1,37 +1,123 @@
-{
-  "name": "Alexandre Beduc.",
-  "nav": {
-    "aboutMe": "À propos de moi",
-    "project": "Projets",
-    "contact": "Contact"
-  },
-  "banner": {
-    "h2": "Bonjour, je suis",
-    "h1": "Alexandre Beduc.",
-    "p": "Un développeur backend Python, passionné par le codage.",
-    "button": {
-      "aboutMe": "Qui suis-je ?",
-      "project": "Mes projets"
+{ "header": {
+    "name": "Alexandre Beduc.",
+    "nav": {
+      "aboutMe": "À propos de moi",
+      "project": "Projets",
+      "contact": "Contact"
     }
   },
-  "form": {
-    "h1": "Entrons en contact",
-    "p": "Si vous avez des questions, n'hésitez pas à me contacter.",
-    "labelFirstName": "Prénom*",
-    "labelLastName": "Nom*",
-    "labelEmail": "E-mail*",
-    "labelCompany": "Entreprise",
-    "labelMessage": "Votre message*",
-    "button": "Envoyer"
-  },
-  "projectCard": {
-    "chessApp": {
-      "h2": "Chess Log Tournament",
-      "p": "Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+  "index": {
+    "banner": {
+      "greeting": "Salut, je suis",
+      "name": "Alexandre Beduc.",
+      "information": "Développeur Python Junior."
     },
-    "movieIndexWebsite": {
-      "h2": "Site Web Index de Films",
-      "p": "Ce projet a été réalisé dans le cadre de la formation Développeur d'Applications Python sur OpenClassrooms. Il comprend la mise en œuvre d'un design spécifique de site web en utilisant uniquement HTML et CSS. La requête API pour créer le contenu du site a été écrite en JavaScript."
+    "form": {
+      "title": "Entrons en contact",
+      "description": "Si vous avez des questions, une opportunité d'emploi ou un projet en tête, n'hésitez pas à me contacter. Je suis impatient de discuter de la manière dont nous pourrions collaborer.",
+      "labelFirstName": "Prénom*",
+      "labelLastName": "Nom*",
+      "labelEmail": "E-mail*",
+      "labelCompany": "Entreprise",
+      "labelMessage": "Votre message*",
+      "button": "Envoyer"
+    }
+  },
+  "project": {
+    "chessLogApp": {
+      "card": {
+        "title": "Chess Log Tournament",
+        "skill": {
+          "01": "Python",
+          "02": "MVC",
+          "03": "Curses"
+        },
+        "content": "Automatise l’organisation d’un tournoi d’échecs : saisie des résultats, appariements système suisse et classement en temps réel."
+      },
+      "detail": {
+        "description": {
+          "title": "Logiciel de tournoi",
+          "content": {
+            "01": "Calculer les scores pendant un tournoi d'échec doit être une tâche la plus simple possible pour utiliser sa matière grise pour ce qui compte vraiment, calculer le prochain coup. Fini les feuilles de score égarées, les appariements approximatifs et les erreurs d'additions. Désormais grâce à notre logiciel affiché dans le terminal, vous pourrez décharger l'arbitre de ces tâches répétitives.",
+            "02": "Chess Log Tournament",
+            "03": " est un gestionnaire de tournoi écrit 100% en Python, basé sur le ",
+            "04": "design pattern MVC,",
+            "05": " et une interface soignée grâce au ",
+            "06": "module curses."
+            }
+          },
+        "imageText": {
+          "01": "",
+          "02": "Exemple de fonctionnement lors d'un tournoi",
+          "03": ""
+        },
+        "whatILearned": {
+          "title": "Des choix fonctionnels",
+          "content": {
+            "01": "Malgré un cahier des charges techniques complet, certains points restaient ouverts à interprétation ; l'implémentation suit donc ces principes : ",
+            "02": " > Chaque action (création de joueur, saisie de résultat, lancement d’un round) est immédiatement sauvegardée dans des fichiers JSON qui font office de base de données ; cela garantit une reprise instantanée après coupure et permet des modifications faciles directement dans les fichiers.",
+            "03": " > L’algorithme d’appariement implémente la \"circle method\" du round-robin : pour n joueurs, il génère automatiquement n - 1 rounds où personne n’affronte deux fois le même adversaire. À chaque nouveau round, le logiciel extrait parmi les appariements disponibles celui qui fait s’opposer les joueurs aux meilleurs scores.",
+            "04": " > L’interface repose entièrement sur le module curses (issu de la bibliothèque C homonyme). Fenêtres et navigation se pilotent uniquement au clavier, pour une expérience fluide et intuitive."
+          }
+        }
+      }
+    },
+    "movieWebsite": {
+      "card": {
+        "title": "Site Web Index de Films",
+        "skill": {
+          "01": "placeholder"
+        },
+        "content": "Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+      },
+      "detail": {
+        "description": {
+          "title": "placeholder",
+          "content": "placeholder"
+          },
+        "whatILearned": {
+          "title": "placeholder",
+          "content": "placeholder"
+        }
+      }
+    },
+    "LITRevu": {
+      "card": {
+        "title": "Chess Log Tournament",
+        "skill": {
+          "01": "placeholder"
+        },
+        "content": "Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+      },
+      "detail": {
+        "description": {
+          "title": "placeholder",
+          "content": "placeholder"
+        },
+        "whatILearned": {
+          "title": "placeholder",
+          "content": "placeholder"
+        }
+      }
+    },
+    "SoftDesk": {
+      "card": {
+        "title": "Chess Log Tournament",
+        "skill": {
+          "01": "placeholder"
+        },
+        "content": "Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+      },
+      "detail": {
+        "description": {
+          "title": "placeholder",
+          "content": "placeholder"
+          },
+        "whatILearned": {
+          "title": "placeholder",
+          "content": "placeholder"
+        }
+      }
     }
   }
 }

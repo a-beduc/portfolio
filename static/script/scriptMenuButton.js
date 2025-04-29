@@ -1,8 +1,8 @@
 const menuButton = document.getElementById("menu-button");
 const menuBlock = document.getElementById("menu");
 const menuIcons = {
-    close: 'static/images/menu-svgrepo-com.svg',
-    open: 'static/images/cross-svgrepo-com.svg',
+    close: '/static/images/menu-svgrepo-com.svg',
+    open: '/static/images/cross-svgrepo-com.svg',
 };
 
 menuButton.addEventListener("click", () => {
