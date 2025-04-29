@@ -38,8 +38,8 @@ setLanguage(currentLanguage).then(() => {
 });
 
 const flagMap = {
-    fr: { src: "static/images/fr.svg", alt: "French flag", formPlaceholder: "Écrivez votre message ici." },
-    en: { src: "static/images/gb.svg", alt: "English flag", formPlaceholder: "Type your message here." }
+    fr: { src: `${basePath}static/images/fr.svg`, alt: "French flag", formPlaceholder: "Écrivez votre message ici." },
+    en: { src: `${basePath}static/images/gb.svg`, alt: "English flag", formPlaceholder: "Type your message here." }
 }
 
 const details = document.querySelector('.language-picker');
