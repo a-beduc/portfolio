@@ -1,37 +1,123 @@
-{
-  "name": "Alexandre Beduc.",
-  "nav": {
-    "aboutMe": "About me",
-    "project": "Projects",
-    "contact": "Contact"
-  },
-  "banner": {
-    "h2": "Hello, I'm",
-    "h1": "Alexandre Beduc.",
-    "p": "A Python Backend Developer, passionate about coding.",
-    "button": {
-      "aboutMe": "Who am I?",
-      "project": "My Projects"
+{ "header": {
+    "name": "Alexandre Beduc.",
+    "nav": {
+      "aboutMe": "About me",
+      "project": "Projects",
+      "contact": "Contact"
     }
   },
-  "form": {
-    "h1": "Get in touch",
-    "p": "If you have any questions, don't hesitate to reach out.",
-    "labelFirstName": "First name*",
-    "labelLastName": "Last name*",
-    "labelEmail": "Email*",
-    "labelCompany": "Company",
-    "labelMessage": "Your message*",
-    "button": "Submit"
-  },
-  "projectCard": {
-    "chessApp": {
-      "h2": "Chess Log Tournament",
-      "p": "Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+  "index": {
+    "banner": {
+      "greeting": "Hello, I'm",
+      "name": "Alexandre Beduc.",
+      "information": "Junior Python Developer."
     },
-    "movieIndexWebsite": {
-      "h2": "Movie Index Website",
-      "p": "This project has been completed as part of the formation for Python Application Developer on OpenClassrooms. It encompasses the implementation of a specific website design using only HTML and CSS. The API request to create the content of the website has been written in Javascript."
+    "form": {
+      "title": "Get in touch",
+      "description": "If you have any questions, a job opportunity, or a project in mind, feel free to contact me. I look forward to discussing how we could collaborate.",
+      "labelFirstName": "First name*",
+      "labelLastName": "Last name*",
+      "labelEmail": "Email*",
+      "labelCompany": "Company",
+      "labelMessage": "Your message*",
+      "button": "Submit"
+    }
+  },
+  "project": {
+  "chessLogApp": {
+    "card": {
+      "title": "Chess Log Tournament",
+      "skill": {
+        "01": "Python",
+        "02": "MVC",
+        "03": "Curses"
+      },
+      "content": "Automates tournament management: result entry, Swiss-system pairings and live standings."
+    },
+    "detail": {
+      "description": {
+        "title": "Tournament software",
+        "content": {
+          "01": "Scoring a chess tournament should be as simple as possible so you can use your brainpower for what really matters: planning the next move. No more lost score sheets, approximate pairings or addition mistakes. With our terminal-based software, the arbiter is freed from repetitive chores.",
+          "02": "Chess Log Tournament",
+          "03": " is a tournament manager written 100% in Python, built on the ",
+          "04": "MVC design pattern,",
+          "05": " with a polished interface thanks to the ",
+          "06": "curses module."
+        }
+      },
+      "imageText": {
+        "01": "",
+        "02": "Example of the software during a tournament",
+        "03": ""
+      },
+      "whatILearned": {
+        "title": "Functional choices",
+        "content": {
+          "01": "Although the technical specifications were complete, some points were open to interpretation; the implementation therefore follows these principles: ",
+          "02": " > Every action (creating a player, entering a result, starting a round) is immediately saved to JSON files that serve as a database; this guarantees instant recovery after a power cut and enables easy manual edits.",
+          "03": " > The pairing algorithm implements the \"circle method\" of round-robin: for n players it automatically generates n - 1 rounds where no one meets the same opponent twice. For each new round the software chooses from the remaining pairings the one that pits the top-scoring players against each other.",
+          "04": " > The interface is entirely based on the curses module (from the C library of the same name). Windows and navigation are driven solely by the keyboard for a smooth and intuitive experience."
+        }
+      }
+    }
+  },
+    "movieWebsite": {
+      "card": {
+        "title": "Site Web Index de Films",
+        "skill": {
+          "01": "placeholder"
+        },
+        "content": "Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+      },
+      "detail": {
+        "description": {
+          "title": "placeholder",
+          "content": "placeholder"
+          },
+        "whatILearned": {
+          "title": "placeholder",
+          "content": "placeholder"
+        }
+      }
+    },
+    "LITRevu": {
+      "card": {
+        "title": "Chess Log Tournament",
+        "skill": {
+          "01": "placeholder"
+        },
+        "content": "Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+      },
+      "detail": {
+        "description": {
+          "title": "placeholder",
+          "content": "placeholder"
+        },
+        "whatILearned": {
+          "title": "placeholder",
+          "content": "placeholder"
+        }
+      }
+    },
+    "SoftDesk": {
+      "card": {
+        "title": "Chess Log Tournament",
+        "skill": {
+          "01": "placeholder"
+        },
+        "content": "Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+      },
+      "detail": {
+        "description": {
+          "title": "placeholder",
+          "content": "placeholder"
+          },
+        "whatILearned": {
+          "title": "placeholder",
+          "content": "placeholder"
+        }
+      }
     }
   }
 }
