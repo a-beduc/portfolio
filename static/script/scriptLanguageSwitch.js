@@ -1,11 +1,18 @@
 let storedLang = localStorage.getItem('preferredLang');
 let currentLanguage = storedLang || 'en';
 
+function getBaseLocation() {
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    return pathParts.length <= 2 ? "" : "../../";
+}
+
+const basePath = getBaseLocation();
+
 async function setLanguage(lang) {
     currentLanguage = lang;
     localStorage.setItem('preferredLang', lang);
 
-    const response = await fetch(`/lang/${lang}.json`);
+    const response = await fetch(`${basePath}lang/${lang}.json`);
     const translations = await response.json();
     updateText(translations);
 }
@@ -31,8 +38,8 @@ setLanguage(currentLanguage).then(() => {
 });
 
 const flagMap = {
-    fr: { src: "/static/images/fr.svg", alt: "French flag", formPlaceholder: "Écrivez votre message ici." },
-    en: { src: "/static/images/gb.svg", alt: "English flag", formPlaceholder: "Type your message here." }
+    fr: { src: "static/images/fr.svg", alt: "French flag", formPlaceholder: "Écrivez votre message ici." },
+    en: { src: "static/images/gb.svg", alt: "English flag", formPlaceholder: "Type your message here." }
 }
 
 const details = document.querySelector('.language-picker');
