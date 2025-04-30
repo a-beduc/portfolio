@@ -9,7 +9,7 @@ $breakpoint-tablet-max: 900px;
 $breakpoint-desktop-min: 1200px;
 
 :root {
-  font-size: 16px;
+  font-size: 14px;
 
   --primary-color: 26, 36, 51;
   --secondary-color: 53, 141, 222;
@@ -18,7 +18,7 @@ $breakpoint-desktop-min: 1200px;
   --filter-secondary-color: invert(53%) sepia(96%) saturate(2247%) hue-rotate(187deg) brightness(90%) contrast(92%);
 
   @media (min-width: $breakpoint-tablet-min) {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
