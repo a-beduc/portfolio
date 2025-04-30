@@ -62,60 +62,40 @@
         }
       }
     },
-    "movieWebsite": {
+    "litrevu": {
       "card": {
-        "title": "Site Web Index de Films",
+        "title": "LITRevu Website",
         "skill": {
-          "01": "placeholder"
+          "01": "Django",
+          "02": "Jinja2",
+          "03": "SQLite"
         },
-        "content": "Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
+        "content": "Site de partage et de demande de critiques de livres. Fil d’actualité personnalisé grâce à un système d’abonnements et de blocages."
       },
       "detail": {
         "description": {
-          "title": "placeholder",
-          "content": "placeholder"
+          "title": "Site de critique de livres",
+          "content": {
+            "01": "Envie de savoir si ce roman de 900 pages vaut vraiment le détour ? Besoin de recommander votre dernière pépite littéraire à des passionnés ? LITRevu est fait pour vous : ouvrez un ticket, demandez une critique ou publiez la vôtre, le tout dans une interface épurée.",
+            "02": "LITRevu",
+            "03": " développé avec ",
+            "04": "Django",
+            "05": " et une base ",
+            "06": "SQLite",
+            "07": " propose une expérience minimaliste mais complète pour échanger autour de la lecture."
+            }
           },
-        "whatILearned": {
-          "title": "placeholder",
-          "content": "placeholder"
-        }
-      }
-    },
-    "LITRevu": {
-      "card": {
-        "title": "Chess Log Tournament",
-        "skill": {
-          "01": "placeholder"
-        },
-        "content": "Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
-      },
-      "detail": {
-        "description": {
-          "title": "placeholder",
-          "content": "placeholder"
+        "imageText": {
+          "01": "",
+          "02": "Site en cours d'utilisation",
+          "03": "Système d'abonnement"
         },
         "whatILearned": {
-          "title": "placeholder",
-          "content": "placeholder"
-        }
-      }
-    },
-    "SoftDesk": {
-      "card": {
-        "title": "Chess Log Tournament",
-        "skill": {
-          "01": "placeholder"
-        },
-        "content": "Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis."
-      },
-      "detail": {
-        "description": {
-          "title": "placeholder",
-          "content": "placeholder"
-          },
-        "whatILearned": {
-          "title": "placeholder",
-          "content": "placeholder"
+          "title": "Premiers pas avec Django",
+          "content": {
+            "01": "Ce projet m'a permis de décourir le framework Django : l'architecture MVT, le routage, les modèles et leurs formulaires. J’ai mis en place un fil d’actualité dynamique, un système d’abonnement/blocage entre utilisateurs.",
+            "02": "Côté interface, si celle-ci reste très basique, j’ai créé des widgets personnalisés, ajouté des interactions JavaScript légères et structuré les styles en SCSS pour un code plus maintenable."
+          }
         }
       }
     }

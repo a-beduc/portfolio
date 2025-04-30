@@ -1,5 +1,5 @@
 :root {
-  font-size: 16px;
+  font-size: 14px;
   --primary-color: 26, 36, 51;
   --secondary-color: 53, 141, 222;
   --tertiary-color: 55, 85, 125;
@@ -8,7 +8,7 @@
 }
 @media (min-width: 768px) {
   :root {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
