@@ -98,6 +98,43 @@
           }
         }
       }
+    },
+    "softdesk": {
+      "card": {
+        "title": "SoftDesk API",
+        "skill": {
+          "01": "Django REST Framework",
+          "02": "Postman",
+          "03": "SQLite"
+        },
+        "content": "API REST pour le suivi de projets, cloisonnée par un système de permissions."
+      },
+      "detail": {
+        "description": {
+          "title": "API de gestion de projets",
+          "content": {
+            "01": "Cette API RESTful permet aux utilisateurs de créer et gérer des projets. Organisez votre travail avec vos contributeurs via un système de tickets et de commentaires. Travaillez efficacement en équipe, avec des rôles clairement définis.",
+            "02": "SoftDesk API,",
+            "03": " développée avec ",
+            "04": "Django REST Framework",
+            "05": " et une base ",
+            "06": "SQLite,",
+            "07": " intègre une authentification JWT, des permissions fines et des filtres sur chaque liste pour retrouver rapidement la ressource désirée."
+          }
+        },
+        "imageText": {
+          "01": "",
+          "02": "Schéma des relations",
+          "03": ""
+        },
+        "whatILearned": {
+          "title": "Concevoir une API sécurisée",
+          "content": {
+            "01": "J’ai conçu ma première API complète : modélisation relationnelle, sérialiseurs imbriqués et routes HATEOAS grâce à drf-nested-routers. J’ai mis en place l’authentification JWT ainsi qu’un système de permissions sur mesure pour assurer la sécurité des projets.",
+            "02": "Côté outillage, j’ai créé une collection Postman exhaustive et ajouté des filtres dynamiques."
+          }
+        }
+      }
     }
   }
 }

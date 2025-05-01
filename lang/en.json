@@ -76,7 +76,7 @@
         "description": {
           "title": "Book-review platform",
           "content": {
-            "01": "Want to know if that 900-page novel is really worth the effort? Eager to recommend your latest literary gem to fellow readers? LITRevu has you covered: open a ticket, request a review or publish your own—all in a clean interface.",
+            "01": "Want to know if that 900-page novel is really worth the effort? Eager to recommend your latest literary gem to fellow readers? LITRevu has you covered: open a ticket, request a review or publish your own ; all in a clean interface.",
             "02": "LITRevu",
             "03": " developed with ",
             "04": "Django",
@@ -94,7 +94,44 @@
           "title": "First steps with Django",
           "content": {
             "01": "This project introduced me to the Django framework: MVT architecture, routing, relational models and their forms. I implemented a dynamic news feed and a user follow/block feature.",
-            "02": "On the UI side—although it remains quite minimal, I built custom widgets, added light JavaScript interactions and organised styles in SCSS for cleaner, more maintainable code."
+            "02": "On the UI side, although it remains quite minimal, I built custom widgets, added light JavaScript interactions and organised styles in SCSS for cleaner, more maintainable code."
+          }
+        }
+      }
+    },
+    "softdesk": {
+      "card": {
+        "title": "SoftDesk API",
+        "skill": {
+          "01": "Django REST Framework",
+          "02": "Postman",
+          "03": "SQLite"
+        },
+        "content": "RESTful API for project tracking, secured by a permission system."
+      },
+      "detail": {
+        "description": {
+          "title": "Project-management API",
+          "content": {
+            "01": "This RESTful API lets users create and manage projects. Coordinate work with contributors through tickets and comments, and keep everyone organized with clearly defined roles.",
+            "02": "SoftDesk",
+            "03": " was built with ",
+            "04": "Django REST Framework",
+            "05": " and a ",
+            "06": "SQLite",
+            "07": " database. It features JWT authentication, fine-tuned permissions, and filters on every list endpoint to quickly find the wanted resource."
+          }
+        },
+        "imageText": {
+          "01": "",
+          "02": "Relationship diagram",
+          "03": ""
+        },
+        "whatILearned": {
+          "title": "Building a secure API",
+          "content": {
+            "01": "This was my first full API project: relational modeling, nested serializers, and HATEOAS-style routes using drf-nested-routers. I implemented JWT authentication plus a custom permission scheme to isolate and secure each project.",
+            "02": "Tooling side: I produced a comprehensive Postman collection and added dynamic filters."
           }
         }
       }
