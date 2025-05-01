@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SoftDesk App</title>
+    <link rel="stylesheet" href="../../static/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.g/static.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Electrolize&display=swap" rel="stylesheet">
+    <script src="../../static/script/scriptHideNav.js" defer></script>
+    <script src="../../static/script/scriptMenuButton.js" defer></script>
+    <script src="../../static/script/scriptThemeSwitch.js" defer></script>
+    <script src="../../static/script/scriptLanguageSwitch.js" defer></script>
+</head>
+<body>
+<header>
+    <nav class="nav-bar">
+        <a data-translate="header.name" class="nav-bar__name" href="../../index.html"></a>
+        <button id="menu-button" class="nav-bar__button">
+            <img src="../../static/images/menu-svgrepo-com.svg" class="nav-bar__button__logo filter" alt="Menu Logo"/>
+        </button>
+        <div id="menu" class="nav-bar__menu">
+            <ul class="nav-bar__list">
+<!--                <li class="nav-bar__item">-->
+<!--                    <a href="about.html" data-translate="header.nav.aboutMe" class="nav-bar__link"></a>-->
+<!--                </li>-->
+                <li class="nav-bar__item">
+                    <a href="../../index.html#projects" data-translate="header.nav.project" class="nav-bar__link"></a>
+                </li>
+                <li class="nav-bar__item">
+                    <a href="../../index.html#contact" data-translate="header.nav.contact" class="nav-bar__link"></a>
+                </li>
+            </ul>
+            <div class="nav-bar__menu__widget">
+                <div class="theme">
+                    <label class="theme__toggle">
+                        <input id="theme-toggle" type="checkbox" class="theme__toggle__input">
+                        <span class="theme__toggle__control"></span>
+                    </label>
+                </div>
+                <details class="language-picker">
+                    <summary class="language-picker__summary">
+                        <img id="selected-flag" src="../../static/images/gb.svg" alt="English flag" class="flag-icon" />
+                    </summary>
+                    <ul class="language-picker__flag-options">
+                        <li data-lang="en" class="language-picker__item">
+                            <img src="../../static/images/gb.svg" alt="English flag" class="flag-icon" />
+                        </li>
+                        <li data-lang="fr" class="language-picker__item">
+                            <img src="../../static/images/fr.svg" alt="French flag" class="flag-icon" />
+                        </li>
+                    </ul>
+                </details>
+            </div>
+        </div>
+    </nav>
+</header>
+<main class="main-container">
+    <div class="project-card project-card--detail">
+        <div class="image-container">
+            <img class="image-container__image" alt="Placeholder" src="assets/project_10-1.png">
+        </div>
+        <div class="text-container">
+            <div class="text-container__head">
+                <h2 class="text-container__title" data-translate="project.softdesk.card.title"></h2>
+                <ul class="text-container__abilities">
+                    <li class="text-container__abilities__item" data-translate="project.softdesk.card.skill.01"><span></span></li>
+                    <li class="text-container__abilities__item" data-translate="project.softdesk.card.skill.02"><span></span></li>
+                    <li class="text-container__abilities__item" data-translate="project.softdesk.card.skill.03"><span></span></li>
+                </ul>
+            </div>
+            <div class="text-container__body">
+                <p class="text-container__content" data-translate="project.softdesk.card.content"></p>
+                <div class="text-container__icon">
+                    <a href="https://github.com/a-beduc/formation_project_10" target="_blank">
+                        <img src="../../static/images/github-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="Logo of github"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project-info">
+        <h2 class="project-info__title" data-translate="project.softdesk.detail.description.title"></h2>
+        <hr class="line-separator">
+        <p class="project-info__content" >
+            <span data-translate="project.softdesk.detail.description.content.01"></span>
+        <p>
+        <p class="project-info__content" >
+            <span data-translate="project.softdesk.detail.description.content.02" class="bold"></span>
+            <span data-translate="project.softdesk.detail.description.content.03"></span>
+            <span data-translate="project.softdesk.detail.description.content.04" class="bold"></span>
+            <span data-translate="project.softdesk.detail.description.content.05"></span>
+            <span data-translate="project.softdesk.detail.description.content.06" class="bold"></span>
+            <span data-translate="project.softdesk.detail.description.content.07"></span>
+        </p>
+        <div class="project-info__image-block">
+            <img src="assets/project_10-2.png" alt="placeholder_text" class="project-info__image-block__image"/>
+            <span class="project-info__image-block__description" data-translate="project.softdesk.detail.imageText.01"></span>
+        </div>
+        <div class="project-info__image-block">
+            <img src="assets/project_10-4.png" alt="placeholder_text" class="project-info__image-block__image"/>
+            <span class="project-info__image-block__description" data-translate="project.softdesk.detail.imageText.02"></span>
+        </div>
+        <div class="project-info__image-block">
+            <img src="assets/project_10-3.png" alt="placeholder_text" class="project-info__image-block__image"/>
+            <span class="project-info__image-block__description" data-translate="project.softdesk.detail.imageText.03"></span>
+        </div>
+        <h2 class="project-info__title" data-translate="project.softdesk.detail.whatILearned.title"></h2>
+        <hr class="line-separator">
+        <p class="project-info__content" data-translate="project.softdesk.detail.whatILearned.content.01"></p>
+        <p class="project-info__content" data-translate="project.softdesk.detail.whatILearned.content.02"></p>
+    </div>
+</main>
+<hr class="line-separator">
+<footer class="footer">
+    <a href="https://github.com/a-beduc" target="_blank">
+        <img src="../../static/images/github-svgrepo-com.svg" class="footer__logo filter" alt="Logo of github"/>
+    </a>
+    <a href="mailto:alexandre.beduc@gmail.com" target="_blank">
+        <img src="../../static/images/email-svgrepo-com.svg" class="footer__logo filter" alt="Logo of an Email"/>
+    </a>
+</footer>
+</body>
