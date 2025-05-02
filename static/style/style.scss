@@ -343,7 +343,7 @@ ul {
 }
 
 .section {
-  padding: 2rem 0;
+  padding: 7.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -753,6 +753,20 @@ ul {
         background: rgba(var(--secondary-color), 0.8);
         box-shadow: 5px 10px rgba(0, 0, 0, 0);
         transform: translateY(-2px) scale(1.05);
+      }
+    }
+
+    &__flash {
+      font-style: italic;
+      font-size: 0.8rem;
+      display: none;
+
+      @media (min-width: $breakpoint-tablet-min) {
+        text-align: end;
+      }
+
+      &--display {
+        display: block;
       }
     }
   }

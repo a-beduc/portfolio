@@ -45,7 +45,7 @@ const flagMap = {
 const details = document.querySelector('.language-picker');
 function updateFlagIcon(lang) {
     const summaryImg = document.getElementById('selected-flag');
-    const formPlaceholder = document.getElementById('formMessage');
+    const formPlaceholder = document.getElementById('message');
     if (flagMap[lang]) {
         summaryImg.src = flagMap[lang].src;
         summaryImg.alt = flagMap[lang].alt;
