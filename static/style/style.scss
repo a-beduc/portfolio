@@ -759,14 +759,9 @@ ul {
     &__flash {
       font-style: italic;
       font-size: 0.8rem;
-      display: none;
 
       @media (min-width: $breakpoint-tablet-min) {
         text-align: end;
-      }
-
-      &--display {
-        display: block;
       }
     }
   }

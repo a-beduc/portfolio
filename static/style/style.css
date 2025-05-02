@@ -718,15 +718,11 @@ ul {
 .contact__form__flash {
   font-style: italic;
   font-size: 0.8rem;
-  display: none;
 }
 @media (min-width: 768px) {
   .contact__form__flash {
     text-align: end;
   }
-}
-.contact__form__flash--display {
-  display: block;
 }
 
 .footer {
