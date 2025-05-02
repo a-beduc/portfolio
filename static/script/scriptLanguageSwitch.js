@@ -1,6 +1,8 @@
 let storedLang = localStorage.getItem('preferredLang');
 let currentLanguage = storedLang || 'en';
 
+const flashedMessage = document.getElementById('msgBox');
+
 function getBaseLocation() {
     const pathParts = window.location.pathname.split('/').filter(Boolean);
     return pathParts.length <= 2 ? "" : "../../";
@@ -11,6 +13,10 @@ const basePath = getBaseLocation();
 async function setLanguage(lang) {
     currentLanguage = lang;
     localStorage.setItem('preferredLang', lang);
+
+    if (flashedMessage) {
+        flashedMessage.innerText = "";
+    }
 
     const response = await fetch(`${basePath}lang/${lang}.json`);
     const translations = await response.json();
@@ -42,10 +48,9 @@ const flagMap = {
     en: { src: `${basePath}static/images/gb.svg`, alt: "English flag", formPlaceholder: "Type your message here." }
 }
 
-const details = document.querySelector('.language-picker');
 function updateFlagIcon(lang) {
     const summaryImg = document.getElementById('selected-flag');
-    const formPlaceholder = document.getElementById('formMessage');
+    const formPlaceholder = document.getElementById('message');
     if (flagMap[lang]) {
         summaryImg.src = flagMap[lang].src;
         summaryImg.alt = flagMap[lang].alt;

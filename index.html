@@ -12,6 +12,7 @@
     <script src="static/script/scriptMenuButton.js" defer></script>
     <script src="static/script/scriptThemeSwitch.js" defer></script>
     <script src="static/script/scriptLanguageSwitch.js" defer></script>
+    <script src="static/script/scriptFormSubmit.js" defer></script>
 </head>
 <body>
 <header>
@@ -160,35 +161,39 @@
     <div class="contact">
         <h1 data-translate="index.form.title" class="contact__title"></h1>
         <p data-translate="index.form.description" class="contact__content"></p>
-        <form class="contact__form">
+        <form id="contactForm" class="contact__form" novalidate>
             <div class="contact__form__row">
                 <div class="contact__form__group">
-                    <label for="formFirstName" data-translate="index.form.labelFirstName"></label>
-                    <input type="text" id="formFirstName" name="formFirstName">
+                    <label id="first_name_label" for="first_name" data-translate="index.form.labelFirstName"></label>
+                    <input type="text" id="first_name" name="first_name">
                 </div>
                 <div class="contact__form__group">
-                    <label for="formLastName" data-translate="index.form.labelLastName"></label>
-                    <input type="text" id="formLastName" name="formLastName">
+                    <label id="last_name_label" for="last_name" data-translate="index.form.labelLastName"></label>
+                    <input type="text" id="last_name" name="last_name">
                 </div>
             </div>
             <div class="contact__form__row">
                 <div class="contact__form__group">
-                    <label for="formEMail" data-translate="index.form.labelEmail"></label>
-                    <input type="text" id="formEMail" name="formEMail">
+                    <label id="email_label" for="email" data-translate="index.form.labelEmail"></label>
+                    <input type="email" id="email" name="email">
                 </div>
                 <div class="contact__form__group">
-                    <label for="formCompany" data-translate="index.form.labelCompany"></label>
-                    <input type="text" id="formCompany" name="formCompany">
+                    <label id="company_label" for="company" data-translate="index.form.labelCompany"></label>
+                    <input type="text" id="company" name="company">
                 </div>
             </div>
             <div class="contact__form__row">
                 <div class="contact__form__group full-width">
-                    <label for="formMessage" data-translate="index.form.labelMessage"></label>
-                    <textarea id="formMessage" name="formMessage" placeholder="Type your message here." rows="4"></textarea>
+                    <label id="message_label" for="message" data-translate="index.form.labelMessage"></label>
+                    <textarea id="message" name="message" placeholder="Type your message here." rows="4"></textarea>
                 </div>
             </div>
+            <p id="msgBox" class="contact__form__flash contact__form__flash--display"></p>
             <div class="contact__form__row">
-                <button class="contact__form__button" data-translate="index.form.button">Submit</button>
+                <button id="submitButton"
+                        class="contact__form__button"
+                        type="submit"
+                        data-translate="index.form.button"></button>
             </div>
         </form>
     </div>
