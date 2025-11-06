@@ -32,7 +32,7 @@ function onScroll() {
     lastScroll = currentY;
     const speed = 0.02;
     const botDrift = -15;
-    const topDrift = 5
+    const topDrift = 5;
 
 
     visible.forEach(function (element) {
