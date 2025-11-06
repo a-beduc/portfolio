@@ -13,6 +13,7 @@
     <script src="static/script/scriptThemeSwitch.js" defer></script>
     <script src="static/script/scriptLanguageSwitch.js" defer></script>
     <script src="static/script/scriptFormSubmit.js" defer></script>
+    <script src="static/script/scriptParallax.js" defer></script>
 </head>
 <body>
 <header>
@@ -69,13 +70,13 @@
     <img src="static/images/down-arrow-5-svgrepo-com.svg" class="banner__arrow" alt="arrow icon pointing down">
 </div>
 <section id="projects" class="section">
-    <div class="project-card">
+    <div class="project-card" id="chess-log-app">
         <div class="image-container">
             <a href="projects/chess-log-app/chess-log-app.html">
                 <img class="image-container__image" alt="image of the chess log app" src="projects/chess-log-app/assets/project_4-1.png">
             </a>
         </div>
-        <div class="text-container">
+        <div class="text-container parallax">
             <div class="text-container__head">
                 <h2 class="text-container__title" data-translate="project.chessLogApp.card.title"></h2>
                 <ul class="text-container__abilities">
@@ -97,13 +98,13 @@
             </div>
         </div>
     </div>
-    <div class="project-card">
+    <div class="project-card" id="litrevu-app">
         <div class="image-container">
             <a href="projects/litrevu-app/litrevu-app.html">
                 <img class="image-container__image" alt="image of the chess log app" src="projects/litrevu-app/assets/project_9-2.png">
             </a>
         </div>
-        <div class="text-container">
+        <div class="text-container parallax">
             <div class="text-container__head">
                 <h2 class="text-container__title" data-translate="project.litrevu.card.title"></h2>
                 <ul class="text-container__abilities">
@@ -125,13 +126,13 @@
             </div>
         </div>
     </div>
-    <div class="project-card">
+    <div class="project-card" id="softdesk-app">
         <div class="image-container">
             <a href="projects/softdesk-app/softdesk-app.html">
                 <img class="image-container__image" alt="image of the chess log app" src="projects/softdesk-app/assets/project_10-1.png">
             </a>
         </div>
-        <div class="text-container">
+        <div class="text-container parallax">
             <div class="text-container__head">
                 <h2 class="text-container__title" data-translate="project.softdesk.card.title"></h2>
                 <ul class="text-container__abilities">
@@ -147,6 +148,36 @@
                         <img src="static/images/github-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="Logo of github"/>
                     </a>
                     <a href="projects/softdesk-app/softdesk-app.html">
+                        <img src="static/images/arrow-down-right-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="External link to project"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project-card" id="eecrm-app">
+        <div class="image-container">
+            <a href="projects/eecrm-app/eecrm-app.html">
+                <img class="image-container__image" alt="image of the chess log app" src="projects/eecrm-app/assets/project_10-1.png">
+            </a>
+        </div>
+        <div class="text-container parallax">
+            <div class="text-container__head">
+                <h2 class="text-container__title" data-translate="project.eecrm.card.title"></h2>
+                <ul class="text-container__abilities">
+                    <li class="text-container__abilities__item" data-translate="project.eecrm.card.skill.01"><span></span></li>
+                    <li class="text-container__abilities__item" data-translate="project.eecrm.card.skill.02"><span></span></li>
+                    <li class="text-container__abilities__item" data-translate="project.eecrm.card.skill.03"><span></span></li>
+                    <li class="text-container__abilities__item" data-translate="project.eecrm.card.skill.04"><span></span></li>
+                    <li class="text-container__abilities__item" data-translate="project.eecrm.card.skill.05"><span></span></li>
+                </ul>
+            </div>
+            <div class="text-container__body">
+                <p class="text-container__content" data-translate="project.eecrm.card.content"></p>
+                <div class="text-container__icon">
+                    <a href="https://github.com/a-beduc/formation_project_10" target="_blank">
+                        <img src="static/images/github-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="Logo of github"/>
+                    </a>
+                    <a href="projects/eecrm-app/eecrm-app.html">
                         <img src="static/images/arrow-down-right-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="External link to project"/>
                     </a>
                 </div>
@@ -205,7 +236,7 @@
     <a href="https://github.com/a-beduc" target="_blank">
         <img src="static/images/github-svgrepo-com.svg" class="footer__logo filter" alt="Logo of github"/>
     </a>
-    <a href="mailto:alexandre.beduc@gmail.com" target="_blank">
+    <a href="mailto:alexandre.beduc@proton.me" target="_blank">
         <img src="static/images/email-svgrepo-com.svg" class="footer__logo filter" alt="Logo of an Email"/>
     </a>
 </footer>

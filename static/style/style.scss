@@ -383,13 +383,13 @@ ul {
     &:nth-child(even) .text-container {
       left: 10%;
       right: auto;
-      transform: translate(0, -50%);
+      --base: translate(0, -50%);
     }
 
     &:nth-child(odd) .text-container {
       right: 10%;
       left: auto;
-      transform: translate(0, -50%);
+      --base: translate(0, -50%);
     }
   }
 
@@ -514,6 +514,8 @@ ul {
 }
 
 .text-container {
+  --base: translate(0, 0);
+
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -535,7 +537,7 @@ ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    --base: translate(-50%, -45%);
   }
 
   @media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-desktop-min) {
@@ -544,7 +546,7 @@ ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    --base: translate(-50%, -45%);
   }
 
   @media (min-width: $breakpoint-desktop-min) {
@@ -552,6 +554,7 @@ ul {
     height: 300px;
     position: absolute;
     top: 50%;
+    --base: translate(0, 0);
   }
 
   &__head {
@@ -864,4 +867,16 @@ ul {
 
 .bold {
   font-weight: 700;
+}
+
+
+.parallax {
+  --parallax-y: 0%;
+  transform: var(--base) translateY(var(--parallax-y));
+  transition: transform 0.5s ease-out;
+
+  @media (max-width: $breakpoint-phone-max) {
+    transform: var(--base);
+    transition: transform 0s;
+  }
 }
