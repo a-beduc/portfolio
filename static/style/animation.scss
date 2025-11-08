@@ -1,0 +1,27 @@
+.reveal-letters {
+  white-space: pre;
+}
+
+.reveal-letters > .reveal-char {
+  opacity: 0;
+  display: inline-block;
+  will-change: transform, opacity;
+
+  /* cubic-bezier allow a curve for the animation timer (fast start, slow end) */
+  /* https://www.cssportal.com/css-cubic-bezier-generator/ */
+  animation: char-reveal 300ms cubic-bezier(0.16, 1, 0.3, 1)  forwards;
+}
+
+@keyframes char-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  80% {
+    transform: translateY(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

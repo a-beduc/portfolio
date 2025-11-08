@@ -1,5 +1,5 @@
-function revealLetters(elem, delay=40, dur=260) {
-    if (!elem || elem.dataset.reavealed === "1") return;
+function revealLetters(elem, speed=50, startDelay=750, commaPause=350) {
+    if (!elem || elem.dataset.revealed === "1") return;
     const text = (elem.textContent || '').trim();
     if (!text) return;
 
@@ -7,18 +7,20 @@ function revealLetters(elem, delay=40, dur=260) {
     elem.classList.add('reveal-letters');
     elem.textContent = '';
 
-    console.log(text)
-    console.log(elem)
-
-    for (let i = 0; i < text.length; i++) {
-        const span = document.createElement('span');
-        span.className = 'reveal-char';
-        span.textContent = text[i];
-        span.style.animationDelay = (i * delay) + 'ms';
-        elem.appendChild(span);
-    }
+    setTimeout(() => {
+        let delay = 0;
+        for (let i = 0; i < text.length; i++) {
+            const character = text[i]
+            const span = document.createElement('span');
+            span.className = 'reveal-char';
+            span.textContent = character;
+            span.style.animationDelay = `${delay}ms`;
+            elem.appendChild(span);
+            delay += speed;
+            if (character === ',') delay += commaPause;
+        }
+    }, startDelay);
 }
-
 
 
 // 'i18n:applied' is a custom event sent after LanguageSwitch is pressed
