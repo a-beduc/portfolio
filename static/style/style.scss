@@ -298,9 +298,12 @@ ul {
 
   &__content {
     position: relative;
+    width: 290px;
+    height: 290px;
 
-    @media (max-width: $breakpoint-phone-min) {
-      width: 290px;
+    @media (min-width: $breakpoint-phone-min) {
+      width: 400px;
+      height: 200px;
     }
   }
 
@@ -322,23 +325,12 @@ ul {
     font-size: 1.125rem;
   }
 
-
-  @keyframes upDownPattern {
-    from {
-      transform: translateY(-15%);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-
   &__arrow {
     position: absolute;
     filter: var(--filter-secondary-color);
     width: 6rem;
     height: auto;
     bottom: 0;
-    animation: upDownPattern 1.5s alternate infinite;
   }
 }
 

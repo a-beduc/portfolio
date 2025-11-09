@@ -272,10 +272,13 @@ ul {
 }
 .banner__content {
   position: relative;
+  width: 290px;
+  height: 290px;
 }
-@media (max-width: 450px) {
+@media (min-width: 450px) {
   .banner__content {
-    width: 290px;
+    width: 400px;
+    height: 200px;
   }
 }
 .banner__h1 {
@@ -293,21 +296,12 @@ ul {
   font-weight: 200;
   font-size: 1.125rem;
 }
-@keyframes upDownPattern {
-  from {
-    transform: translateY(-15%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
 .banner__arrow {
   position: absolute;
   filter: var(--filter-secondary-color);
   width: 6rem;
   height: auto;
   bottom: 0;
-  animation: upDownPattern 1.5s alternate infinite;
 }
 
 .section {

@@ -8,8 +8,9 @@
   },
   "index": {
     "banner": {
-      "greeting": "Salut, je suis",
-      "name": "Alexandre Beduc.",
+      "greeting": "Salut, je me présente",
+      "firstName": "Alexandre",
+      "lastName": "Beduc.",
       "information": "Développeur Python Junior."
     },
     "form": {
