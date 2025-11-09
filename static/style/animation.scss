@@ -36,6 +36,11 @@
   white-space: nowrap;
 }
 
+// to avoid arrow flash when loading page
+.banner__arrow {
+  opacity: 0;
+}
+
 .arrow-intro {
   animation: banner-char-reveal 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

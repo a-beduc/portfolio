@@ -115,6 +115,12 @@ document.addEventListener('i18n:applied', async () => {
     await wait(300);
     await revealInfo(inf)
     await wait(1500);
+
+    const navbar = document.querySelector('.nav-bar');
+    navbar.classList.remove('nav-bar__hidden');
     await revealArrow(arrow)
 
 }, { once: true });
+
+
+
