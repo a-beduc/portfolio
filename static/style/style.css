@@ -651,7 +651,6 @@ ul {
 .text-container__content {
   font-size: 14px;
   font-weight: 200;
-  line-height: 1rem;
   text-align: center;
 }
 @media (min-width: 575px) {
@@ -666,7 +665,7 @@ ul {
 }
 @media (min-width: 1200px) {
   .text-container__content {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .text-container__icon {

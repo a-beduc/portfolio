@@ -42,7 +42,7 @@ $font-card-tag-desktop: 14px;
 $font-card-tag-tablet: 12px;
 $font-card-tag-phone: 10px;
 
-$font-card-text-desktop: 16px;
+$font-card-text-desktop: 18px;
 $font-card-text-tablet: 16px;
 $font-card-text-phone: 14px;
 
@@ -719,7 +719,6 @@ ul {
   &__content {
     font-size: $font-card-text-phone;
     font-weight: 200;
-    line-height: 1rem;
     text-align: center;
 
     @media (min-width: $breakpoint-phone-max) {

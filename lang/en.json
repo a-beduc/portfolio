@@ -9,9 +9,8 @@
   "index": {
     "banner": {
       "greeting": "Hello, my name is",
-      "firstName": "Alexandre",
-      "lastName": "Beduc.",
-      "information": "Junior Python Developer."
+      "name": "Alexandre Beduc.",
+      "information": "I am a web developer, backend specialist, \nwith an unapologetic bias toward Python."
     },
     "form": {
       "title": "Get in touch",
