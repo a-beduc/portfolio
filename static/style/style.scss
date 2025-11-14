@@ -205,7 +205,7 @@ ul {
     justify-content: center;
 
     @media (min-width: $breakpoint-tablet-min) {
-      gap: 1rem;
+      gap: 3rem;
       flex-direction: row;
     }
   }
