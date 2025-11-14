@@ -69,5 +69,58 @@
     transform: translateY(-15px);
   }
 }
+.card-reveal-char {
+  opacity: 0;
+  display: inline-block;
+  will-change: transform, opacity;
+  /* cubic-bezier allow a curve for the animation timer (fast start, slow end) */
+  /* https://www.cssportal.com/css-cubic-bezier-generator/ */
+  animation: card-char-reveal 500ms cubic-bezier(0, 0, 0.58, 1) forwards;
+}
+
+@keyframes card-char-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  80% {
+    opacity: 0.4;
+    transform: translateY(-1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card-elem-hide {
+  opacity: 0;
+}
+
+.card-reveal-block {
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: card-block-reveal 600ms cubic-bezier(0, 0, 0.58, 1) forwards;
+}
+
+@keyframes card-block-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes card-block-reveal-long {
+  0% {
+    opacity: 0;
+    transform: translateY(36px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /*# sourceMappingURL=animation.css.map */
