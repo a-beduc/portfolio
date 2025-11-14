@@ -21,6 +21,8 @@ async function setLanguage(lang) {
     const response = await fetch(`${basePath}lang/${lang}.json`);
     const translations = await response.json();
     updateText(translations);
+
+    document.dispatchEvent(new CustomEvent('i18n:applied'));
 }
 
 function updateText(translations) {

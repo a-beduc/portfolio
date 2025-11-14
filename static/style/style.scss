@@ -1,6 +1,6 @@
-$font-family-primary: "Azeret Mono", serif;
+$font-family-primary: "Lexend Deca", sans-serif;
 
-$font-color: rgb(255, 255, 255);
+$font-color-basic: rgb(255, 255, 255);
 
 $breakpoint-phone-min: 450px;
 $breakpoint-phone-max: 575px;
@@ -8,8 +8,58 @@ $breakpoint-tablet-min: 768px;
 $breakpoint-tablet-max: 900px;
 $breakpoint-desktop-min: 1200px;
 
+/* font-size parameters */
+
+/* default */
+$font-default-desktop: 16px;
+$font-default-tablet: 16px;
+$font-default-phone: 14px;
+
+/* navigation */
+$font-nav-link-desktop: 24px;
+$font-nav-link-tablet: 18px;
+$font-nav-link-phone: 16px;
+
+/* banner */
+$font-banner-intro-desktop: 31px;
+$font-banner-intro-tablet: 26px;
+$font-banner-intro-phone: 18px;
+
+$font-banner-name-desktop: 91px;
+$font-banner-name-tablet: 64px;
+$font-banner-name-phone: 38px;
+
+$font-banner-information-desktop: 21px;
+$font-banner-information-tablet: 18px;
+$font-banner-information-phone: 16px;
+
+/* project-card */
+$font-card-title-desktop: 40px;
+$font-card-title-tablet: 32px;
+$font-card-title-phone: 24px;
+
+$font-card-tag-desktop: 14px;
+$font-card-tag-tablet: 12px;
+$font-card-tag-phone: 10px;
+
+$font-card-text-desktop: 18px;
+$font-card-text-tablet: 16px;
+$font-card-text-phone: 14px;
+
+/* form */
+$font-form-title: 2rem;
+$font-form-content: 1.25rem;
+$font-form-input: 1.125rem;
+$font-form-flash: 0.8rem;
+$font-form-button: 1.3rem;
+
+/* detail project */
+$font-detail-title: 2.5rem;
+$font-detail-content: 1.125rem;
+$font-detail-comment: 0.8rem;
+
 :root {
-  font-size: 14px;
+  font-size: $font-default-phone;
 
   --primary-color: 26, 36, 51;
   --secondary-color: 53, 141, 222;
@@ -18,7 +68,11 @@ $breakpoint-desktop-min: 1200px;
   --filter-secondary-color: invert(53%) sepia(96%) saturate(2247%) hue-rotate(187deg) brightness(90%) contrast(92%);
 
   @media (min-width: $breakpoint-tablet-min) {
-    font-size: 16px;
+    font-size: $font-default-tablet;
+  }
+
+  @media (min-width: $breakpoint-desktop-min) {
+    font-size: $font-default-desktop;
   }
 }
 
@@ -31,7 +85,7 @@ $breakpoint-desktop-min: 1200px;
 body {
   background-color: rgb(var(--primary-color));
   font-family: $font-family-primary;
-  color: $font-color;
+  color: $font-color-basic;
   padding-bottom: 1rem;
 }
 
@@ -56,9 +110,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   background-size: cover;
-  font-weight: 600;
-  font-size: 1.25rem;
-  border-bottom: 3px solid rgb(var(--secondary-color));
+  //border-bottom: 3px solid rgb(var(--secondary-color));
   padding: 0 1rem;
 
   &__button {
@@ -99,6 +151,9 @@ ul {
     transform: translateX(150%);
     transition: transform 0.3s ease;
 
+    font-size: $font-nav-link-phone;
+    font-weight: 200;
+
     &.is-open {
       transform: translateX(0);
     }
@@ -118,6 +173,12 @@ ul {
       flex-direction: row;
       align-items: center;
       justify-content: end;
+
+      font-size: $font-nav-link-tablet;
+    }
+
+    @media (min-width: $breakpoint-desktop-min) {
+      font-size: $font-nav-link-desktop;
     }
 
     &__widget {
@@ -137,8 +198,6 @@ ul {
   &__list {
     display: flex;
     flex-direction: column;
-    font-size: 1.125rem;
-    font-weight: 200;
     transition-property: text-decoration;
     transition-duration: 0.3s;
     margin: 0;
@@ -146,7 +205,7 @@ ul {
     justify-content: center;
 
     @media (min-width: $breakpoint-tablet-min) {
-      gap: 1rem;
+      gap: 3rem;
       flex-direction: row;
     }
   }
@@ -283,52 +342,74 @@ ul {
 }
 
 .banner {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background-size: 25px 25px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-family: "Electrolize", serif;
-      font-weight: 400;
-      font-style: normal;
-      text-align: left;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: 25px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  text-align: left;
 
   &__content {
     position: relative;
+    width: 290px;
+    height: 290px;
 
-    @media (max-width: $breakpoint-phone-min) {
-      width: 290px;
+    @media (min-width: $breakpoint-phone-max) {
+      width: 500px;
+    }
+
+    @media (min-width: $breakpoint-tablet-min) {
+      width: 650px;
+    }
+
+    @media (min-width: $breakpoint-desktop-min) {
+      width: 900px;
     }
   }
 
   &__h1 {
-    font-size: 3rem;
-    font-weight: 1000;
+    font-size: $font-banner-name-phone;
+    font-weight: 700;
     margin-bottom: 1rem;
     color: rgb(var(--secondary-color));
+
+    @media (min-width: $breakpoint-phone-max) {
+      font-size: $font-banner-name-tablet;
+    }
+
+    @media (min-width: $breakpoint-desktop-min) {
+      font-size: $font-banner-name-desktop;
+    }
   }
 
   &__h2 {
     font-weight: 200;
-    font-size: 1.25rem;
+    font-size: $font-banner-intro-phone;
     margin-bottom: 0.5rem;
+
+    @media (min-width: $breakpoint-phone-max) {
+      font-size: $font-banner-intro-tablet;
+    }
+
+    @media (min-width: $breakpoint-phone-max) {
+      font-size: $font-banner-intro-desktop;
+    }
   }
 
   &__p {
     font-weight: 200;
-    font-size: 1.125rem;
-  }
+    font-size: $font-banner-information-phone;
 
-
-  @keyframes upDownPattern {
-    from {
-      transform: translateY(-15%);
+    @media (min-width: $breakpoint-phone-max) {
+      font-size: $font-banner-information-tablet;
     }
-    to {
-      transform: translateY(0);
+
+    @media (min-width: $breakpoint-phone-max) {
+      font-size: $font-banner-information-desktop;
     }
   }
 
@@ -338,7 +419,6 @@ ul {
     width: 6rem;
     height: auto;
     bottom: 0;
-    animation: upDownPattern 1.5s alternate infinite;
   }
 }
 
@@ -383,13 +463,27 @@ ul {
     &:nth-child(even) .text-container {
       left: 10%;
       right: auto;
-      transform: translate(0, -50%);
+      --base: translate(0, -50%);
+    }
+
+    &:nth-child(even) .image-container {
+      left: auto;
+      right: 15%;
+      transform: translateX(15%);
+      transition: transform 0.5s ease-out;
     }
 
     &:nth-child(odd) .text-container {
       right: 10%;
       left: auto;
-      transform: translate(0, -50%);
+      --base: translate(0, -50%);
+    }
+
+    &:nth-child(odd) .image-container {
+      left: 15%;
+      right: auto;
+      transform: translateX(-15%);
+      transition: transform 0.5s ease-out;
     }
   }
 
@@ -447,13 +541,11 @@ ul {
       position: static;
       padding: 4rem 2rem;
 
-      @media (min-width: $breakpoint-phone-max) {
-        transform: none;
-      }
+      --base: translate(0, 0);
 
       @media (min-width: $breakpoint-tablet-min) {
         position: absolute;
-        transform: translate(0, -50%);
+        --base: translate(0, -50%);
         top: 50%;
         right: 10%;
         left: auto;
@@ -498,7 +590,7 @@ ul {
     display: block;
 
     border-radius: 5px;
-    opacity: 0.6;
+    opacity: 0.75;
     transition-duration: 0.5s;
     transition-property: opacity;
     width: 100%;
@@ -514,6 +606,8 @@ ul {
 }
 
 .text-container {
+  --base: translate(0, 0);
+
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -535,7 +629,7 @@ ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    --base: translate(-50%, -45%);
   }
 
   @media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-desktop-min) {
@@ -544,7 +638,7 @@ ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    --base: translate(-50%, -45%);
   }
 
   @media (min-width: $breakpoint-desktop-min) {
@@ -552,6 +646,7 @@ ul {
     height: 300px;
     position: absolute;
     top: 50%;
+    --base: translate(0, 0);
   }
 
   &__head {
@@ -569,8 +664,16 @@ ul {
   }
 
   &__title {
-    font-size: 1.2rem;
-    font-weight: 800;
+    font-size: $font-card-title-phone;
+    font-weight: 700;
+
+    @media (min-width: $breakpoint-tablet-min) {
+      font-size: $font-card-title-tablet;
+    }
+
+    @media (min-width: $breakpoint-desktop-min) {
+      font-size: $font-card-title-desktop;
+    }
   }
 
   &__abilities {
@@ -578,7 +681,7 @@ ul {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    font-size: 0.8rem;
+    font-size: $font-card-tag-tablet;
 
     &__item {
       padding: 0.3rem 0.8rem;
@@ -588,6 +691,14 @@ ul {
       & span {
         opacity: 1;
       }
+    }
+
+    @media (min-width: $breakpoint-tablet-min) {
+      font-size: $font-card-tag-tablet;
+    }
+
+    @media (min-width: $breakpoint-desktop-min) {
+      font-size: $font-card-tag-desktop;
     }
   }
 
@@ -606,13 +717,20 @@ ul {
   }
 
   &__content {
-    font-size: 0.8rem;
+    font-size: $font-card-text-phone;
     font-weight: 200;
-    line-height: 1rem;
     text-align: center;
 
     @media (min-width: $breakpoint-phone-max) {
       text-align: justify;
+    }
+
+    @media (min-width: $breakpoint-tablet-min) {
+      font-size: $font-card-text-tablet;
+    }
+
+    @media (min-width: $breakpoint-desktop-min) {
+      font-size: $font-card-text-desktop;
     }
   }
 
@@ -676,12 +794,20 @@ ul {
     text-align: left;
   }
 
+  &__title {
+    font-size: $font-form-title;
+  }
+
+  &__content {
+    font-size: $font-form-content;
+    font-weight: 200;
+  }
+
   &__form {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    font-size: 1.125rem;
 
     &__row {
       width: 100%;
@@ -701,6 +827,10 @@ ul {
       flex-direction: column;
       gap: 0.5rem;
 
+      & label {
+        font-weight: 600;
+      }
+
       & input, textarea {
         background-color: rgb(var(--primary-color));
         border: solid 1px rgb(var(--secondary-color));
@@ -708,8 +838,9 @@ ul {
         outline: none;
         resize: vertical;
         padding: 0.5rem;
-        color: $font-color;
-        font-size: 1rem;
+        color: $font-color-basic;
+        font-size: $font-form-input;
+        font-weight: 400;
 
         &:focus {
           border: 1px solid rgb(256, 256, 256);
@@ -722,7 +853,7 @@ ul {
     }
 
     &__button {
-      color: $font-color;
+      color: $font-color-basic;
       align-content: center;
       align-items: center;
       background: rgb(var(--secondary-color));
@@ -730,10 +861,10 @@ ul {
       border-radius: 10px;
       cursor: pointer;
       display: flex;
-      font-family: "Electrolize", serif;
-      font-weight: 800;
+      font-family: $font-family-primary;
+      font-weight: 700;
       font-style: normal;
-      font-size: 1.3rem;
+      font-size: $font-form-button;
       height: 48px;
       justify-content: center;
       line-height: 24px;
@@ -758,7 +889,7 @@ ul {
 
     &__flash {
       font-style: italic;
-      font-size: 0.8rem;
+      font-size: $font-form-flash;
 
       @media (min-width: $breakpoint-tablet-min) {
         text-align: end;
@@ -832,7 +963,7 @@ ul {
     align-items: center;
     gap: 0.5rem;
     color: rgba(255, 255, 255, 0.6);
-    font-size: 0.7rem;
+    font-size: $font-detail-comment;
     max-width: 750px;
 
 
@@ -847,13 +978,14 @@ ul {
 
   &__content {
     font-weight: 200;
-    font-size: 0.8rem;
+    font-size: $font-detail-content;
     text-align: justify;
     width: 100%;
   }
 
   &__title {
     width: 100%;
+    font-size: $font-detail-title;
   }
 
   .line-separator {
@@ -864,4 +996,16 @@ ul {
 
 .bold {
   font-weight: 700;
+}
+
+
+.parallax {
+  --parallax-y: 0%;
+  transform: var(--base) translateY(var(--parallax-y));
+  transition: transform 0.5s ease-out;
+
+  @media (max-width: $breakpoint-phone-max) {
+    transform: var(--base);
+    transition: transform 0s;
+  }
 }

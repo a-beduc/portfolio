@@ -8,9 +8,9 @@
   },
   "index": {
     "banner": {
-      "greeting": "Hello, I'm",
+      "greeting": "Hello, my name is",
       "name": "Alexandre Beduc.",
-      "information": "Junior Python Developer."
+      "information": "I am a web developer, backend specialist, \nwith an unapologetic bias toward Python."
     },
     "form": {
       "title": "Get in touch",
@@ -132,6 +132,43 @@
           "content": {
             "01": "This was my first full API project: relational modeling, nested serializers, and HATEOAS-style routes using drf-nested-routers. I implemented JWT authentication plus a custom permission scheme to isolate and secure each project.",
             "02": "Tooling side: I produced a comprehensive Postman collection and added dynamic filters."
+          }
+        }
+      }
+    },
+    "eecrm": {
+      "card": {
+        "title": "Epic Events CRM",
+        "skill": {
+          "01": "SQLAlchemy",
+          "02": "PostgreSQL",
+          "03": "Pytest",
+          "04": "Sentry",
+          "05": "Click"
+        },
+        "content": "Customer Relationship Management, centralizing and unifying collaborator data across departments that previously relied on isolated Excel sheets."
+      },
+      "detail": {
+        "description": {
+          "title": "Hexagonal-architecture CLI",
+          "content": {
+            "01": "Epic Events CRM is a CLI-based CRM designed to consolidate client and collaborator data. It provides a structured database for managing and processing client's events.",
+            "02": "The project was deliberately over-engineered to test the feasibility of applying Domain-Driven Design principles, the Repository pattern, and the Unit of Work pattern within a Python CLI context.",
+            "03": "It uses <bold>SQLAlchemy</bold> (Imperative ORM) with <bold>PostgreSQL</bold> as the database backend, wrapped in a layered architecture to ensure clear separation of concerns.",
+            "04": "Permissions are enforced through RCAB and ACAB to allow fine-grained access, while Sentry provides error monitoring."
+          }
+        },
+        "imageText": {
+          "01": "PostgreSQL schema diagram",
+          "02": "CLI demonstration",
+          "03": "Architecture overview"
+        },
+        "whatILearned": {
+          "title": "Applying strict patterns in Python",
+          "content": {
+            "01": "This project taught me how to implement DDD-inspired architecture in Python. Encapsulation of operations and abstract interfaces with Repositories and Unit of Works, designing entities and services to maintain a layered codebase.",
+            "02": "On the dev tool side, I built tests with Pytest and managed packaging and dependencies with uv.",
+            "03": "My key takeaway from this project: patterns bring structure, but they also introduced significant code complexity. If over-engineering was intentional here, I shall restrain from implementing design pattern without a clear goal in mind in the future."
           }
         }
       }
