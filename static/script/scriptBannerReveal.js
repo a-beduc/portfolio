@@ -53,31 +53,34 @@ function revealGreeting(obj, stepSpeed=50, startDelay=750, commaPause=350) {
 }
 
 // Reveal name
-function revealWords(obj, wordSpeed=600) {
+function revealWords(obj, wordSpeed=600, offset=0, cls='banner-reveal-char') {
     if (!guardRails(obj)) return;
 
-    const s = obj.text.trim();
-    const i = s.indexOf(' ');
-    const left = Array.from(s.slice(0, i + 1));
-    const right = Array.from(s.slice(i + 1));
+    const words = obj.text.trim().split(' ');
+    let outputDelay = 0
 
-    const leftStepSpeed = wordSpeed / Math.max(1, left.length);
-    const rightStepSpeed = wordSpeed / Math.max(1, right.length);
+    for (let i = 0; i < words.length; i++) {
+        const word = words[i];
+        const char = Array.from(word);
 
-    const leftWrap = document.createElement('span');
-    leftWrap.className = 'name-word';
-    const rightWrap = document.createElement('span');
-    rightWrap.className = 'name-word';
+        const wrap = document.createElement('span');
+        wrap.className = 'name-word';
 
-    obj.elem.appendChild(leftWrap);
-    obj.elem.appendChild(rightWrap);
+        obj.elem.appendChild(wrap);
 
-    revealElements(leftWrap, left, leftStepSpeed);
-    return revealElements(rightWrap, right, rightStepSpeed);
+        const stepSpeed = wordSpeed / Math.max(1, char.length);
+
+        outputDelay = revealElements(wrap, char, stepSpeed, offset, cls);
+
+        if (i < words.length - 1) {
+            obj.elem.appendChild(document.createTextNode(' '));
+        }
+    }
+    return outputDelay
 }
 
 // Reveal block text
-function revealInfo (obj, speed=50) {
+function revealBlock (obj, speed=50) {
     if (!guardRails(obj)) return;
     return revealElements(obj.elem, [obj.text], speed, 0, 'banner-reveal-char long');
 }
@@ -96,9 +99,7 @@ async function revealArrow(arrow) {
     arrow.classList.add('arrow-bounce');
 }
 
-// BANNER ANIMATION
-// 'i18n:applied' is a custom event sent after LanguageSwitch is pressed
-document.addEventListener('i18n:applied', async () => {
+async function BannerAnimation() {
     const greeting = document.querySelector('[data-translate="index.banner.greeting"]');
     const name = document.querySelector('[data-translate="index.banner.name"]');
     const information = document.querySelector('[data-translate="index.banner.information"]');
@@ -117,16 +118,16 @@ document.addEventListener('i18n:applied', async () => {
     const nameAnimationEndDelay= revealWords(nam);
     await wait(300 + nameAnimationEndDelay);
 
-    const infoAnimationEndDelay = revealInfo(inf)
+    const infoAnimationEndDelay = revealBlock(inf)
     await wait(1000 + infoAnimationEndDelay);
 
     const navbar = document.querySelector('.nav-bar');
     navbar.classList.remove('nav-bar__hidden');
     await revealArrow(arrow)
+}
 
+// BANNER ANIMATION
+// 'i18n:applied' is a custom event sent after LanguageSwitch is pressed
+document.addEventListener('i18n:applied', async () => {
+    await BannerAnimation()
 }, { once: true });
-
-// CARD ANIMATION
-
-
-
