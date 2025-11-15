@@ -403,13 +403,21 @@ ul {
   &__p {
     font-weight: 200;
     font-size: $font-banner-information-phone;
+    line-height: 24px;
 
     @media (min-width: $breakpoint-phone-max) {
       font-size: $font-banner-information-tablet;
+      line-height: 27px;
+      width: 350px;
     }
 
-    @media (min-width: $breakpoint-phone-max) {
+    @media (min-width: $breakpoint-tablet-min) {
+      width: auto;
+    }
+
+    @media (min-width: $breakpoint-desktop-min) {
       font-size: $font-banner-information-desktop;
+      line-height: 36px;
     }
   }
 

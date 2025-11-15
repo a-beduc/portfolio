@@ -10,7 +10,7 @@
     "banner": {
       "greeting": "Hello, my name is",
       "name": "Alexandre Beduc.",
-      "information": "I am a web developer, backend specialist, \nwith an unapologetic bias toward Python."
+      "information": "Backend web developer, with an unapologetic bias toward Python."
     },
     "form": {
       "title": "Get in touch",

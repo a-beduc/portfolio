@@ -337,15 +337,24 @@ ul {
 .banner__p {
   font-weight: 200;
   font-size: 16px;
+  line-height: 24px;
 }
 @media (min-width: 575px) {
   .banner__p {
     font-size: 18px;
+    line-height: 27px;
+    width: 350px;
   }
 }
-@media (min-width: 575px) {
+@media (min-width: 768px) {
+  .banner__p {
+    width: auto;
+  }
+}
+@media (min-width: 1200px) {
   .banner__p {
     font-size: 21px;
+    line-height: 36px;
   }
 }
 .banner__arrow {

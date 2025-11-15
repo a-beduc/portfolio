@@ -1,5 +1,5 @@
 // reveal `<li> class="text-container__abilities__item"`
-function revealTags(tagElements, step = 150, baseDelay = 0, cls = 'card-reveal-block') {
+function revealTags(tagElements, step = 150, baseDelay = 0, cls = 'reveal-block') {
     let currentDelay = baseDelay;
 
     tagElements.forEach((li) => {
@@ -15,13 +15,12 @@ function revealTags(tagElements, step = 150, baseDelay = 0, cls = 'card-reveal-b
 }
 
 // reveal `<li> class="text-container__body"`
-function revealBody(bodyElement, animationDuration = 1500, cls = 'card-reveal-block') {
+function revealBody(bodyElement, animationDuration = 1500, cls = 'reveal-block') {
     if (bodyElement.dataset.revealed === "1") return;
     bodyElement.dataset.revealed = "1";
 
     bodyElement.classList.remove("card-elem-hide")
     bodyElement.classList.add(cls);
-    bodyElement.style.animationName = "card-block-reveal-long";
     bodyElement.style.animationDuration = `${animationDuration}ms`;
 }
 
