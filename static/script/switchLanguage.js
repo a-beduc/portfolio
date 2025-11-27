@@ -33,6 +33,18 @@ function updateText(translations) {
          element.textContent = translation;
        }
     });
+
+    document.querySelectorAll('[data-translate-skill]').forEach(ul => {
+        const keyPath = ul.getAttribute('data-translate-skill');
+        const items = getNestedValue(translations, keyPath);
+        items.forEach(text => {
+            const li = document.createElement('li');
+            li.className = 'text-container__abilities__item';
+            li.textContent = text;
+            ul.appendChild(li);
+        });
+    });
+
 }
 
 // use a keyPath string like "nav.contact" and create an array ["nav", "contact"] then iterate on the array with
