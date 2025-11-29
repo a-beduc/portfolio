@@ -8,10 +8,12 @@
     <link rel="preconnect" href="https://fonts.g/static.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">    <script src="../../static/script/scriptHideNav.js" defer></script>
     <link rel="stylesheet" href="../../static/style/style.css">
-    <script src="../../static/script/scriptMenuButton.js" defer></script>
-    <script src="../../static/script/scriptThemeSwitch.js" defer></script>
-    <script src="../../static/script/scriptLanguageSwitch.js" defer></script>
-    <script src="../../static/script/scriptParallax.js" defer></script>
+    <script src="../../static/script/animationMenuButton.js" defer></script>
+    <script src="../../static/script/switchTheme.js" defer></script>
+    <script src="../../static/script/switchLanguage.js" defer></script>
+    <script src="../../static/script/animationParallax.js" defer></script>
+    <script src="../../static/script/loadCards.js" defer></script>
+    <script src="../../static/script/init.js" defer></script>
 </head>
 <body>
 <header>
@@ -22,9 +24,6 @@
         </button>
         <div id="menu" class="nav-bar__menu">
             <ul class="nav-bar__list">
-<!--                <li class="nav-bar__item">-->
-<!--                    <a href="about.html" data-translate="header.nav.aboutMe" class="nav-bar__link"></a>-->
-<!--                </li>-->
                 <li class="nav-bar__item">
                     <a href="../../index.html#projects" data-translate="header.nav.project" class="nav-bar__link"></a>
                 </li>
@@ -57,28 +56,10 @@
     </nav>
 </header>
 <main class="main-container">
-    <div class="project-card project-card--detail">
-        <div class="image-container">
-            <img class="image-container__image" alt="Placeholder" src="assets/project_4-1.png">
-        </div>
-        <div class="text-container parallax">
-            <div class="text-container__head">
-                <h2 class="text-container__title" data-translate="project.chessLogApp.card.title"></h2>
-                <ul class="text-container__abilities">
-                    <li class="text-container__abilities__item" data-translate="project.chessLogApp.card.skill.01"></li>
-                    <li class="text-container__abilities__item" data-translate="project.chessLogApp.card.skill.02"></li>
-                    <li class="text-container__abilities__item" data-translate="project.chessLogApp.card.skill.03"></li>
-                </ul>
-            </div>
-            <div class="text-container__body">
-                <p class="text-container__content" data-translate="project.chessLogApp.card.content"></p>
-                <div class="text-container__icon">
-                    <a href="https://github.com/a-beduc/formation_project_4" target="_blank">
-                        <img src="../../static/images/github-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="Logo of github"/>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <div id="projects-card-container"
+         class="project-card project-card--detail"
+         data-project-keys="chess-log-app"
+         data-show-detail-link="false">
     </div>
     <div class="project-info">
         <h2 class="project-info__title" data-translate="project.chessLogApp.detail.description.title"></h2>

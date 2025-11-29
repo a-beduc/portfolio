@@ -934,4 +934,9 @@ ul {
   }
 }
 
+.link-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
 /*# sourceMappingURL=style.css.map */

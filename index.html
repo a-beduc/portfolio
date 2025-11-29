@@ -18,6 +18,7 @@
     <script src="static/script/animationBannerReveal.js" defer></script>
     <script src="static/script/loadCards.js" defer></script>
     <script src="static/script/animationCardReveal.js" defer></script>
+    <script src="static/script/init.js"></script>
 </head>
 <body>
 <header>
@@ -34,7 +35,7 @@
 <!--                    <a href="about.html" data-translate="header.nav.aboutMe" class="nav-bar__link"></a>-->
 <!--                </li>-->
                 <li class="nav-bar__item">
-                    <a href="#projects" data-translate="header.nav.project" class="nav-bar__link"></a>
+                    <a href="#projects-card-container" data-translate="header.nav.project" class="nav-bar__link"></a>
                 </li>
                 <li class="nav-bar__item">
                     <a href="#contact" data-translate="header.nav.contact" class="nav-bar__link"></a>
@@ -74,125 +75,16 @@
     <img src="static/images/down-arrow-5-svgrepo-com.svg" class="banner__arrow" alt="arrow icon pointing down">
 </div>
 
-<section id="projects" class="section">
-    <div class="project-card" id="chess-log-app">
-        <div class="image-container">
-            <a href="projects/chess-log-app/chess-log-app.html">
-                <img class="image-container__image" alt="image of the chess log app" src="projects/chess-log-app/assets/project_4-1.png">
-            </a>
-        </div>
-        <div class="text-container parallax">
-            <div class="text-container__head">
-                <h2 class="text-container__title" data-translate="project.chessLogApp.card.title"></h2>
-                <ul class="text-container__abilities">
-                    <li class="text-container__abilities__item" data-translate="project.chessLogApp.card.skill.01"></li>
-                    <li class="text-container__abilities__item" data-translate="project.chessLogApp.card.skill.02"></li>
-                    <li class="text-container__abilities__item" data-translate="project.chessLogApp.card.skill.03"></li>
-                </ul>
-            </div>
-            <div class="text-container__body">
-                <p class="text-container__content" data-translate="project.chessLogApp.card.content"></p>
-                <div class="text-container__icon">
-                    <a href="https://github.com/a-beduc/formation_project_4" target="_blank">
-                        <img src="static/images/github-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="Logo of github"/>
-                    </a>
-                    <a href="projects/chess-log-app/chess-log-app.html">
-                        <img src="static/images/arrow-down-right-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="External link to project"/>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="project-card" id="litrevu-app">
-        <div class="image-container">
-            <a href="projects/litrevu-app/litrevu-app.html">
-                <img class="image-container__image" alt="image of the chess log app" src="projects/litrevu-app/assets/project_9-2.png">
-            </a>
-        </div>
-        <div class="text-container parallax">
-            <div class="text-container__head">
-                <h2 class="text-container__title" data-translate="project.litrevu.card.title"></h2>
-                <ul class="text-container__abilities">
-                    <li class="text-container__abilities__item" data-translate="project.litrevu.card.skill.01"></li>
-                    <li class="text-container__abilities__item" data-translate="project.litrevu.card.skill.02"></li>
-                    <li class="text-container__abilities__item" data-translate="project.litrevu.card.skill.03"></li>
-                </ul>
-            </div>
-            <div class="text-container__body">
-                <p class="text-container__content" data-translate="project.litrevu.card.content"></p>
-                <div class="text-container__icon">
-                    <a href="https://github.com/a-beduc/formation_project_9" target="_blank">
-                        <img src="static/images/github-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="Logo of github"/>
-                    </a>
-                    <a href="projects/litrevu-app/litrevu-app.html">
-                        <img src="static/images/arrow-down-right-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="External link to project"/>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="project-card" id="softdesk-app">
-        <div class="image-container">
-            <a href="projects/softdesk-app/softdesk-app.html">
-                <img class="image-container__image" alt="image of the chess log app" src="projects/softdesk-app/assets/project_10-1.png">
-            </a>
-        </div>
-        <div class="text-container parallax">
-            <div class="text-container__head">
-                <h2 class="text-container__title" data-translate="project.softdesk.card.title"></h2>
-                <ul class="text-container__abilities">
-                    <li class="text-container__abilities__item" data-translate="project.softdesk.card.skill.01"></li>
-                    <li class="text-container__abilities__item" data-translate="project.softdesk.card.skill.02"></li>
-                    <li class="text-container__abilities__item" data-translate="project.softdesk.card.skill.03"></li>
-                </ul>
-            </div>
-            <div class="text-container__body">
-                <p class="text-container__content" data-translate="project.softdesk.card.content"></p>
-                <div class="text-container__icon">
-                    <a href="https://github.com/a-beduc/formation_project_10" target="_blank">
-                        <img src="static/images/github-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="Logo of github"/>
-                    </a>
-                    <a href="projects/softdesk-app/softdesk-app.html">
-                        <img src="static/images/arrow-down-right-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="External link to project"/>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-<!--    <div class="project-card" id="eecrm-app">-->
-<!--        <div class="image-container">-->
-<!--            <a href="projects/eecrm-app/eecrm-app.html">-->
-<!--                <img class="image-container__image" alt="image of the chess log app" src="projects/eecrm-app/assets/project_10-1.png">-->
-<!--            </a>-->
-<!--        </div>-->
-<!--        <div class="text-container parallax">-->
-<!--            <div class="text-container__head">-->
-<!--                <h2 class="text-container__title" data-translate="project.eecrm.card.title"></h2>-->
-<!--                <ul class="text-container__abilities">-->
-<!--                    <li class="text-container__abilities__item" data-translate="project.eecrm.card.skill.01"></li>-->
-<!--                    <li class="text-container__abilities__item" data-translate="project.eecrm.card.skill.02"></li>-->
-<!--                    <li class="text-container__abilities__item" data-translate="project.eecrm.card.skill.03"></li>-->
-<!--                    <li class="text-container__abilities__item" data-translate="project.eecrm.card.skill.04"></li>-->
-<!--                    <li class="text-container__abilities__item" data-translate="project.eecrm.card.skill.05"></li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--            <div class="text-container__body">-->
-<!--                <p class="text-container__content" data-translate="project.eecrm.card.content"></p>-->
-<!--                <div class="text-container__icon">-->
-<!--                    <a href="https://github.com/a-beduc/formation_project_10" target="_blank">-->
-<!--                        <img src="static/images/github-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="Logo of github"/>-->
-<!--                    </a>-->
-<!--                    <a href="projects/eecrm-app/eecrm-app.html">-->
-<!--                        <img src="static/images/arrow-down-right-svgrepo-com.svg" class="text-container__icon__logo filter_reversed" alt="External link to project"/>-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+<section id="projects-card-container"
+         class="section"
+         data-project-keys="chess-log-app, litrevu-app, softdesk-app, eecrm-app"
+         data-show-detail-link="true">
 </section>
+
 <div>
     <hr class="line-separator">
 </div>
+
 <section id="contact" class="section">
     <div class="contact">
         <h1 data-translate="index.form.title" class="contact__title"></h1>

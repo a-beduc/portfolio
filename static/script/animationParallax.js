@@ -1,22 +1,5 @@
-const elements = document.querySelectorAll('.text-container.parallax');
-
 const visible = new Set();
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-        const element = entry.target;
-        if (entry.isIntersecting) {
-            visible.add(element);
-        } else {
-            visible.delete(element);
-            element.style.setProperty('--parallax-y', '0%');
-        }
-    });
-});
-
-elements.forEach(function(element) {
-    observer.observe(element);
-});
+let observer = null;
 
 function translationLimit(value, bot, top) {
     if (value > top) return top;
@@ -46,5 +29,29 @@ function onScroll() {
     });
 }
 
+function initParallax() {
+    const elements = document.querySelectorAll('.text-container.parallax');
+    if (!elements.length) return;
+
+    if (!observer) {
+        observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                const element = entry.target;
+                if (entry.isIntersecting) {
+                    visible.add(element);
+                } else {
+                    visible.delete(element);
+                    element.style.setProperty('--parallax-y', '0%');
+                }
+            });
+        });
+    }
+
+    elements.forEach(function(element) {
+        observer.observe(element);
+    });
+
+    onScroll();
+}
+
 window.addEventListener('scroll', onScroll, { passive: true });
-onScroll();

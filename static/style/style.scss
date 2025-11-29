@@ -1017,3 +1017,9 @@ ul {
     transition: transform 0s;
   }
 }
+
+
+.link-disabled {
+  pointer-events: none;
+  cursor: default;
+}

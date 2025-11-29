@@ -3,13 +3,6 @@ let currentLanguage = storedLang || 'en';
 
 const flashedMessage = document.getElementById('msgBox');
 
-function getBaseLocation() {
-    const pathParts = window.location.pathname.split('/').filter(Boolean);
-    return pathParts.length <= 2 ? "" : "../../";
-}
-
-const basePath = getBaseLocation();
-
 async function setLanguage(lang) {
     currentLanguage = lang;
     localStorage.setItem('preferredLang', lang);
@@ -21,8 +14,6 @@ async function setLanguage(lang) {
     const response = await fetch(`${basePath}lang/${lang}.json`);
     const translations = await response.json();
     updateText(translations);
-
-    document.dispatchEvent(new CustomEvent('i18n:applied'));
 }
 
 function updateText(translations) {
@@ -37,6 +28,9 @@ function updateText(translations) {
     document.querySelectorAll('[data-translate-skill]').forEach(ul => {
         const keyPath = ul.getAttribute('data-translate-skill');
         const items = getNestedValue(translations, keyPath);
+
+        ul.innerHTML = "";
+
         items.forEach(text => {
             const li = document.createElement('li');
             li.className = 'text-container__abilities__item';
@@ -53,30 +47,27 @@ function getNestedValue(obj, keyPath) {
     return keyPath.split('.').reduce((acc, key) => acc && acc[key], obj);
 }
 
-setLanguage(currentLanguage).then(() => {
-    updateFlagIcon(currentLanguage);
-});
-
-const flagMap = {
-    fr: { src: `${basePath}static/images/fr.svg`, alt: "French flag", formPlaceholder: "Écrivez votre message ici." },
-    en: { src: `${basePath}static/images/gb.svg`, alt: "English flag", formPlaceholder: "Type your message here." }
-}
-
 function updateFlagIcon(lang) {
     const summaryImg = document.getElementById('selected-flag');
     const formPlaceholder = document.getElementById('message');
-    if (flagMap[lang]) {
-        summaryImg.src = flagMap[lang].src;
-        summaryImg.alt = flagMap[lang].alt;
-        if (formPlaceholder) {
-            formPlaceholder.placeholder = flagMap[lang].formPlaceholder;
-        }
-    } else {
-        summaryImg.src = flagMap["en"].src;
-        summaryImg.alt = flagMap["en"].alt;
-        if (formPlaceholder) {
-            formPlaceholder.placeholder = flagMap["en"].formPlaceholder;
-        }
+
+    const flagMap = {
+        fr: {
+            src: `${basePath}static/images/fr.svg`,
+            alt: "French flag",
+            formPlaceholder: "Écrivez votre message ici." },
+        en: {
+            src: `${basePath}static/images/gb.svg`,
+            alt: "English flag",
+            formPlaceholder: "Type your message here." }
+    }
+
+    const cfg = flagMap[lang] || flagMap.en
+
+    summaryImg.src = cfg.src;
+    summaryImg.alt = cfg.alt;
+    if (formPlaceholder) {
+        formPlaceholder.placeholder = flagMap[lang].formPlaceholder;
     }
 }
 

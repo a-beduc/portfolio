@@ -1,0 +1,42 @@
+{
+  "chess-log-app": {
+    "id": "chess-log-app",
+    "projectUrl": "projects/chess-log-app/chess-log-app.html",
+    "imageSrc": "projects/chess-log-app/assets/project_4-1.png",
+    "imageAlt": "image of the chess log app",
+    "githubUrl": "https://github.com/a-beduc/formation_project_4",
+    "titleKey": "project.chessLogApp.card.title",
+    "skillsKey": "project.chessLogApp.card.skill",
+    "contentKey": "project.chessLogApp.card.content"
+  },
+  "litrevu-app": {
+    "id": "litrevu-app",
+    "projectUrl": "projects/litrevu-app/litrevu-app.html",
+    "imageSrc": "projects/litrevu-app/assets/project_9-2.png",
+    "imageAlt": "screenshot of the litrevu website",
+    "githubUrl": "https://github.com/a-beduc/formation_project_9",
+    "titleKey": "project.litrevu.card.title",
+    "skillsKey": "project.litrevu.card.skill",
+    "contentKey": "project.litrevu.card.content"
+  },
+  "softdesk-app": {
+    "id": "softdesk-app",
+    "projectUrl": "projects/softdesk-app/softdesk-app.html",
+    "imageSrc": "projects/softdesk-app/assets/project_10-1.png",
+    "imageAlt": "screenshot of the softdesk API",
+    "githubUrl": "https://github.com/a-beduc/formation_project_10",
+    "titleKey": "project.softdesk.card.title",
+    "skillsKey": "project.softdesk.card.skill",
+    "contentKey": "project.softdesk.card.content"
+  },
+  "eecrm-app": {
+    "id": "eecrm-app",
+    "projectUrl": "projects/eecrm-app/eecrm-app.html",
+    "imageSrc": "projects/eecrm-app/assets/project_12-1.jpg",
+    "imageAlt": "screenshot of the eecrm command line interface in action",
+    "githubUrl": "https://github.com/a-beduc/formation_project_9",
+    "titleKey": "project.eecrm.card.title",
+    "skillsKey": "project.eecrm.card.skill",
+    "contentKey": "project.eecrm.card.content"
+  }
+}
