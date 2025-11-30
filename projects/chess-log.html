@@ -6,29 +6,31 @@
     <title>Chess Log Tournament</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.g/static.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">    <script src="../../static/script/scriptHideNav.js" defer></script>
-    <link rel="stylesheet" href="../../static/style/style.css">
-    <script src="../../static/script/animationMenuButton.js" defer></script>
-    <script src="../../static/script/switchTheme.js" defer></script>
-    <script src="../../static/script/switchLanguage.js" defer></script>
-    <script src="../../static/script/animationParallax.js" defer></script>
-    <script src="../../static/script/loadCards.js" defer></script>
-    <script src="../../static/script/init.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style/style.css">
+    <script src="../static/script/animationHideNav.js" defer></script>
+    <script src="../static/script/animationMenuButton.js" defer></script>
+    <script src="../static/script/switchTheme.js" defer></script>
+    <script src="../static/script/switchLanguage.js" defer></script>
+    <script src="../static/script/animationParallax.js" defer></script>
+    <script src ="../static/script/loadFooter.js" defer></script>
+    <script src="../static/script/loadCards.js" defer></script>
+    <script src="../static/script/init.js" defer></script>
 </head>
 <body>
 <header>
     <nav class="nav-bar">
-        <a data-translate="header.name" class="nav-bar__name" href="../../index.html"></a>
+        <a data-translate="header.name" class="nav-bar__name" href="../index.html"></a>
         <button id="menu-button" class="nav-bar__button">
-            <img src="../../static/images/menu-svgrepo-com.svg" class="nav-bar__button__logo filter" alt="Menu Logo"/>
+            <img src="../static/images/menu-svgrepo-com.svg" class="nav-bar__button__logo filter" alt="Menu Logo"/>
         </button>
         <div id="menu" class="nav-bar__menu">
             <ul class="nav-bar__list">
                 <li class="nav-bar__item">
-                    <a href="../../index.html#projects" data-translate="header.nav.project" class="nav-bar__link"></a>
+                    <a href="../index.html#projects-card-container" data-translate="header.nav.project" class="nav-bar__link"></a>
                 </li>
                 <li class="nav-bar__item">
-                    <a href="../../index.html#contact" data-translate="header.nav.contact" class="nav-bar__link"></a>
+                    <a href="../index.html#contact" data-translate="header.nav.contact" class="nav-bar__link"></a>
                 </li>
             </ul>
             <div class="nav-bar__menu__widget">
@@ -40,14 +42,14 @@
                 </div>
                 <details class="language-picker">
                     <summary class="language-picker__summary">
-                        <img id="selected-flag" src="../../static/images/gb.svg" alt="English flag" class="flag-icon" />
+                        <img id="selected-flag" src="../static/images/gb.svg" alt="English flag" class="flag-icon" />
                     </summary>
                     <ul class="language-picker__flag-options">
                         <li data-lang="en" class="language-picker__item">
-                            <img src="../../static/images/gb.svg" alt="English flag" class="flag-icon" />
+                            <img src="../static/images/gb.svg" alt="English flag" class="flag-icon" />
                         </li>
                         <li data-lang="fr" class="language-picker__item">
-                            <img src="../../static/images/fr.svg" alt="French flag" class="flag-icon" />
+                            <img src="../static/images/fr.svg" alt="French flag" class="flag-icon" />
                         </li>
                     </ul>
                 </details>
@@ -58,7 +60,7 @@
 <main class="main-container">
     <div id="projects-card-container"
          class="project-card project-card--detail"
-         data-project-keys="chess-log-app"
+         data-project-keys="chess-log-card"
          data-show-detail-link="false">
     </div>
     <div class="project-info">
@@ -75,15 +77,15 @@
             <span data-translate="project.chessLogApp.detail.description.content.06" class="bold"></span>
         </p>
         <div class="project-info__image-block">
-            <img src="assets/project_4-2.png" alt="placeholder_text" class="project-info__image-block__image"/>
+            <img src="../assets/chess-log/project_4-2.png" alt="placeholder_text" class="project-info__image-block__image"/>
             <span class="project-info__image-block__description" data-translate="project.chessLogApp.detail.imageText.01"></span>
         </div>
         <div class="project-info__image-block">
-            <img src="assets/project_4-3.gif" alt="placeholder_text" class="project-info__image-block__image"/>
+            <img src="../assets/chess-log/project_4-3.gif" alt="placeholder_text" class="project-info__image-block__image"/>
             <span class="project-info__image-block__description" data-translate="project.chessLogApp.detail.imageText.02"></span>
         </div>
         <div class="project-info__image-block">
-            <img src="assets/project_4-4.png" alt="placeholder_text" class="project-info__image-block__image"/>
+            <img src="../assets/chess-log/project_4-4.png" alt="placeholder_text" class="project-info__image-block__image"/>
             <span class="project-info__image-block__description" data-translate="project.chessLogApp.detail.imageText.03"></span>
         </div>
         <h2 class="project-info__title" data-translate="project.chessLogApp.detail.whatILearned.title"></h2>
@@ -95,12 +97,12 @@
     </div>
 </main>
 <hr class="line-separator">
-<footer class="footer">
-    <a href="https://github.com/a-beduc" target="_blank">
-        <img src="../../static/images/github-svgrepo-com.svg" class="footer__logo filter" alt="Logo of github"/>
-    </a>
-    <a href="mailto:alexandre.beduc@gmail.com" target="_blank">
-        <img src="../../static/images/email-svgrepo-com.svg" class="footer__logo filter" alt="Logo of an Email"/>
-    </a>
-</footer>
+<!--<footer class="footer">-->
+<!--    <a href="https://github.com/a-beduc" target="_blank">-->
+<!--        <img src="../static/images/github-svgrepo-com.svg" class="footer__logo filter" alt="Logo of github"/>-->
+<!--    </a>-->
+<!--    <a href="mailto:alexandre.beduc@gmail.com" target="_blank">-->
+<!--        <img src="../static/images/email-svgrepo-com.svg" class="footer__logo filter" alt="Logo of an Email"/>-->
+<!--    </a>-->
+<!--</footer>-->
 </body>

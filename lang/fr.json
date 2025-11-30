@@ -27,12 +27,9 @@
     "chessLogApp": {
       "card": {
         "title": "Chess Log Tournament",
-        "skill": {
-          "01": "Python",
-          "02": "MVC",
-          "03": "Curses"
-        },
-        "content": "Automatise l’organisation d’un tournoi d’échecs : saisie des résultats, appariements système suisse et classement en temps réel."
+        "skill": ["python", "json"],
+        "content": "Automatise l’organisation d’un tournoi d’échecs : saisie des résultats, appariements système suisse et classement en temps réel.",
+        "imageAlt": "image de l'application Chess log"
       },
       "detail": {
         "description": {

@@ -28,17 +28,26 @@
       "card": {
         "title": "Chess Log Tournament",
         "skill": ["python", "json"],
-        "content": "Automates tournament management: result entry, Swiss-system pairings and live standings."
+        "content": "Automates tournament management: result entry, Swiss-system pairings and live standings.",
+        "imageAlt": "image of the chess log app"
       },
       "detail": {
         "description": {
           "title": "Tournament software",
-          "content": "Scoring a chess tournament should be as simple as possible so you can use your brainpower for what really matters: planning the next move. No more lost score sheets, approximate pairings or addition mistakes. With our terminal-based software, the arbiter is freed from repetitive chores. <bold>Chess Log Tournament</bold> is a tournament manager written 100% in Python, built on the"
+          "content": [
+            "I had been tasked with creating a simple way to run small chess tournaments without juggling papers or manually making pairings every round. So I built a terminal app that handles the tedious parts for the user.",
+            "You select a match, type results, it updates the standings. You start a round, it generates the next set of pairings using the circle method, with a bias toward the most interesting matches. Everything is saved instantly in plain JSON files, so the tournament can easily be exported by non-technical users. The whole thing runs in the terminal using the built-in library ‘curses’, which makes it fast and satisfying to use."
+          ]
         },
         "imageText": ["", "Example of the software during a tournament", ""],
         "whatILearned": {
-          "title": "Functional choices",
-          "content": "Although the technical specifications were complete, some points were open to interpretation; the implementation therefore follows these principles: "
+          "title": "Things I had to figure out along the way",
+          "content": [
+            "I built this during my first month of learning Python. The code quality (or lack of) reflects that. I keep it here because the finished tool is still fun to use and represents where my learning started.",
+            "MVC. How to organise my code in three separate parts, the model that handles the business logic and the data persistence, the views that render the data to the terminal and the controller that receive the user input and organise the communication between the application layers.",
+            "Pairing logic. How to generate pairings that don’t repeat while forcing the best players to face each other. I implemented the circle method, which is simple but works surprisingly well for this kind of tournament.",
+            "UI with curses. How to make a terminal interface appealing to the user. curses was annoying at first, but once I figured out window layouts and keyboard navigation creating, the UI became my favorite part of the project."
+          ]
         }
       }
     },
@@ -46,7 +55,8 @@
       "card": {
         "title": "LITRevu Website",
         "skill": ["django", "sqlite", "sass", "javascript"],
-        "content": "Platform for sharing and requesting book reviews. Personalized feed thanks to a follow/block system."
+        "content": "Platform for sharing and requesting book reviews. Personalized feed thanks to a follow/block system.",
+        "imageAlt": "screenshot of the litrevu website"
       },
       "detail": {
         "description": {
@@ -79,7 +89,8 @@
       "card": {
         "title": "SoftDesk API",
         "skill": ["django rest framework", "postman", "sqlite"],
-        "content": "RESTful API for project tracking, secured by a permission system."
+        "content": "RESTful API for project tracking, secured by a permission system.",
+        "imageAlt": "screenshot of the softdesk API"
       },
       "detail": {
         "description": {
@@ -112,7 +123,8 @@
       "card": {
         "title": "Epic Events CRM",
         "skill": ["sqlalchemy", "postgresql", "pytest", "sentry"],
-        "content": "Customer Relationship Management, centralizing and unifying collaborator data across departments that previously relied on isolated Excel sheets."
+        "content": "Customer Relationship Management, centralizing and unifying collaborator data across departments that previously relied on isolated Excel sheets.",
+        "imageAlt": "screenshot of the eecrm command line interface in action"
       },
       "detail": {
         "description": {
