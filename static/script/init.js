@@ -2,7 +2,7 @@ let basePath = "";
 
 function getBaseLocation() {
     const pathParts = window.location.pathname.split('/').filter(Boolean);
-    return pathParts.length <= 2 ? "" : "../../";
+    return pathParts.length <= 2 ? "" : "../";
 }
 
 
@@ -21,6 +21,7 @@ async function initPage() {
         }
     }
 
+    await loadFooter();
     await loadProjectsCards(projectKeys);
     await setLanguage(currentLanguage);
     updateFlagIcon(currentLanguage);
