@@ -11,63 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/style/style.css">
     <link rel="stylesheet" href="static/style/animation.css">
-    <script src="static/script/animationHideNav.js" defer></script>
-    <script src="static/script/animationMenuButton.js" defer></script>
-    <script src="static/script/switchTheme.js" defer></script>
-    <script src="static/script/switchLanguage.js" defer></script>
-    <script src="static/script/submitForm.js" defer></script>
-    <script src="static/script/animationParallax.js" defer></script>
-    <script src="static/script/animationBannerReveal.js" defer></script>
+    <script src="static/script/loadHeader.js" defer></script>
     <script src="static/script/loadFooter.js" defer></script>
     <script src="static/script/loadCards.js" defer></script>
+    <script src="static/script/switchLanguage.js" defer></script>
+    <script src="static/script/switchTheme.js" defer></script>
+    <script src="static/script/animationParallax.js" defer></script>
+    <script src="static/script/animationHeader.js" defer></script>
+    <script src="static/script/animationBannerReveal.js" defer></script>
     <script src="static/script/animationCardReveal.js" defer></script>
-    <script src="static/script/init.js"></script>
+    <script src="static/script/submitForm.js" defer></script>
+    <script src="static/script/init.js" defer></script>
 </head>
 <body>
-<header>
-    <nav class="nav-bar nav-bar__hidden">
-        <a href="index.html">
-            <div data-translate="header.name" class="nav-bar__name"></div>
-        </a>
-        <button id="menu-button" class="nav-bar__button">
-            <img src="static/images/menu-svgrepo-com.svg" class="nav-bar__button__logo filter" alt="Menu icon"/>
-        </button>
-        <div id="menu" class="nav-bar__menu">
-            <ul class="nav-bar__list">
-<!--                <li class="nav-bar__item">-->
-<!--                    <a href="about.html" data-translate="header.nav.aboutMe" class="nav-bar__link"></a>-->
-<!--                </li>-->
-                <li class="nav-bar__item">
-                    <a href="#projects-card-container" data-translate="header.nav.project" class="nav-bar__link"></a>
-                </li>
-                <li class="nav-bar__item">
-                    <a href="#contact" data-translate="header.nav.contact" class="nav-bar__link"></a>
-                </li>
-            </ul>
-            <div class="nav-bar__menu__widget">
-                <div class="theme">
-                    <label class="theme__toggle">
-                        <input id="theme-toggle" type="checkbox" class="theme__toggle__input">
-                        <span class="theme__toggle__control"></span>
-                    </label>
-                </div>
-                <details class="language-picker">
-                    <summary class="language-picker__summary">
-                        <img id="selected-flag" src="static/images/gb.svg" alt="English flag" class="flag-icon" />
-                    </summary>
-                    <ul class="language-picker__flag-options">
-                        <li data-lang="en" class="language-picker__item">
-                            <img src="static/images/gb.svg" alt="English flag" class="flag-icon" />
-                        </li>
-                        <li data-lang="fr" class="language-picker__item">
-                            <img src="static/images/fr.svg" alt="French flag" class="flag-icon" />
-                        </li>
-                    </ul>
-                </details>
-            </div>
-        </div>
-    </nav>
-</header>
 
 <div class="banner">
     <div class="banner__content">
@@ -132,13 +88,5 @@
 <div>
     <hr class="line-separator">
 </div>
-<!--<footer class="footer">-->
-<!--    <a href="https://github.com/a-beduc" target="_blank">-->
-<!--        <img src="static/images/github-svgrepo-com.svg" class="footer__logo filter" alt="Logo of github"/>-->
-<!--    </a>-->
-<!--    <a href="mailto:alexandre.beduc@proton.me" target="_blank">-->
-<!--        <img src="static/images/email-svgrepo-com.svg" class="footer__logo filter" alt="Logo of an Email"/>-->
-<!--    </a>-->
-<!--</footer>-->
 </body>
 </html>
