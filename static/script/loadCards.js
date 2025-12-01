@@ -19,19 +19,18 @@ async function loadProjectsCards(projectKeys) {
     if (!Array.isArray(projectKeys) || projectKeys.length === 0) return;
 
     const showDetailLink = container.getAttribute("data-show-detail-link") !== "false";
-    console.log(showDetailLink)
 
     await ensureCardTemplateLoaded();
     const tpl = document.getElementById("project-card-template");
     if (!tpl) return;
 
-    const res = await fetch(`${basePath}static/data/projects.json`);
+    const res = await fetch(`${basePath}data/projects-card.json`);
     const projects = await res.json();
 
     for (const key of projectKeys) {
         const project = projects[key]
 
-        // if wrong project key ignore and continue
+        // if bad project key ignore and continue
         if (!project) continue;
 
         const clone = tpl.content.cloneNode(true);
@@ -52,7 +51,7 @@ async function loadProjectsCards(projectKeys) {
         const detailLogo = clone.querySelector(".card-link-detail img");
 
         img.src = `${basePath}${project.imageSrc}`;
-        img.alt = project.imageAlt;
+        img.dataset.translateCardImg = project.imageAltKey;
 
         title.dataset.translate = project.titleKey;
         content.dataset.translate = project.contentKey;

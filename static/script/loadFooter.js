@@ -6,6 +6,7 @@ async function loadFooter() {
     wrapper.innerHTML = html.trim();
 
     const footer = wrapper.querySelector('footer')
+    if (!footer) return;
 
     footer.querySelectorAll('img[src]').forEach(img => {
         const src = img.getAttribute('src');

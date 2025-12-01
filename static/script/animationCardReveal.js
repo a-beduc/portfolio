@@ -71,4 +71,4 @@ async function animateCard(cardObj) {
 }
 
 // wait for text before animating, event triggered in .scriptLanguageSwitch
-document.addEventListener('i18n:applied', cardAnimationObserver, { once: true });
+document.addEventListener('init:applied', cardAnimationObserver, { once: true });
