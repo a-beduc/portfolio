@@ -7,17 +7,6 @@ function getBaseLocation() {
 }
 
 
-function getProjectCardKeys() {
-    const container = document.getElementById("projects-card-container");
-    if (!container) return [];
-
-    const attr = container.getAttribute("data-project-keys");
-    if (!attr) return [];
-
-    return attr.split(",").map(k => k.trim()).filter(Boolean);
-}
-
-
 async function initPage() {
     basePath = getBaseLocation();
 
@@ -31,9 +20,7 @@ async function initPage() {
     initHeaderAnimation();
     initTheme();
 
-    const projectKeys = getProjectCardKeys()
-    await loadProjectsCards(projectKeys);
-
+    await loadProjectsCards();
     await initLanguage();
 
     // when cards + text init add Parallax effect.

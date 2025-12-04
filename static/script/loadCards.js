@@ -13,9 +13,22 @@ async function ensureCardTemplateLoaded() {
     }
 }
 
-async function loadProjectsCards(projectKeys) {
+
+function getProjectCardKeys() {
+    const container = document.getElementById("projects-card-container");
+    if (!container) return [];
+
+    const attr = container.getAttribute("data-project-keys");
+    if (!attr) return [];
+
+    return attr.split(",").map(k => k.trim()).filter(Boolean);
+}
+
+async function loadProjectsCards() {
     const container = document.getElementById("projects-card-container");
     if (!container) return;
+
+    let projectKeys = getProjectCardKeys()
     if (!Array.isArray(projectKeys) || projectKeys.length === 0) return;
 
     const showDetailLink = container.getAttribute("data-show-detail-link") !== "false";
