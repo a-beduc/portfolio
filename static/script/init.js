@@ -20,7 +20,17 @@ async function initPage() {
     initHeaderAnimation();
     initTheme();
 
-    await loadProjectsCards();
+    // verification to skip if associated script is not in <header>
+    if (typeof loadProjectsCards === 'function') {
+        await loadProjectsCards();
+    }
+
+    // verification to skip if associated script is not in <header>
+    if (typeof loadProjectDetail === 'function') {
+        await loadProjectDetail();
+    }
+
+
     await initLanguage();
 
     // when cards + text init add Parallax effect.
