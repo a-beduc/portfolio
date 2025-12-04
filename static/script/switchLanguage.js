@@ -19,6 +19,17 @@ async function initLanguage() {
     updateFlagIcon(currentLanguage);
 }
 
+function applyInlineFormatting(text) {
+    if (typeof text !== 'string') {
+        console.warn("Expected inline text is not a string")
+        return
+    }
+
+    return text
+        .replaceAll("<bold>", '<span class="bold">')
+        .replaceAll("</bold>", "</span>")
+}
+
 async function setLanguage(lang) {
     currentLanguage = lang;
     localStorage.setItem('preferredLang', lang);
@@ -40,6 +51,10 @@ function updateText(translations) {
          element.textContent = translation;
        }
     });
+
+    const nameEle = document.querySelector('[data-translate-name]');
+    const namePath = nameEle.getAttribute('data-translate-name');
+    nameEle.innerHTML = applyInlineFormatting(getNestedValue(translations, namePath));
 
     document.querySelectorAll('[data-translate-skill]').forEach(ul => {
         const keyPath = ul.getAttribute('data-translate-skill');
