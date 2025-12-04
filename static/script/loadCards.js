@@ -18,11 +18,12 @@ function getProjectCardKeys() {
     const container = document.getElementById("projects-card-container");
     if (!container) return [];
 
-    const attr = container.getAttribute("data-project-keys");
+    const attr = container.getAttribute("data-project-card-keys");
     if (!attr) return [];
 
     return attr.split(",").map(k => k.trim()).filter(Boolean);
 }
+
 
 async function loadProjectsCards() {
     const container = document.getElementById("projects-card-container");
