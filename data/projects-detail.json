@@ -1,0 +1,31 @@
+{
+  "chess-log-detail": {
+    "id": "chess-log-app",
+    "githubUrl": "https://github.com/a-beduc/formation_project_4",
+    "imagesSrc": [
+      "assets/chess-log/project_4-2.png",
+      "assets/chess-log/project_4-3.gif",
+      "assets/chess-log/project_4-4.png"
+    ],
+    "descriptionTitleKey": "project.chessLogApp.detail.descriptionTitle",
+    "descriptionContentKey": "project.chessLogApp.detail.descriptionContent",
+    "imageAltKey": "project.chessLogApp.detail.imageAlt",
+    "imageTextKey": "project.chessLogApp.detail.imageText",
+    "whatILearnedTitleKey": "project.chessLogApp.detail.whatILearnedTitle",
+    "whatILearnedContentKey": "project.chessLogApp.detail.whatILearnedContent",
+    "techStack": [
+      {
+        "id": "python",
+        "label": "Python",
+        "icon": "static/images/tech/logo-python.svg",
+        "link": "https://www.python.org/"
+      },
+      {
+        "id": "json",
+        "label": "JSON",
+        "icon": "static/images/tech/logo-json.svg",
+        "link": "https://www.json.org/json-en.html"
+      }
+    ]
+  }
+}
