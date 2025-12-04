@@ -1,5 +1,5 @@
 { "header": {
-    "name": "Alexandre Beduc.",
+    "name": "<bold>A</bold>lexandre <bold>B</bold>educ.",
     "nav": {
       "aboutMe": "About me",
       "project": "Projects",
@@ -27,28 +27,30 @@
     "chessLogApp": {
       "card": {
         "title": "Chess Log Tournament",
-        "skill": ["python", "json"],
+        "skill": ["python", "json", "mvc", "curses"],
         "content": "Automates tournament management: result entry, Swiss-system pairings and live standings.",
         "imageAlt": "image of the chess log app"
       },
       "detail": {
-        "description": {
-          "title": "Tournament software",
-          "content": [
-            "I had been tasked with creating a simple way to run small chess tournaments without juggling papers or manually making pairings every round. So I built a terminal app that handles the tedious parts for the user.",
-            "You select a match, type results, it updates the standings. You start a round, it generates the next set of pairings using the circle method, with a bias toward the most interesting matches. Everything is saved instantly in plain JSON files, so the tournament can easily be exported by non-technical users. The whole thing runs in the terminal using the built-in library ‘curses’, which makes it fast and satisfying to use."
-          ]
-        },
+        "descriptionTitle": "Tournament software",
+        "descriptionContent": [
+          "<bold>I built a small tool to run chess tournaments without juggling paper or manually creating pairings.</bold>",
+          "You select a match, enter results, and the standings update instantly. Starting a new round triggers automatic pairings using <bold>the circle method</bold>, with a slight bias toward the most interesting matches.",
+          "All data is stored in <bold>plain JSON files</bold>, non-technical users can easily export the data. The whole interface is built with <bold>curses</bold>, which kept it fast and pleasant to use for a terminal environment."
+        ],
+        "imageAlt": [
+          "List view of the available tournaments, with a new tournament popup.",
+          "Animated gif of the application in use, show a tournament in progress.",
+          "List view of the registered players."
+        ],
         "imageText": ["", "Example of the software during a tournament", ""],
-        "whatILearned": {
-          "title": "Things I had to figure out along the way",
-          "content": [
-            "I built this during my first month of learning Python. The code quality (or lack of) reflects that. I keep it here because the finished tool is still fun to use and represents where my learning started.",
-            "MVC. How to organise my code in three separate parts, the model that handles the business logic and the data persistence, the views that render the data to the terminal and the controller that receive the user input and organise the communication between the application layers.",
-            "Pairing logic. How to generate pairings that don’t repeat while forcing the best players to face each other. I implemented the circle method, which is simple but works surprisingly well for this kind of tournament.",
-            "UI with curses. How to make a terminal interface appealing to the user. curses was annoying at first, but once I figured out window layouts and keyboard navigation creating, the UI became my favorite part of the project."
-          ]
-        }
+        "whatILearnedTitle": "Things I had to figure out along the way",
+        "whatILearnedContent": [
+          "<bold>MVC architecture.</bold> Separating business logic, persistence, views, and user input.",
+          "<bold>Pairing logic.</bold> Generating matches that avoid repeats while prioritizing strong pairings. Implemented using the circle method.",
+          "<bold>Terminal UI.</bold> Making a text-based interface feel structured and navigable with window layouts and keyboard controls.",
+          "<bold>Early-stage Python code.</bold> I wrote this in my first months learning Python. The code shows it, but the finished tool still represents an important learning milestone."
+        ]
       }
     },
     "litrevu": {

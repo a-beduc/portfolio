@@ -82,6 +82,30 @@ function updateText(translations) {
             img.alt = altText
         }
     });
+
+    document.querySelectorAll('[data-translate-paragraphs]').forEach(div => {
+        const keyPath = div.getAttribute('data-translate-paragraphs');
+        const items = getNestedValue(translations, keyPath);
+
+        div.innerHTML = "";
+
+        if (!Array.isArray(items)) {
+            console.warn("Expected array, but got:", items)
+            return
+        }
+
+        items.forEach(text => {
+            const p = document.createElement('p');
+            p.className = 'project-info__content';
+            p.innerHTML = applyInlineFormatting(text);
+            div.appendChild(p);
+        });
+    });
+
+    document.querySelectorAll('[data-translate-img-alt]').forEach(img => {
+        const keyPath = img.getAttribute("data-translate-img-alt");
+        img.alt = getNestedValue(translations, keyPath);
+    })
 }
 
 // use a keyPath string like "nav.contact" and create an array ["nav", "contact"] then iterate on the array with
