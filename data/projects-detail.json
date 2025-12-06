@@ -14,21 +14,61 @@
     "whatILearnedTitleKey": "project.chessLogApp.detail.whatILearnedTitle",
     "whatILearnedContentKey": "project.chessLogApp.detail.whatILearnedContent",
     "techStack": [
-      {
-        "id": "python",
-        "label": "Python",
-        "icon": "static/images/tech/logo-python.svg",
-        "link": "https://www.python.org/"
-      },
-      {
-        "id": "json",
-        "label": "JSON",
-        "icon": "static/images/tech/logo-json.svg",
-        "link": "https://www.json.org/json-en.html"
-      }
       "python", "json"
     ]
   },
+  "litrevu-detail": {
+    "id": "litrevu",
+    "githubUrl": "https://github.com/a-beduc/formation_project_9",
+    "imagesSrc": [
+      "assets/litrevu/project_9-1.png",
+      "assets/litrevu/project_9-5.gif",
+      "assets/litrevu/project_9-4.png"
+    ],
+    "descriptionTitleKey": "project.litrevu.detail.descriptionTitle",
+    "descriptionContentKey": "project.litrevu.detail.descriptionContent",
+    "imageAltKey": "project.litrevu.detail.imageAlt",
+    "imageTextKey": "project.litrevu.detail.imageText",
+    "whatILearnedTitleKey": "project.litrevu.detail.whatILearnedTitle",
+    "whatILearnedContentKey": "project.litrevu.detail.whatILearnedContent",
+    "techStack": [
+      "python", "django", "sqlite", "sass", "javascript"
+    ]
+  },
+  "softdesk-detail": {
+    "id": "softdesk",
+    "githubUrl": "https://github.com/a-beduc/formation_project_10",
+    "imagesSrc": [
+      "assets/softdesk/project_10-2.png",
+      "assets/softdesk/project_10-4.png",
+      "assets/softdesk/project_10-3.png"
+    ],
+    "descriptionTitleKey": "project.softdesk.detail.descriptionTitle",
+    "descriptionContentKey": "project.softdesk.detail.descriptionContent",
+    "imageAltKey": "project.softdesk.detail.imageAlt",
+    "imageTextKey": "project.softdesk.detail.imageText",
+    "whatILearnedTitleKey": "project.softdesk.detail.whatILearnedTitle",
+    "whatILearnedContentKey": "project.softdesk.detail.whatILearnedContent",
+    "techStack": [
+      "python", "django-rest", "sqlite", "postman"
+    ]
+  },
+  "eecrm-detail": {
+    "id": "eecrm",
+    "githubUrl": "https://github.com/a-beduc/formation_project_12",
+    "imagesSrc": [
+      "assets/eecrm/project_12-3.png",
+      "assets/eecrm/project_12-2.png",
+      "assets/eecrm/project_12-4.png"
+    ],
+    "descriptionTitleKey": "project.eecrm.detail.descriptionTitle",
+    "descriptionContentKey": "project.eecrm.detail.descriptionContent",
+    "imageAltKey": "project.eecrm.detail.imageAlt",
+    "imageTextKey": "project.eecrm.detail.imageText",
+    "whatILearnedTitleKey": "project.eecrm.detail.whatILearnedTitle",
+    "whatILearnedContentKey": "project.eecrm.detail.whatILearnedContent",
+    "techStack": [
+      "python", "sqlalchemy", "pytest", "postgresql", "sentry"
     ]
   }
 }
