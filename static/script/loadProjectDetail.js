@@ -58,28 +58,33 @@ async function loadProjectDetail() {
     const list = document.createElement('ul');
     list.className = 'project-info__tech-stack__list';
 
-    detail.techStack.forEach(tool => {
-       const li = document.createElement('li');
-       li.className = 'project-info__tech-stack__item';
+    const response = await fetch(`${basePath}data/icons.json`);
+    const icons = await response.json()
 
-       const a = document.createElement('a');
-       a.target = "_blank";
-       a.className = 'project-info__tech-stack__link';
-       a.href = tool.link;
+    detail.techStack.forEach(techName => {
+        const icon = icons[techName]
 
-       const img = document.createElement('img');
-       img.className = 'project-info__tech-stack__icon';
-       img.src = `${basePath}${tool.icon}`;
-       img.alt = tool.label;
+        const li = document.createElement('li');
+        li.className = 'project-info__tech-stack__item';
 
-       const span = document.createElement('span');
-       span.className = 'project-info__tech-stack__label';
-       span.textContent = tool.label;
+        const a = document.createElement('a');
+        a.target = "_blank";
+        a.className = 'project-info__tech-stack__link';
+        a.href = icon.link;
 
-       a.appendChild(img);
-       a.appendChild(span);
-       li.append(a);
-       list.appendChild(li);
+        const img = document.createElement('img');
+        img.className = 'project-info__tech-stack__icon';
+        img.src = `${basePath}${icon.icon}`;
+        img.alt = icon.label;
+
+        const span = document.createElement('span');
+        span.className = 'project-info__tech-stack__label';
+        span.textContent = icon.label;
+
+        a.appendChild(img);
+        a.appendChild(span);
+        li.append(a);
+        list.appendChild(li);
     });
 
     techStackContainer.appendChild(list);

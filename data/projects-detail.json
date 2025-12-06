@@ -1,6 +1,6 @@
 {
   "chess-log-detail": {
-    "id": "chess-log-app",
+    "id": "chess-log",
     "githubUrl": "https://github.com/a-beduc/formation_project_4",
     "imagesSrc": [
       "assets/chess-log/project_4-2.png",
@@ -26,6 +26,9 @@
         "icon": "static/images/tech/logo-json.svg",
         "link": "https://www.json.org/json-en.html"
       }
+      "python", "json"
+    ]
+  },
     ]
   }
 }
