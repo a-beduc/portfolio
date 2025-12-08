@@ -25,6 +25,11 @@ function getProjectDetailKey() {
 }
 
 
+function detailKeyPath(keyName, keyAttribute) {
+    return `project.${keyName}.detail.${keyAttribute}`
+}
+
+
 async function loadProjectDetail() {
     const container = document.getElementById("project-detail-container");
     if (!container) return;
@@ -50,10 +55,12 @@ async function loadProjectDetail() {
     const imageContainer = clone.querySelector('[data-role="images-container"]');
     const techStackContainer = clone.querySelector('[data-role="tech-stack"]');
 
-    descriptionTitleEl.dataset.translate = detail.descriptionTitleKey
-    descriptionContentEl.dataset.translateParagraphs = detail.descriptionContentKey
-    learnedTitleEl.dataset.translate = detail.whatILearnedTitleKey
-    learnedContentEl.dataset.translateParagraphs = detail.whatILearnedContentKey
+    const keyName = detail.keyName
+
+    descriptionTitleEl.dataset.translate = detailKeyPath(keyName, "descriptionTitle")
+    descriptionContentEl.dataset.translateParagraphs = detailKeyPath(keyName, "descriptionContent")
+    learnedTitleEl.dataset.translate = detailKeyPath(keyName, "whatILearnedTitle")
+    learnedContentEl.dataset.translateParagraphs = detailKeyPath(keyName, "whatILearnedContent")
 
     const list = document.createElement('ul');
     list.className = 'project-info__tech-stack__list';
@@ -96,11 +103,11 @@ async function loadProjectDetail() {
         const img = document.createElement('img');
         img.className = 'project-info__image-block__image';
         img.src = `${basePath}${src}`;
-        img.dataset.translateImgAlt = `${detail.imageAltKey}.${index}`;
+        img.dataset.translateImgAlt = `${detailKeyPath(keyName, "imageAlt")}.${index}`;
 
         const caption = document.createElement('span');
         caption.className = "project-info__image-block__description";
-        caption.dataset.translate = `${detail.imageTextKey}.${index}`;
+        caption.dataset.translate = `${detailKeyPath(keyName, "imageText")}.${index}`;
 
         block.appendChild(img);
         block.appendChild(caption);

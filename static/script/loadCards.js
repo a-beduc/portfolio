@@ -25,6 +25,11 @@ function getProjectCardKeys() {
 }
 
 
+function cardKeyPath(keyName, keyAttribute) {
+    return `project.${keyName}.card.${keyAttribute}`
+}
+
+
 async function loadProjectsCards() {
     const container = document.getElementById("projects-card-container");
     if (!container) return;
@@ -64,12 +69,14 @@ async function loadProjectsCards() {
         const githubLogo = clone.querySelector(".card-link-github img");
         const detailLogo = clone.querySelector(".card-link-detail img");
 
-        img.src = `${basePath}${project.imageSrc}`;
-        img.dataset.translateCardImg = project.imageAltKey;
+        const keyName = project.keyName
 
-        title.dataset.translate = project.titleKey;
-        content.dataset.translate = project.contentKey;
-        skills.dataset.translateSkill = project.skillsKey;
+        img.src = `${basePath}${project.imageSrc}`;
+        img.dataset.translateCardImg = cardKeyPath(keyName, "imageAlt");
+
+        title.dataset.translate = cardKeyPath(keyName, "title");
+        content.dataset.translate = cardKeyPath(keyName, "content");
+        skills.dataset.translateSkill = cardKeyPath(keyName, "skill");
 
         githubLink.href = project.githubUrl;
         githubLogo.src = `${basePath}static/images/github-svgrepo-com.svg`

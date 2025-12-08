@@ -1,42 +1,30 @@
 {
   "chess-log-card": {
-    "id": "chess-log-app",
+    "id": "chess-log",
+    "keyName": "chessLog",
     "projectUrl": "projects/chess-log.html",
     "imageSrc": "assets/chess-log/project_4-1.png",
-    "imageAltKey": "project.chessLogApp.card.imageAlt",
-    "githubUrl": "https://github.com/a-beduc/formation_project_4",
-    "titleKey": "project.chessLogApp.card.title",
-    "skillsKey": "project.chessLogApp.card.skill",
-    "contentKey": "project.chessLogApp.card.content"
+    "githubUrl": "https://github.com/a-beduc/formation_project_4"
   },
   "litrevu-card": {
-    "id": "litrevu-app",
+    "id": "litrevu",
+    "keyName": "litrevu",
     "projectUrl": "projects/litrevu.html",
     "imageSrc": "assets/litrevu/project_9-2.png",
-    "imageAltKey": "project.litrevu.card.imageAlt",
-    "githubUrl": "https://github.com/a-beduc/formation_project_9",
-    "titleKey": "project.litrevu.card.title",
-    "skillsKey": "project.litrevu.card.skill",
-    "contentKey": "project.litrevu.card.content"
+    "githubUrl": "https://github.com/a-beduc/formation_project_9"
   },
   "softdesk-card": {
-    "id": "softdesk-app",
+    "id": "softdesk",
+    "keyName": "softdesk",
     "projectUrl": "projects/softdesk.html",
     "imageSrc": "assets/softdesk/project_10-1.png",
-    "imageAltKey": "project.softdesk.card.imageAlt",
-    "githubUrl": "https://github.com/a-beduc/formation_project_10",
-    "titleKey": "project.softdesk.card.title",
-    "skillsKey": "project.softdesk.card.skill",
-    "contentKey": "project.softdesk.card.content"
+    "githubUrl": "https://github.com/a-beduc/formation_project_10"
   },
   "eecrm-card": {
-    "id": "eecrm-app",
+    "id": "eecrm",
+    "keyName": "eecrm",
     "projectUrl": "projects/eecrm.html",
     "imageSrc": "assets/eecrm/project_12-1.jpg",
-    "imageAltKey": "project.eecrm.card.imageAlt",
-    "githubUrl": "https://github.com/a-beduc/formation_project_9",
-    "titleKey": "project.eecrm.card.title",
-    "skillsKey": "project.eecrm.card.skill",
-    "contentKey": "project.eecrm.card.content"
+    "githubUrl": "https://github.com/a-beduc/formation_project_12"
   }
 }
