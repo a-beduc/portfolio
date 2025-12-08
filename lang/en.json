@@ -24,7 +24,7 @@
     }
   },
   "project": {
-    "chessLogApp": {
+    "chessLog": {
       "card": {
         "title": "Chess Log Tournament",
         "skill": ["python", "json", "mvc", "curses"],
