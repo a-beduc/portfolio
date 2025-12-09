@@ -26,5 +26,12 @@
     "projectUrl": "projects/eecrm.html",
     "imageSrc": "assets/eecrm/project_12-1.jpg",
     "githubUrl": "https://github.com/a-beduc/formation_project_12"
+  },
+  "oclettings-card": {
+    "id": "oclettings",
+    "keyName": "oclettings",
+    "projectUrl": "projects/oclettings.html",
+    "imageSrc": "assets/oclettings/project_12-1.jpg",
+    "githubUrl": "https://github.com/a-beduc/formation_project_13"
   }
 }

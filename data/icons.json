@@ -58,5 +58,25 @@
     "label": "Sentry",
     "icon": "static/images/tech/logo-sentry.svg",
     "link": "https://sentry.io/welcome/"
+  },
+  "github-action": {
+    "label": "Github Action",
+    "icon": "static/images/tech/logo-github-action.svg",
+    "link": "https://github.com/features/actions"
+  },
+  "docker": {
+    "label": "Docker",
+    "icon": "static/images/tech/logo-docker.svg",
+    "link": "https://www.docker.com/"
+  },
+  "render": {
+    "label": "Render",
+    "icon": "static/images/tech/logo-render.svg",
+    "link": "https://render.com/"
+  },
+  "sphinx": {
+    "label": "Sphinx",
+    "icon": "static/images/tech/logo-sphinx.svg",
+    "link": "https://www.sphinx-doc.org/en/master/index.html"
   }
 }

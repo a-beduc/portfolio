@@ -50,5 +50,18 @@
     "techStack": [
       "python", "sqlalchemy", "pytest", "postgresql", "sentry"
     ]
+  },
+    "oclettings-detail": {
+    "id": "oclettings",
+    "keyName": "oclettings",
+    "githubUrl": "https://github.com/a-beduc/formation_project_13",
+    "imagesSrc": [
+      "assets/oclettings/project_12-3.png",
+      "assets/oclettings/project_12-2.png",
+      "assets/oclettings/project_12-4.png"
+    ],
+    "techStack": [
+      "python", "django", "pytest", "sqlite", "github-action", "docker", "render", "sphinx"
+    ]
   }
 }
