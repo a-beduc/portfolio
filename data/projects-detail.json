@@ -56,9 +56,9 @@
     "keyName": "oclettings",
     "githubUrl": "https://github.com/a-beduc/formation_project_13",
     "imagesSrc": [
-      "assets/oclettings/project_12-3.png",
-      "assets/oclettings/project_12-2.png",
-      "assets/oclettings/project_12-4.png"
+      "assets/oclettings/project_13-2.png",
+      "assets/oclettings/project_13-3.gif",
+      "assets/oclettings/project_13-4.png"
     ],
     "techStack": [
       "python", "django", "pytest", "sqlite", "github-action", "docker", "render", "sphinx"
