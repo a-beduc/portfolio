@@ -127,7 +127,6 @@ async function BannerAnimation() {
 }
 
 // BANNER ANIMATION
-// 'i18n:applied' is a custom event sent after LanguageSwitch is pressed
-document.addEventListener('i18n:applied', async () => {
+document.addEventListener('init:applied', async () => {
     await BannerAnimation()
 }, { once: true });

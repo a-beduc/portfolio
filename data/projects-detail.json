@@ -1,0 +1,67 @@
+{
+  "chess-log-detail": {
+    "id": "chess-log",
+    "keyName": "chessLog",
+    "githubUrl": "https://github.com/a-beduc/formation_project_4",
+    "imagesSrc": [
+      "assets/chess-log/project_4-2.png",
+      "assets/chess-log/project_4-3.gif",
+      "assets/chess-log/project_4-4.png"
+    ],
+    "techStack": [
+      "python", "json"
+    ]
+  },
+  "litrevu-detail": {
+    "id": "litrevu",
+    "keyName": "litrevu",
+    "githubUrl": "https://github.com/a-beduc/formation_project_9",
+    "imagesSrc": [
+      "assets/litrevu/project_9-1.png",
+      "assets/litrevu/project_9-5.gif",
+      "assets/litrevu/project_9-4.png"
+    ],
+    "techStack": [
+      "python", "django", "sqlite", "sass", "javascript"
+    ]
+  },
+  "softdesk-detail": {
+    "id": "softdesk",
+    "keyName": "softdesk",
+    "githubUrl": "https://github.com/a-beduc/formation_project_10",
+    "imagesSrc": [
+      "assets/softdesk/project_10-2.png",
+      "assets/softdesk/project_10-4.png",
+      "assets/softdesk/project_10-3.png"
+    ],
+    "techStack": [
+      "python", "django-rest", "sqlite", "postman"
+    ]
+  },
+  "eecrm-detail": {
+    "id": "eecrm",
+    "keyName": "eecrm",
+    "githubUrl": "https://github.com/a-beduc/formation_project_12",
+    "imagesSrc": [
+      "assets/eecrm/project_12-3.png",
+      "assets/eecrm/project_12-2.png",
+      "assets/eecrm/project_12-4.png"
+    ],
+    "techStack": [
+      "python", "sqlalchemy", "pytest", "postgresql", "sentry"
+    ]
+  },
+    "oclettings-detail": {
+    "id": "oclettings",
+    "keyName": "oclettings",
+    "githubUrl": "https://github.com/a-beduc/formation_project_13",
+    "imagesSrc": [
+      "assets/oclettings/project_13-2.png",
+      "assets/oclettings/project_13-3.png",
+      "assets/oclettings/project_13-4.png"
+    ],
+    "techStack": [
+      "python", "django", "pytest", "sqlite", "github-action", "docker", "render", "sphinx"
+    ]
+  }
+}

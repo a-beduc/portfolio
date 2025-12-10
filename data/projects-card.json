@@ -1,0 +1,53 @@
+{
+  "chess-log-card": {
+    "id": "chess-log",
+    "keyName": "chessLog",
+    "projectUrl": "projects/chess-log.html",
+    "imageSrc": "assets/chess-log/project_4-1.png",
+    "githubUrl": "https://github.com/a-beduc/formation_project_4"
+  },
+  "litrevu-card": {
+    "id": "litrevu",
+    "keyName": "litrevu",
+    "projectUrl": "projects/litrevu.html",
+    "imageSrc": "assets/litrevu/project_9-2.png",
+    "githubUrl": "https://github.com/a-beduc/formation_project_9"
+  },
+  "softdesk-card": {
+    "id": "softdesk",
+    "keyName": "softdesk",
+    "projectUrl": "projects/softdesk.html",
+    "imageSrc": "assets/softdesk/project_10-1.png",
+    "githubUrl": "https://github.com/a-beduc/formation_project_10",
+    "extraLinks": [
+      {
+        "type": "postman",
+        "url": "https://documenter.getpostman.com/view/42454429/2sB34ZqPrd",
+        "icon": "static/images/postman-svgrepo-com.svg",
+        "alt": "Postman collection"
+      }
+    ]
+  },
+  "eecrm-card": {
+    "id": "eecrm",
+    "keyName": "eecrm",
+    "projectUrl": "projects/eecrm.html",
+    "imageSrc": "assets/eecrm/project_12-1.jpg",
+    "githubUrl": "https://github.com/a-beduc/formation_project_12"
+  },
+  "oclettings-card": {
+    "id": "oclettings",
+    "keyName": "oclettings",
+    "projectUrl": "projects/oclettings.html",
+    "imageSrc": "assets/oclettings/project_13-1.png",
+    "githubUrl": "https://github.com/a-beduc/formation_project_13",
+    "extraLinks": [
+      {
+        "type": "production",
+        "url": "https://oc-lettings-demo.onrender.com/",
+        "icon": "static/images/link-external-svgrepo-com.svg",
+        "alt": "External link to live project"
+      }
+    ]
+  }
+}

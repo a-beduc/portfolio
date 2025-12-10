@@ -1,0 +1,70 @@
+<header>
+    <nav class="nav-bar nav-bar__hidden">
+        <a href="index.html">
+            <div
+                    data-translate-name="header.name"
+                    class="nav-bar__name"></div>
+        </a>
+        <button
+                id="menu-button"
+                class="nav-bar__button">
+            <img
+                    src="static/images/menu-svgrepo-com.svg"
+                    class="nav-bar__button__logo filter"
+                    alt="Menu icon"/>
+        </button>
+        <div id="menu"
+             class="nav-bar__menu">
+            <ul class="nav-bar__list">
+                <li class="nav-bar__item">
+                    <a
+                            href="index.html#projects-card-container"
+                            data-translate="header.nav.project"
+                            class="nav-bar__link"></a>
+                </li>
+                <li class="nav-bar__item">
+                    <a
+                            href="index.html#contact"
+                            data-translate="header.nav.contact"
+                            class="nav-bar__link"></a>
+                </li>
+            </ul>
+            <div class="nav-bar__menu__widget">
+                <div class="theme">
+                    <label class="theme__toggle">
+                        <input
+                                id="theme-toggle"
+                                type="checkbox"
+                                class="theme__toggle__input">
+                        <span class="theme__toggle__control"></span>
+                    </label>
+                </div>
+                <details class="language-picker">
+                    <summary class="language-picker__summary">
+                        <img
+                                id="selected-flag"
+                                src="static/images/gb.svg"
+                                alt="English flag"
+                                class="flag-icon" />
+                    </summary>
+                    <ul class="language-picker__flag-options">
+                        <li
+                                data-lang="en"
+                                class="language-picker__item">
+                            <img
+                                    src="static/images/gb.svg"
+                                    alt="English flag"
+                                    class="flag-icon" />
+                        </li>
+                        <li data-lang="fr" class="language-picker__item">
+                            <img
+                                    src="static/images/fr.svg"
+                                    alt="French flag"
+                                    class="flag-icon" />
+                        </li>
+                    </ul>
+                </details>
+            </div>
+        </div>
+    </nav>
+</header>

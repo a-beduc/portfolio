@@ -57,6 +57,7 @@ $font-form-button: 1.3rem;
 $font-detail-title: 2.5rem;
 $font-detail-content: 1.125rem;
 $font-detail-comment: 0.8rem;
+$font-detail-tech: 1rem;
 
 :root {
   font-size: $font-default-phone;
@@ -112,6 +113,23 @@ ul {
   background-size: cover;
   //border-bottom: 3px solid rgb(var(--secondary-color));
   padding: 0 1rem;
+
+  &__name {
+    font-weight: 200;
+    font-size: $font-nav-link-phone * 1.1;
+
+    @media (min-width: $breakpoint-tablet-min) {
+          font-size: $font-nav-link-tablet * 1.1;
+    }
+
+    @media (min-width: $breakpoint-desktop-min) {
+      font-size: $font-nav-link-desktop * 1.1;
+    }
+
+    span {
+      color: rgb(var(--secondary-color));
+    }
+  }
 
   &__button {
     background: none;
@@ -403,13 +421,21 @@ ul {
   &__p {
     font-weight: 200;
     font-size: $font-banner-information-phone;
+    line-height: 24px;
 
     @media (min-width: $breakpoint-phone-max) {
       font-size: $font-banner-information-tablet;
+      line-height: 27px;
+      width: 350px;
     }
 
-    @media (min-width: $breakpoint-phone-max) {
+    @media (min-width: $breakpoint-tablet-min) {
+      width: auto;
+    }
+
+    @media (min-width: $breakpoint-desktop-min) {
       font-size: $font-banner-information-desktop;
+      line-height: 36px;
     }
   }
 
@@ -955,8 +981,16 @@ ul {
     width: auto;
   }
 
+  &__images {
+    margin: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
   &__image-block {
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -965,7 +999,6 @@ ul {
     color: rgba(255, 255, 255, 0.6);
     font-size: $font-detail-comment;
     max-width: 750px;
-
 
     &__image {
       overflow: hidden;
@@ -977,9 +1010,16 @@ ul {
   }
 
   &__content {
-    font-weight: 200;
+    font-weight: 300;
     font-size: $font-detail-content;
     text-align: justify;
+    width: 100%;
+  }
+
+  &__content-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     width: 100%;
   }
 
@@ -991,6 +1031,90 @@ ul {
   .line-separator {
     width: 100%;
     margin: auto;
+  }
+
+  &__tech-stack {
+    width: 100%;
+    margin: 0 0.25rem;
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    &__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: $font-detail-tech * 0.9;
+    }
+
+    &__item {
+      display: inline-flex;
+      align-items: center;
+      background-color: rgb(var(--secondary-color));
+      //border: 0px solid rgb(var(--primary-color));
+      border-radius: 9999px;
+      padding: 0 0.5rem 0 0;
+    }
+
+    &__icon {
+      width: 24px;
+      height: 24px;
+      padding: 2px;
+      border: 2px solid rgb(var(--secondary-color));
+      border-radius: 50%;
+      background-color: rgb(var(--tertiary-color));
+      object-fit: contain;
+    }
+
+    &__label {
+      white-space: nowrap;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 600;
+    }
+
+    @media (min-width: $breakpoint-tablet-min) {
+      margin: 0 0 0.5rem 0;
+
+      &__list {
+        gap: 0.5rem;
+      }
+
+      &__link {
+        gap: 0.25rem;
+        font-size: $font-detail-tech;
+      }
+
+      &__item {
+        padding: 0 0.75rem 0 0;
+      }
+
+      &__icon {
+        width: 28px;
+        height: 28px;
+        padding: 3px;
+      }
+    }
+
+    @media (min-width: $breakpoint-desktop-min) {
+      &__list {
+        gap: 0.75rem;
+      }
+
+      &__link {
+        font-size: $font-detail-tech * 1.1;
+      }
+
+      &__icon {
+        width: 32px;
+        height: 32px;
+      }
+    }
   }
 }
 
@@ -1008,4 +1132,10 @@ ul {
     transform: var(--base);
     transition: transform 0s;
   }
+}
+
+
+.link-disabled {
+  pointer-events: none;
+  cursor: default;
 }

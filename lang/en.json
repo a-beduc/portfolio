@@ -1,5 +1,6 @@
-{ "header": {
-    "name": "Alexandre Beduc.",
+{
+  "header": {
+    "name": "<bold>A</bold>lexandre <bold>B</bold>educ.",
     "nav": {
       "aboutMe": "About me",
       "project": "Projects",
@@ -10,7 +11,7 @@
     "banner": {
       "greeting": "Hello, my name is",
       "name": "Alexandre Beduc.",
-      "information": "I am a web developer, backend specialist, \nwith an unapologetic bias toward Python."
+      "information": "Backend web developer, with an unapologetic bias toward Python."
     },
     "form": {
       "title": "Get in touch",
@@ -24,153 +25,196 @@
     }
   },
   "project": {
-    "chessLogApp": {
+    "chessLog": {
       "card": {
         "title": "Chess Log Tournament",
-        "skill": {
-          "01": "Python",
-          "02": "MVC",
-          "03": "Curses"
-        },
-        "content": "Automates tournament management: result entry, Swiss-system pairings and live standings."
+        "skill": [
+          "python",
+          "json",
+          "mvc",
+          "curses"
+        ],
+        "content": "Intuitive terminal based UI to automate chess tournament management: Round-robin pairings, live standings and easy-to-access data.",
+        "imageAlt": "Image of the chess log app"
       },
       "detail": {
-        "description": {
-          "title": "Tournament software",
-          "content": {
-            "01": "Scoring a chess tournament should be as simple as possible so you can use your brainpower for what really matters: planning the next move. No more lost score sheets, approximate pairings or addition mistakes. With our terminal-based software, the arbiter is freed from repetitive chores.",
-            "02": "Chess Log Tournament",
-            "03": " is a tournament manager written 100% in Python, built on the ",
-            "04": "MVC design pattern,",
-            "05": " with a polished interface thanks to the ",
-            "06": "curses module."
-          }
-        },
-        "imageText": {
-          "01": "",
-          "02": "Example of the software during a tournament",
-          "03": ""
-        },
-        "whatILearned": {
-          "title": "Functional choices",
-          "content": {
-            "01": "Although the technical specifications were complete, some points were open to interpretation; the implementation therefore follows these principles: ",
-            "02": " > Every action (creating a player, entering a result, starting a round) is immediately saved to JSON files that serve as a database; this guarantees instant recovery after a power cut and enables easy manual edits.",
-            "03": " > The pairing algorithm implements the \"circle method\" of round-robin: for n players it automatically generates n - 1 rounds where no one meets the same opponent twice. For each new round the software chooses from the remaining pairings the one that pits the top-scoring players against each other.",
-            "04": " > The interface is entirely based on the curses module (from the C library of the same name). Windows and navigation are driven solely by the keyboard for a smooth and intuitive experience."
-          }
-        }
+        "descriptionTitle": "Tournament software",
+        "descriptionContent": [
+          "<bold>I built a small tool to run chess tournaments without juggling paper or manually creating pairings.</bold>",
+          "You select a match, enter results, and the standings update instantly. Starting a new round triggers automatic pairings using <bold>the circle method</bold>, with a slight bias toward the most interesting matches.",
+          "All data is stored in plain <bold>JSON</bold> files, non-technical users can easily export or modify the data. The whole interface is built with <bold>curses</bold>, which kept it fast and pleasant to use for a terminal environment."
+        ],
+        "imageAlt": [
+          "List view of the available tournaments, with a new tournament popup.",
+          "Animated gif of the application in use, show a tournament in progress.",
+          "List view of the registered players."
+        ],
+        "imageText": [
+          "New tournament creation form",
+          "Example of the software during a tournament",
+          "List of all players"
+        ],
+        "whatILearnedTitle": "Things I had to figure out along the way",
+        "whatILearnedContent": [
+          "<bold>MVC architecture.</bold> Separating business logic, persistence, views, and user input.",
+          "<bold>Pairing logic.</bold> Generating matches that avoid repeats while prioritizing strong pairings. Implemented using the circle method.",
+          "<bold>Terminal UI.</bold> Making a text-based interface feel structured and navigable with window layouts and keyboard controls.",
+          "<bold>Early-stage Python code.</bold> I wrote this in my first months learning Python. The code shows it, but the finished tool still represents an important learning milestone."
+        ]
       }
     },
     "litrevu": {
       "card": {
         "title": "LITRevu Website",
-        "skill": {
-          "01": "Django",
-          "02": "Jinja2",
-          "03": "SQLite"
-        },
-        "content": "Platform for sharing and requesting book reviews. Personalized feed thanks to a follow/block system."
+        "skill": [
+          "django",
+          "sqlite",
+          "sass",
+          "javascript"
+        ],
+        "content": "Request and publish book reviews with a personalized feed shaped by a follow/block system.",
+        "imageAlt": "Screenshot of the litrevu website"
       },
       "detail": {
-        "description": {
-          "title": "Book-review platform",
-          "content": {
-            "01": "Want to know if that 900-page novel is really worth the effort? Eager to recommend your latest literary gem to fellow readers? LITRevu has you covered: open a ticket, request a review or publish your own ; all in a clean interface.",
-            "02": "LITRevu",
-            "03": " developed with ",
-            "04": "Django",
-            "05": " and a ",
-            "06": "SQLite",
-            "07": " database offers a minimalist yet complete experience for sharing your reading adventures."
-          }
-        },
-        "imageText": {
-          "01": "",
-          "02": "Site in action",
-          "03": "Follow system"
-        },
-        "whatILearned": {
-          "title": "First steps with Django",
-          "content": {
-            "01": "This project introduced me to the Django framework: MVT architecture, routing, relational models and their forms. I implemented a dynamic news feed and a user follow/block feature.",
-            "02": "On the UI side, although it remains quite minimal, I built custom widgets, added light JavaScript interactions and organised styles in SCSS for cleaner, more maintainable code."
-          }
-        }
+        "descriptionTitle": "Book-review platform",
+        "descriptionContent": [
+          "<bold>A lightweight space to request reviews, write your own, and follow readers whose tastes echo yours.</bold>",
+          "Users can open review requests or respond to those posted by others. The feed adapts to each reader by using follow/block relationships to bring relevant content forward.",
+          "Built with <bold>Django</bold> on top of a <bold>SQLite</bold> database. Styling is written in <bold>SCSS</bold>, with small interactive features handled in <bold>JavaScript</bold>."
+        ],
+        "imageAlt": [
+          "Screenshot of the login page",
+          "Gif of the website in action",
+          "Screenshot of the follow/block page"
+        ],
+        "imageText": [
+          "Login page",
+          "Site in action",
+          "Follow system"
+        ],
+        "whatILearnedTitle": "First steps with Django",
+        "whatILearnedContent": [
+          "<bold>MVT architecture.</bold> Implemented views, routing, forms, authentication, and relational models behind user-driven features like follow/block.",
+          "<bold>Custom widgets.</bold> Created and customized Django form widgets by subclassing and overriding default behaviors.",
+          "<bold>Frontend foundations.</bold> First structured use of SCSS and small-scale JavaScript to support a more coherent user experience.",
+          "<bold>Class-based views.</bold> Explored Django’s CBVs for rapid development; their abstractions helped but required care to avoid hidden complexity."
+        ]
       }
     },
     "softdesk": {
       "card": {
         "title": "SoftDesk API",
-        "skill": {
-          "01": "Django REST Framework",
-          "02": "Postman",
-          "03": "SQLite"
-        },
-        "content": "RESTful API for project tracking, secured by a permission system."
+        "skill": [
+          "django rest",
+          "postman",
+          "sqlite"
+        ],
+        "content": "REST API for managing projects, contributors, issues, and comments, with role-based permissions and filtered endpoints.",
+        "imageAlt": "Screenshot of the softdesk API"
       },
       "detail": {
-        "description": {
-          "title": "Project-management API",
-          "content": {
-            "01": "This RESTful API lets users create and manage projects. Coordinate work with contributors through tickets and comments, and keep everyone organized with clearly defined roles.",
-            "02": "SoftDesk",
-            "03": " was built with ",
-            "04": "Django REST Framework",
-            "05": " and a ",
-            "06": "SQLite",
-            "07": " database. It features JWT authentication, fine-tuned permissions, and filters on every list endpoint to quickly find the wanted resource."
-          }
-        },
-        "imageText": {
-          "01": "",
-          "02": "Relationship diagram",
-          "03": ""
-        },
-        "whatILearned": {
-          "title": "Building a secure API",
-          "content": {
-            "01": "This was my first full API project: relational modeling, nested serializers, and HATEOAS-style routes using drf-nested-routers. I implemented JWT authentication plus a custom permission scheme to isolate and secure each project.",
-            "02": "Tooling side: I produced a comprehensive Postman collection and added dynamic filters."
-          }
-        }
+        "descriptionTitle": "Project-management API",
+        "descriptionContent": [
+          "<bold>An API designed to structure collaborative work: create projects, define contributors, track issues, and exchange feedback through comments.</bold>",
+          "Endpoints are protected with JWT authentication and fine-grained permissions. List routes support filtering to quickly retrieve the relevant entries. Only registered contributors can access a project's details and its nested resources.",
+          "Built with <bold>Django REST Framework</bold> on top of <bold>SQLite</bold>, using drf-nested-routers to expose clean nested endpoints (projects/1/issues/2/comments/3). A full Postman collection accompanies the project for testing and documentation."
+        ],
+        "imageAlt": [
+          "A screenshot of the list view of Issues with the filter open.",
+          "Relationship diagram",
+          "Image of the body sent with a PUT request to modify an issue."
+        ],
+        "imageText": [
+          "The filter in the web-based API",
+          "Relationship diagram",
+          "A body in the web browser"
+        ],
+        "whatILearnedTitle": "Building a secure API",
+        "whatILearnedContent": [
+          "<bold>DRF fundamentals.</bold> Worked with serializers, viewsets, relational models, and nested routing to structure complex resources.",
+          "<bold>Auth and permissions.</bold> Implemented JWT authentication and custom access rules so each project exposes only the data relevant to its contributors.",
+          "<bold>Documentation workflow.</bold> Produced a Postman collection describing each endpoint and typical interaction flows."
+        ]
       }
     },
     "eecrm": {
       "card": {
         "title": "Epic Events CRM",
-        "skill": {
-          "01": "SQLAlchemy",
-          "02": "PostgreSQL",
-          "03": "Pytest",
-          "04": "Sentry",
-          "05": "Click"
-        },
-        "content": "Customer Relationship Management, centralizing and unifying collaborator data across departments that previously relied on isolated Excel sheets."
+        "skill": [
+          "sqlalchemy",
+          "postgresql",
+          "pytest",
+          "sentry",
+          "jwt"
+        ],
+        "content": "CLI-based CRM built with hexagonal architecture, managing clients, contracts and events with strict permissions and transactional integrity.",
+        "imageAlt": "Screenshot of the eecrm command line interface in action"
       },
       "detail": {
-        "description": {
-          "title": "Hexagonal-architecture CLI",
-          "content": {
-            "01": "Epic Events CRM is a CLI-based CRM designed to consolidate client and collaborator data. It provides a structured database for managing and processing client's events.",
-            "02": "The project was deliberately over-engineered to test the feasibility of applying Domain-Driven Design principles, the Repository pattern, and the Unit of Work pattern within a Python CLI context.",
-            "03": "It uses <bold>SQLAlchemy</bold> (Imperative ORM) with <bold>PostgreSQL</bold> as the database backend, wrapped in a layered architecture to ensure clear separation of concerns.",
-            "04": "Permissions are enforced through RCAB and ACAB to allow fine-grained access, while Sentry provides error monitoring."
-          }
-        },
-        "imageText": {
-          "01": "PostgreSQL schema diagram",
-          "02": "CLI demonstration",
-          "03": "Architecture overview"
-        },
-        "whatILearned": {
-          "title": "Applying strict patterns in Python",
-          "content": {
-            "01": "This project taught me how to implement DDD-inspired architecture in Python. Encapsulation of operations and abstract interfaces with Repositories and Unit of Works, designing entities and services to maintain a layered codebase.",
-            "02": "On the dev tool side, I built tests with Pytest and managed packaging and dependencies with uv.",
-            "03": "My key takeaway from this project: patterns bring structure, but they also introduced significant code complexity. If over-engineering was intentional here, I shall restrain from implementing design pattern without a clear goal in mind in the future."
-          }
-        }
+        "descriptionTitle": "Hexagonal-architecture CLI",
+        "descriptionContent": [
+          "<bold>A terminal CRM designed to centralize clients, contracts, and event data in a cohesive, structured system.</bold>",
+          "The project applies <bold>DDD</bold> principles with clear separation between domain, services and infrastructure (database and interfaces). <bold>Repository</bold> and <bold>Unit of Work</bold> patterns operate data persistence and ensure transactional consistency without impacting the domain entities.",
+          "Uses <bold>SQLAlchemy (imperative)</bold> with <bold>PostgreSQL</bold> for persistence. Services operate on domain objects, committing changes through units of work. A custom decorator provides RBAC/ABAC-style fine-grained permissions, and logging is handled locally with forwarding to <bold>Sentry</bold> for unexpected errors."
+        ],
+        "imageAlt": [
+          "PostgreSQL schema diagram",
+          "Architecture overview",
+          "CLI Error demonstration"
+        ],
+        "imageText": [
+          "PostgreSQL schema diagram",
+          "Architecture overview",
+          "CLI Error demonstration"
+        ],
+        "whatILearnedTitle": "Applying strict patterns in Python",
+        "whatILearnedContent": [
+          "<bold>DDD-inspired design.</bold> Domain entities, application services, repositories and units of work structured around ideas from 'Architecture Patterns with Python' (Percival & Gregory).",
+          "<bold>Testing strategy.</bold> Extensive pytest suite with isolated fixtures, allowing service tests to run without a database and integration tests to verify transactional behavior.",
+          "<bold>Dependencies tools (uv).</bold> Packaging, dependency management and build workflows using uv and a clear pyproject.toml (entry points, test config, metadata).",
+          "<bold>Architectural discipline.</bold> This project clarified the advantages of decoupling; cleaner tests, predictable data flow and easier refactoring."
+        ]
+      }
+    },
+    "oclettings": {
+      "card": {
+        "title": "OC Lettings Pipeline",
+        "skill": [
+          "django",
+          "docker",
+          "github actions",
+          "render",
+          "sphinx",
+          "pytest"
+        ],
+        "content": "Automated CI/CD pipeline for a Django app: linting, tests, Docker image build, deployment to Render, and documentation rebuild.",
+        "imageAlt": "Screenshot of a GitHub Actions workflow for the OC Lettings project"
+      },
+      "detail": {
+        "descriptionTitle": "From Git push to deployed app",
+        "descriptionContent": [
+          "<bold>A CI/CD pipeline that takes an existing Django app from commit to production automatically.</bold>",
+          "On merges into the main branch, a <bold>GitHub Actions</bold> workflow runs linting and tests, builds two <bold>Docker</bold> images (clean and demo), pushes them to <bold>Docker Hub</bold>, and triggers a redeploy on <bold>Render</bold> via a deploy hook.",
+          "The pipeline also rebuilds the <bold>Sphinx</bold> documentation so that each release ships with up-to-date docs, keeping the application, container images, and documentation aligned."
+        ],
+        "imageAlt": [
+          "Docker images",
+          "GitHub Actions workflow overview",
+          "Read the Docs documentation index page"
+        ],
+        "imageText": [
+          "Docker images",
+          "GitHub Actions",
+          "Read the Docs documentation page"
+        ],
+        "whatILearnedTitle": "Automating delivery of a Django app",
+        "whatILearnedContent": [
+          "<bold>GitHub Actions CI/CD.</bold> Designed a workflow with separate jobs for linting, tests, Docker builds, image pushes, and deployment via a web hook, using secrets and environment variables.",
+          "<bold>Containerization.</bold> Built small sized Docker images for different data states (clean and demo), pushed them to Docker Hub.",
+          "<bold>Deployment.</bold> Automated redeploys to wire an image with an embedded database to a Render service for demonstration purposes.",
+          "<bold>Documentation automation.</bold> Integrated Sphinx documentation so it is rebuilt and republished on each pipeline run, keeping technical docs synchronized with the deployed version.",
+          "<bold>Quality check.</bold> Used pytest and linters in the pipeline as mandatory checks for merging on the main branch so that only passing code reaches the deployment step."
+        ]
       }
     }
   }

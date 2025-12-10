@@ -1,0 +1,82 @@
+{
+  "python": {
+    "label": "Python",
+    "icon": "static/images/tech/logo-python.svg",
+    "link": "https://www.python.org/"
+  },
+  "json": {
+    "label": "JSON",
+    "icon": "static/images/tech/logo-json.svg",
+    "link": "https://www.json.org/json-en.html"
+  },
+  "django": {
+    "label": "Django",
+    "icon": "static/images/tech/logo-django.svg",
+    "link": "https://www.djangoproject.com/"
+  },
+  "sqlite": {
+    "label": "SQLite",
+    "icon": "static/images/tech/logo-sqlite.svg",
+    "link": "https://sqlite.org/index.html"
+  },
+  "sass": {
+    "label": "Sass",
+    "icon": "static/images/tech/logo-sass.svg",
+    "link": "https://sass-lang.com/"
+  },
+  "javascript": {
+    "label": "JavaScript",
+    "icon": "static/images/tech/logo-javascript.svg",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  "django-rest": {
+    "label": "Django REST",
+    "icon": "static/images/tech/logo-django-rest.svg",
+    "link": "https://www.django-rest-framework.org/"
+  },
+  "sqlalchemy": {
+    "label": "SQLAlchemy",
+    "icon": "static/images/tech/logo-sqlalchemy.svg",
+    "link": "https://www.sqlalchemy.org/"
+  },
+  "postman": {
+    "label": "Postman",
+    "icon": "static/images/tech/logo-postman.svg",
+    "link": "https://www.postman.com/"
+  },
+  "postgresql": {
+    "label": "PostgreSQL",
+    "icon": "static/images/tech/logo-postgresql.svg",
+    "link": "https://www.postgresql.org/"
+  },
+  "pytest": {
+    "label": "Pytest",
+    "icon": "static/images/tech/logo-pytest.svg",
+    "link": "https://docs.pytest.org/en/stable/"
+  },
+  "sentry": {
+    "label": "Sentry",
+    "icon": "static/images/tech/logo-sentry.svg",
+    "link": "https://sentry.io/welcome/"
+  },
+  "github-action": {
+    "label": "Github Action",
+    "icon": "static/images/tech/logo-github-action.svg",
+    "link": "https://github.com/features/actions"
+  },
+  "docker": {
+    "label": "Docker",
+    "icon": "static/images/tech/logo-docker.svg",
+    "link": "https://www.docker.com/"
+  },
+  "render": {
+    "label": "Render",
+    "icon": "static/images/tech/logo-render.svg",
+    "link": "https://render.com/"
+  },
+  "sphinx": {
+    "label": "Sphinx",
+    "icon": "static/images/tech/logo-sphinx.svg",
+    "link": "https://www.sphinx-doc.org/en/master/index.html"
+  }
+}
