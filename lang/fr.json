@@ -1,5 +1,6 @@
-{ "header": {
-    "name": "Alexandre Beduc.",
+{
+  "header": {
+    "name": "<bold>A</bold>lexandre <bold>B</bold>educ.",
     "nav": {
       "aboutMe": "À propos de moi",
       "project": "Projets",
@@ -10,151 +11,210 @@
     "banner": {
       "greeting": "Bonjour, je m'appelle",
       "name": "Alexandre Beduc.",
-      "information": "Développeur web backend, avec une préférence assumée pour Python."
+      "information": "Développeur backend, avec une préférence assumée pour Python."
     },
     "form": {
-      "title": "Entrons en contact",
-      "description": "Si vous avez des questions, une opportunité d'emploi ou un projet en tête, n'hésitez pas à me contacter. Je suis impatient de discuter de la manière dont nous pourrions collaborer.",
+      "title": "Me contacter",
+      "description": "Si vous avez des questions, une opportunité professionnelle ou un projet en tête, n'hésitez pas à me joindre. Je serai ravi d’échanger sur une éventuelle collaboration.",
       "labelFirstName": "Prénom*",
       "labelLastName": "Nom*",
-      "labelEmail": "E-mail*",
+      "labelEmail": "Email*",
       "labelCompany": "Entreprise",
       "labelMessage": "Votre message*",
       "button": "Envoyer"
     }
   },
   "project": {
-    "chessLogApp": {
+    "chessLog": {
       "card": {
         "title": "Chess Log Tournament",
-        "skill": ["python", "json"],
-        "content": "Automatise l’organisation d’un tournoi d’échecs : saisie des résultats, appariements système suisse et classement en temps réel.",
-        "imageAlt": "image de l'application Chess log"
+        "skill": [
+          "python",
+          "json",
+          "mvc",
+          "curses"
+        ],
+        "content": "Interface intuitive dans le terminal pour automatiser la gestion d’un tournoi d’échecs : appariements en toutes rondes, classement en direct et données facilement accessibles.",
+        "imageAlt": "Image de l'application chess log"
       },
       "detail": {
-        "description": {
-          "title": "Logiciel de tournoi",
-          "content": {
-            "01": "Calculer les scores pendant un tournoi d'échec doit être une tâche la plus simple possible pour utiliser sa matière grise pour ce qui compte vraiment, calculer le prochain coup. Fini les feuilles de score égarées, les appariements approximatifs et les erreurs d'additions. Désormais grâce à notre logiciel affiché dans le terminal, vous pourrez décharger l'arbitre de ces tâches répétitives.",
-            "02": "Chess Log Tournament",
-            "03": " est un gestionnaire de tournoi écrit 100% en Python, basé sur le ",
-            "04": "design pattern MVC,",
-            "05": " et une interface soignée grâce au ",
-            "06": "module curses."
-            }
-          },
-        "imageText": {
-          "01": "",
-          "02": "Exemple de fonctionnement lors d'un tournoi",
-          "03": ""
-        },
-        "whatILearned": {
-          "title": "Des choix fonctionnels",
-          "content": {
-            "01": "Malgré un cahier des charges techniques complet, certains points restaient ouverts à interprétation ; l'implémentation suit donc ces principes : ",
-            "02": " > Chaque action (création de joueur, saisie de résultat, lancement d’un round) est immédiatement sauvegardée dans des fichiers JSON qui font office de base de données ; cela garantit une reprise instantanée après coupure et permet des modifications faciles directement dans les fichiers.",
-            "03": " > L’algorithme d’appariement implémente la \"circle method\" du round-robin : pour n joueurs, il génère automatiquement n - 1 rounds où personne n’affronte deux fois le même adversaire. À chaque nouveau round, le logiciel extrait parmi les appariements disponibles celui qui fait s’opposer les joueurs aux meilleurs scores.",
-            "04": " > L’interface repose entièrement sur le module curses (issu de la bibliothèque C homonyme). Fenêtres et navigation se pilotent uniquement au clavier, pour une expérience fluide et intuitive."
-          }
-        }
+        "descriptionTitle": "Logiciel de tournoi",
+        "descriptionContent": [
+          "<bold>J’ai créé un petit outil pour gérer des tournois d’échecs sans feuilles volantes ni création manuelle des appariements.</bold>",
+          "On sélectionne une partie, on saisit les résultats, et le classement se met instantanément à jour. Le lancement d’un nouveau tour génère automatiquement les appariements grâce à la<bold>'circle method'</bold>, avec un léger biais pour obtenir des rencontres intéressantes.",
+          "Toutes les données sont stockées dans de simples fichiers <bold>JSON</bold>, ce qui permet à des utilisateurs sans compétences techniques d’exporter ou modifier les données. L’interface repose sur <bold>curses</bold>, mêlant rapidité et confort d’utilisation pour une interface de terminal."
+        ],
+        "imageAlt": [
+          "Vue liste des tournois disponibles, avec une fenêtre de création de tournoi.",
+          "Gif animé montrant l'application en cours d’utilisation, tournoi en cours.",
+          "Vue liste des joueurs enregistrés."
+        ],
+        "imageText": [
+          "Formulaire de création de tournoi",
+          "Exemple d’utilisation pendant un tournoi",
+          "Liste de tous les joueurs"
+        ],
+        "whatILearnedTitle": "Ce que j’ai dû comprendre en cours de route",
+        "whatILearnedContent": [
+          "<bold>Architecture MVC.</bold> Séparation de la logique métier, de la persistance, des vues et des interactions utilisateur.",
+          "<bold>Logique d’appariement.</bold> Générer des rencontres sans répétitions tout en privilégiant les affrontements les plus pertinents. Implémenté avec la 'circle method'.",
+          "<bold>Interface terminal.</bold> Donner une structure claire à une interface texte via des fenêtres et des contrôles clavier.",
+          "<bold>Code Python débutant.</bold> J’ai écrit ce projet dans mes premiers mois d’apprentissage. Ça se voit, mais il reste une étape de progression importante."
+        ]
       }
     },
     "litrevu": {
       "card": {
-        "title": "LITRevu Website",
-        "skill": ["django", "sqlite", "sass", "javascript"],
-        "content": "Site de partage et de demande de critiques de livres. Fil d’actualité personnalisé grâce à un système d’abonnements et de blocages."
+        "title": "Site LITRevu",
+        "skill": [
+          "django",
+          "sqlite",
+          "sass",
+          "javascript"
+        ],
+        "content": "Demander et publier des critiques de livres avec un flux personnalisé via un système de suivi/blocage.",
+        "imageAlt": "Capture d'écran du site LITRevu"
       },
       "detail": {
-        "description": {
-          "title": "Site de critique de livres",
-          "content": {
-            "01": "Envie de savoir si ce roman de 900 pages vaut vraiment le détour ? Besoin de recommander votre dernière pépite littéraire à des passionnés ? LITRevu est fait pour vous : ouvrez un ticket, demandez une critique ou publiez la vôtre, le tout dans une interface épurée.",
-            "02": "LITRevu",
-            "03": " développé avec ",
-            "04": "Django",
-            "05": " et une base ",
-            "06": "SQLite",
-            "07": " propose une expérience minimaliste mais complète pour échanger autour de la lecture."
-            }
-          },
-        "imageText": {
-          "01": "",
-          "02": "Site en cours d'utilisation",
-          "03": "Système d'abonnement"
-        },
-        "whatILearned": {
-          "title": "Premiers pas avec Django",
-          "content": {
-            "01": "Ce projet m'a permis de décourir le framework Django : l'architecture MVT, le routage, les modèles et leurs formulaires. J’ai mis en place un fil d’actualité dynamique, un système d’abonnement/blocage entre utilisateurs.",
-            "02": "Côté interface, si celle-ci reste très basique, j’ai créé des widgets personnalisés, ajouté des interactions JavaScript légères et structuré les styles en SCSS pour un code plus maintenable."
-          }
-        }
+        "descriptionTitle": "Plateforme de critiques de livres",
+        "descriptionContent": [
+          "<bold>Un espace minimaliste pour demander des critiques, écrire les vôtres et suivre les lecteurs avec des goûts similaires aux vôtres.</bold>",
+          "Les utilisateurs peuvent ouvrir des demandes de critique ou répondre à celles publiées par d'autres. Le flux s'adapte à chaque lecteur en utilisant les relations de suivi/blocage pour mettre en avant les contenus pertinents.",
+          "Construit avec <bold>Django</bold> monté sur une base de données <bold>SQLite</bold>. Le style est écrit en <bold>SCSS</bold>, avec de petites interactions gérées par <bold>JavaScript</bold>."
+        ],
+        "imageAlt": [
+          "Capture d'écran de la page de connexion",
+          "Gif du site en action",
+          "Capture d'écran de la page de suivi/blocage"
+        ],
+        "imageText": [
+          "Page de connexion",
+          "Site en action",
+          "Système de suivi"
+        ],
+        "whatILearnedTitle": "Premiers pas avec Django",
+        "whatILearnedContent": [
+          "<bold>Architecture MVT.</bold> Implémentation des vues, du routage, des formulaires, de l'authentification et des modèles relationnels pour des fonctionnalités centrées utilisateur comme le suivi/blocage.",
+          "<bold>Widgets personnalisés.</bold> Création et personnalisation de widgets de formulaire Django en sous-classant et en surchargeant les comportements par défaut.",
+          "<bold>Fondations frontend.</bold> Première utilisation structurée de SCSS et d'un JavaScript léger pour soutenir une expérience utilisateur cohérente.",
+          "<bold>Class-based views.</bold> Exploration des CBV de Django pour un développement rapide; leurs abstractions aident mais demandent de la prudence pour éviter la complexité cachée."
+        ]
       }
     },
     "softdesk": {
       "card": {
-        "title": "SoftDesk API",
-        "skill": ["django rest framework", "postman", "sqlite"],
-        "content": "API REST pour le suivi de projets, cloisonnée par un système de permissions."
+        "title": "API SoftDesk",
+        "skill": [
+          "django rest",
+          "postman",
+          "sqlite"
+        ],
+        "content": "API REST pour gérer projets, contributeurs, problèmes et commentaires, avec permissions basées sur les rôles et endpoints filtrables.",
+        "imageAlt": "Capture d'écran de l'API SoftDesk"
       },
       "detail": {
-        "description": {
-          "title": "API de gestion de projets",
-          "content": {
-            "01": "Cette API RESTful permet aux utilisateurs de créer et gérer des projets. Organisez votre travail avec vos contributeurs via un système de tickets et de commentaires. Travaillez efficacement en équipe, avec des rôles clairement définis.",
-            "02": "SoftDesk API,",
-            "03": " développée avec ",
-            "04": "Django REST Framework",
-            "05": " et une base ",
-            "06": "SQLite,",
-            "07": " intègre une authentification JWT, des permissions fines et des filtres sur chaque liste pour retrouver rapidement la ressource désirée."
-          }
-        },
-        "imageText": {
-          "01": "",
-          "02": "Schéma des relations",
-          "03": ""
-        },
-        "whatILearned": {
-          "title": "Concevoir une API sécurisée",
-          "content": {
-            "01": "J’ai conçu ma première API complète : modélisation relationnelle, sérialiseurs imbriqués et routes HATEOAS grâce à drf-nested-routers. J’ai mis en place l’authentification JWT ainsi qu’un système de permissions sur mesure pour assurer la sécurité des projets.",
-            "02": "Côté outillage, j’ai créé une collection Postman exhaustive et ajouté des filtres dynamiques."
-          }
-        }
+        "descriptionTitle": "API de gestion de projets",
+        "descriptionContent": [
+          "<bold>Une API conçue pour structurer le travail collaboratif : créer des projets, définir des contributeurs, suivre les problèmes et échanger des retours via des commentaires.</bold>",
+          "Les endpoints sont protégés par une authentification JWT et des permissions fines. Les routes de liste acceptent des filtres pour retrouver rapidement les entrées pertinentes. Seuls les contributeurs enregistrés peuvent accéder aux détails d'un projet et à ses ressources imbriquées.",
+          "Construite avec <bold>Django REST Framework</bold> sur une base de donnée <bold>SQLite</bold>, en utilisant 'drf-nested-routers' pour exposer des endpoints imbriqués proprement (projects/1/issues/2/comments/3). Une collection Postman complète accompagne le projet pour les tests et la documentation."
+        ],
+        "imageAlt": [
+          "Capture d'écran de la liste des issues avec le filtre ouvert.",
+          "Diagramme des relations",
+          "Exemple de corps de requête PUT pour modifier une issue."
+        ],
+        "imageText": [
+          "Le filtre dans l'API web",
+          "Diagramme des relations",
+          "Corps de requête dans le navigateur"
+        ],
+        "whatILearnedTitle": "Construire une API sécurisée",
+        "whatILearnedContent": [
+          "<bold>Fondamentaux DRF.</bold> Travail avec sérialiseurs, viewsets, modèles relationnels et routing imbriqué pour structurer des ressources complexes.",
+          "<bold>Auth et permissions.</bold> Implémentation de l'authentification JWT et de règles d'accès personnalisées afin que chaque projet n'expose que les données pertinentes pour ses contributeurs.",
+          "<bold>Workflow de documentation.</bold> Production d'une collection Postman décrivant chaque endpoint et les parcours d'utilisation typiques."
+        ]
       }
     },
     "eecrm": {
       "card": {
         "title": "Epic Events CRM",
-        "skill": ["sqlalchemy", "postgresql", "pytest", "sentry"],
-        "content": "Customer Relationship Management, centralizing and unifying collaborator data across departments that previously relied on isolated Excel sheets.",
-        "imageAlt": "screenshot of the eecrm command line interface in action"
+        "skill": [
+          "sqlalchemy",
+          "postgresql",
+          "pytest",
+          "sentry",
+          "jwt"
+        ],
+        "content": "CRM en ligne de commande basé sur une architecture hexagonale, gérant clients, contrats et événements avec des permissions strictes et une intégrité transactionnelle.",
+        "imageAlt": "Capture de l'interface en ligne de commande eecrm en action"
       },
       "detail": {
-        "description": {
-          "title": "Hexagonal-architecture CLI",
-          "content": {
-            "01": "Epic Events CRM is a CLI-based CRM designed to consolidate client and collaborator data. It provides a structured database for managing and processing client's events.",
-            "02": "The project was deliberately over-engineered to test the feasibility of applying Domain-Driven Design principles, the Repository pattern, and the Unit of Work pattern within a Python CLI context.",
-            "03": "It uses <bold>SQLAlchemy</bold> (Imperative ORM) with <bold>PostgreSQL</bold> as the database backend, wrapped in a layered architecture to ensure clear separation of concerns.",
-            "04": "Permissions are enforced through RCAB and ACAB to allow fine-grained access, while Sentry provides error monitoring."
-          }
-        },
-        "imageText": {
-          "01": "PostgreSQL schema diagram",
-          "02": "CLI demonstration",
-          "03": "Architecture overview"
-        },
-        "whatILearned": {
-          "title": "Applying strict patterns in Python",
-          "content": {
-            "01": "This project taught me how to implement DDD-inspired architecture in Python. Encapsulation of operations and abstract interfaces with Repositories and Unit of Works, designing entities and services to maintain a layered codebase.",
-            "02": "On the dev tool side, I built tests with Pytest and managed packaging and dependencies with uv.",
-            "03": "My key takeaway from this project: patterns bring structure, but they also introduced significant code complexity. If over-engineering was intentional here, I shall restrain from implementing design pattern without a clear goal in mind in the future."
-          }
-        }
+        "descriptionTitle": "CLI en architecture hexagonale",
+        "descriptionContent": [
+          "<bold>Un CRM avec une interface dans le terminal conçu pour centraliser les données clients, contrats et événements dans un système structuré et cohérent.</bold>",
+          "Le projet applique les principes du <bold>DDD</bold> avec une séparation claire entre domaine, services et infrastructure (base de données et interfaces). Les patterns <bold>'Repository'</bold> et <bold>'Unit of Work'</bold> contrôlent la persistance des données et garantissent la cohérence transactionnelle sans impacter les entitées du domaine.",
+          "Utilise <bold>SQLAlchemy (impératif)</bold> avec <bold>PostgreSQL</bold> pour la persistance. Les services opèrent sur des objets de domaine et valident les changements via des units of work. Un décorateur personnalisé fournit des permissions fines de type RBAC/ABAC, et la journalisation est gérée localement avec des remontée vers <bold>Sentry</bold> en cas d'erreurs inattendues."
+        ],
+        "imageAlt": [
+          "Diagramme du schéma PostgreSQL",
+          "Vue d'ensemble de l'architecture",
+          "Démonstration d'erreur en CLI"
+        ],
+        "imageText": [
+          "Diagramme du schéma PostgreSQL",
+          "Vue d'ensemble de l'architecture",
+          "Démonstration d'erreur en CLI"
+        ],
+        "whatILearnedTitle": "Appliquer des patterns stricts en Python",
+        "whatILearnedContent": [
+          "<bold>Design inspiré du DDD.</bold> Entités de domaine, services d'application, repositories et units of work structurés autour d'idées issues du livre 'Architecture Patterns with Python' (Percival & Gregory).",
+          "<bold>Stratégie de tests.</bold> Suite pytest étendue avec fixtures isolées, permettant des tests de services sans base de données et des tests d'intégration pour vérifier le comportement transactionnel.",
+          "<bold>Outil de dépendences (uv).</bold> Packaging, gestion des dépendances et workflows de build en utilisant uv et un pyproject.toml clair (entry points, config de tests, métadonnées).",
+          "<bold>Discipline architecturale.</bold> Ce projet a clarifié les avantages du découplage : tests plus propres, flux de données prévisible et refactorings plus simples."
+        ]
+      }
+    },
+    "oclettings": {
+      "card": {
+        "title": "Pipeline OC Lettings",
+        "skill": [
+          "django",
+          "docker",
+          "github actions",
+          "render",
+          "sphinx",
+          "pytest"
+        ],
+        "content": "Pipeline CI/CD automatisée pour une application Django : linting, tests, build d'images Docker, déploiement sur Render et reconstruction de la documentation.",
+        "imageAlt": "Capture d'écran d'un workflow GitHub Actions pour le projet OC Lettings"
+      },
+      "detail": {
+        "descriptionTitle": "Du push Git au déploiement de l'application",
+        "descriptionContent": [
+          "<bold>Une pipeline CI/CD qui amène une application Django existante du commit à la production automatiquement.</bold>",
+          "Lors des merges dans la branche principale, un workflow <bold>GitHub Actions</bold> exécute linting et tests, construit deux images <bold>Docker</bold> (clean et demo), les pousse sur <bold>Docker Hub</bold> et déclenche un redéploiement sur <bold>Render</bold> via un hook de déploiement.",
+          "La pipeline reconstruit également la documentation <bold>Sphinx</bold> afin que chaque version publiée dispose de docs à jour, en maintenant l'application, les images de conteneur et la documentation alignées."
+        ],
+        "imageAlt": [
+          "Images Docker",
+          "Vue d'ensemble du workflow GitHub Actions",
+          "Page d'index de la documentation Read the Docs"
+        ],
+        "imageText": [
+          "Images Docker",
+          "GitHub Actions",
+          "Page de documentation Read the Docs"
+        ],
+        "whatILearnedTitle": "Automatiser la livraison d'une application Django",
+        "whatILearnedContent": [
+          "<bold>CI/CD avec GitHub Actions.</bold> Conception d'un workflow avec des jobs séparés pour le linting, les tests, les builds Docker, le push d'images et le déploiement via webhook, en utilisant secrets et variables d'environnement.",
+          "<bold>Containerisation.</bold> Construction d'images Docker compactes pour différents états de données (clean et demo), puis push sur Docker Hub.",
+          "<bold>Déploiement.</bold> Redéploiements automatisés pour connecter une image contenant une base intégrée à un service Render de démonstration.",
+          "<bold>Automatisation de la documentation.</bold> Intégration de la documentation Sphinx pour qu'elle soit reconstruite et republée à chaque exécution de la pipeline, en gardant la documentation technique synchronisée avec la version déployée.",
+          "<bold>Contrôle qualité.</bold> Utilisation de pytest et des linters comme vérifications obligatoires avant tout merge sur la branche principale, pour que seul du code valide atteigne l'étape de déploiement."
+        ]
       }
     }
   }
