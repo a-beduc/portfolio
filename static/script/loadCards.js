@@ -58,18 +58,10 @@ async function loadProjectsCards() {
         card.id = project.id;
 
         const imgLink = clone.querySelector(".card-link-img");
-        const githubLink = clone.querySelector(".card-link-github");
-        const detailLink = clone.querySelector(".card-link-detail");
-        const productionLink = clone.querySelector(".production-link");
-
         const img = clone.querySelector(".image-container__image");
         const title = clone.querySelector(".text-container__title");
         const content = clone.querySelector(".text-container__content");
         const skills = clone.querySelector(".text-container__abilities");
-
-        const githubLogo = clone.querySelector(".card-link-github img");
-        const detailLogo = clone.querySelector(".card-link-detail img");
-        const productionLogo = clone.querySelector(".production-link img");
 
         const keyName = project.keyName
 
@@ -80,27 +72,75 @@ async function loadProjectsCards() {
         content.dataset.translate = cardKeyPath(keyName, "content");
         skills.dataset.translateSkill = cardKeyPath(keyName, "skill");
 
-        githubLink.href = project.githubUrl;
-        githubLogo.src = `${basePath}static/images/github-svgrepo-com.svg`
-
-        // add link to detail view in case of card in page index
-        if (showDetailLink && detailLink && detailLogo) {
+        // disable image link to detail page on detail page
+        if (showDetailLink && project.projectUrl) {
             imgLink.href = `${basePath}${project.projectUrl}`;
-            detailLink.href = `${basePath}${project.projectUrl}`;
-            detailLogo.src = `${basePath}static/images/arrow-down-right-svgrepo-com.svg`;
-        } else if (detailLink) {
+        } else {
             card.classList.add("project-card--detail")
-            detailLink.remove();
             img.style.opacity = "1.0";
             imgLink.classList.add('link-disabled');
         }
 
-        if (project.productionUrl && productionLink && productionLogo) {
-            productionLink.href = project.productionUrl;
-            productionLink.target = "_blank";
-            productionLogo.src = `${basePath}static/images/link-external-svgrepo-com.svg`;
-        } else if (productionLink) {
-            productionLink.remove();
+        const iconContainer = clone.querySelector(".text-container__icon");
+        const linkTemplate = iconContainer.querySelector(".card-link-template");
+
+        linkTemplate.remove();
+        const links = [];
+
+        if (project.githubUrl) {
+            links.push({
+                type: "github",
+                url: project.githubUrl,
+                icon: `${basePath}static/images/github-svgrepo-com.svg`,
+                alt: "Logo of GitHub",
+                target: "_blank"
+            });
+        }
+
+        if (showDetailLink && project.projectUrl) {
+            links.push({
+                type: "detail",
+                url: `${basePath}${project.projectUrl}`,
+                icon: `${basePath}static/images/arrow-down-right-svgrepo-com.svg`,
+                alt: "Internal link to project",
+                target: "_self"
+            });
+        }
+
+        if (project.extraLinks && Array.isArray(project.extraLinks)) {
+            for (const extra of project.extraLinks) {
+                if (!extra || !extra.url || !extra.icon) continue;
+
+                links.push({
+                    type: extra.type || "extra",
+                    url: extra.url,
+                    icon: `${basePath}${extra.icon}`,
+                    alt: extra.alt || "",
+                    target: "_blank"
+                });
+            }
+        }
+
+        // Render the icon links
+        for (const link of links) {
+            const linkEl = linkTemplate.cloneNode(true);
+            const imgEl = linkEl.querySelector("img");
+
+            linkEl.href = link.url;
+            linkEl.target = link.target || "_blank";
+
+            if (imgEl) {
+                imgEl.src = link.icon;
+                if (link.alt) {
+                    imgEl.alt = link.alt;
+                }
+            }
+
+            if (link.type) {
+                linkEl.classList.add(`card-link-${link.type}`);
+            }
+
+            iconContainer.appendChild(linkEl);
         }
 
         container.appendChild(clone);

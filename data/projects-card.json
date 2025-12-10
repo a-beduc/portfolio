@@ -18,7 +18,15 @@
     "keyName": "softdesk",
     "projectUrl": "projects/softdesk.html",
     "imageSrc": "assets/softdesk/project_10-1.png",
-    "githubUrl": "https://github.com/a-beduc/formation_project_10"
+    "githubUrl": "https://github.com/a-beduc/formation_project_10",
+    "extraLinks": [
+      {
+        "type": "postman",
+        "url": "https://documenter.getpostman.com/view/42454429/2sB34ZqPrd",
+        "icon": "static/images/postman-svgrepo-com.svg",
+        "alt": "Postman collection"
+      }
+    ]
   },
   "eecrm-card": {
     "id": "eecrm",
@@ -33,6 +41,13 @@
     "projectUrl": "projects/oclettings.html",
     "imageSrc": "assets/oclettings/project_13-1.png",
     "githubUrl": "https://github.com/a-beduc/formation_project_13",
-    "productionUrl": "https://oc-lettings-demo.onrender.com/"
+    "extraLinks": [
+      {
+        "type": "production",
+        "url": "https://oc-lettings-demo.onrender.com/",
+        "icon": "static/images/link-external-svgrepo-com.svg",
+        "alt": "External link to live project"
+      }
+    ]
   }
 }
