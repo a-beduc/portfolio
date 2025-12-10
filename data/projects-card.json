@@ -31,7 +31,8 @@
     "id": "oclettings",
     "keyName": "oclettings",
     "projectUrl": "projects/oclettings.html",
-    "imageSrc": "assets/oclettings/project_12-1.jpg",
-    "githubUrl": "https://github.com/a-beduc/formation_project_13"
+    "imageSrc": "assets/oclettings/project_13-1.png",
+    "githubUrl": "https://github.com/a-beduc/formation_project_13",
+    "productionUrl": "https://oc-lettings-demo.onrender.com/"
   }
 }

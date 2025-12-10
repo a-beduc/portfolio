@@ -60,6 +60,7 @@ async function loadProjectsCards() {
         const imgLink = clone.querySelector(".card-link-img");
         const githubLink = clone.querySelector(".card-link-github");
         const detailLink = clone.querySelector(".card-link-detail");
+        const productionLink = clone.querySelector(".production-link");
 
         const img = clone.querySelector(".image-container__image");
         const title = clone.querySelector(".text-container__title");
@@ -68,6 +69,7 @@ async function loadProjectsCards() {
 
         const githubLogo = clone.querySelector(".card-link-github img");
         const detailLogo = clone.querySelector(".card-link-detail img");
+        const productionLogo = clone.querySelector(".production-link img");
 
         const keyName = project.keyName
 
@@ -91,6 +93,14 @@ async function loadProjectsCards() {
             detailLink.remove();
             img.style.opacity = "1.0";
             imgLink.classList.add('link-disabled');
+        }
+
+        if (project.productionUrl && productionLink && productionLogo) {
+            productionLink.href = project.productionUrl;
+            productionLink.target = "_blank";
+            productionLogo.src = `${basePath}static/images/link-external-svgrepo-com.svg`;
+        } else if (productionLink) {
+            productionLink.remove();
         }
 
         container.appendChild(clone);
