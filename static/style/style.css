@@ -1044,4 +1044,8 @@ ul {
   cursor: default;
 }
 
+.elem-hide {
+  opacity: 0;
+}
+
 /*# sourceMappingURL=style.css.map */
