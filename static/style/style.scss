@@ -704,9 +704,12 @@ ul {
 
   &__abilities {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem 1rem;
+    max-width: 100%;
+    white-space: normal;
     font-size: $font-card-tag-tablet;
 
     &__item {
@@ -721,6 +724,7 @@ ul {
 
     @media (min-width: $breakpoint-tablet-min) {
       font-size: $font-card-tag-tablet;
+      justify-content: flex-start;
     }
 
     @media (min-width: $breakpoint-desktop-min) {
@@ -1138,4 +1142,9 @@ ul {
 .link-disabled {
   pointer-events: none;
   cursor: default;
+}
+
+
+.elem-hide {
+  opacity: 0;
 }

@@ -6,7 +6,7 @@ function revealTags(tagElements, step = 150, baseDelay = 0, cls = 'reveal-block'
         if (li.dataset.revealed === "1") return;
         li.dataset.revealed = "1";
 
-        li.classList.remove("card-elem-hide");
+        li.classList.remove("elem-hide");
         li.classList.add(cls);
         li.style.animationDelay = `${currentDelay}ms`;
 
@@ -19,7 +19,7 @@ function revealBody(bodyElement, animationDuration = 1500, cls = 'reveal-block')
     if (bodyElement.dataset.revealed === "1") return;
     bodyElement.dataset.revealed = "1";
 
-    bodyElement.classList.remove("card-elem-hide")
+    bodyElement.classList.remove("elem-hide")
     bodyElement.classList.add(cls);
     bodyElement.style.animationDuration = `${animationDuration}ms`;
 }
@@ -29,15 +29,6 @@ function revealBody(bodyElement, animationDuration = 1500, cls = 'reveal-block')
 // When user see 50% of the card, text animation trigger (once per load)
 function cardAnimationObserver() {
     const cards = document.querySelectorAll(".project-card");
-    for (const card of cards) {
-        const title = card.querySelector(".text-container__title");
-        const abilities = card.querySelectorAll('.text-container__abilities__item');
-        const body = card.querySelector('.text-container__body');
-
-        title.classList.add('card-elem-hide');
-        abilities.forEach(ability => ability.classList.add('card-elem-hide'));
-        body.classList.add('card-elem-hide');
-    }
 
     const cardObserver = new IntersectionObserver(async (entries) => {
         for (const entry of entries) {
@@ -58,14 +49,17 @@ function cardAnimationObserver() {
 // "revealWords", "extractText", "wait" are implemented in .scriptBannerReveal
 async function animateCard(cardObj) {
     const title = cardObj.querySelector(".text-container__title");
+    const tagContainer = cardObj.querySelector(".text-container__abilities");
     const tags = cardObj.querySelectorAll('.text-container__abilities__item');
     const body = cardObj.querySelector('.text-container__body');
 
     const tit = extractText(title, 'banner-reveal-letters');
-    title.classList.remove('card-elem-hide');
+    title.classList.remove('elem-hide');
 
     const titleEnd = revealWords(tit, 600, 0, 'card-reveal-char');
     await wait(titleEnd);
+
+    tagContainer.classList.remove("elem-hide")
     revealTags(tags);
     revealBody(body);
 }
